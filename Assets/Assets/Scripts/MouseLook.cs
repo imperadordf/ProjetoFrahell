@@ -23,7 +23,7 @@ public class MouseLook : MonoBehaviour
 
 
         xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90, 90);
+        xRotation = Mathf.Clamp(xRotation, -74.458f, 74.458f);
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
