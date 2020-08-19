@@ -6,6 +6,9 @@ public class Player : MonoBehaviour
 {
     Animator animator_Player;
     Vector3 velocity;
+    //Camera em Pé e Camera Agachado
+    public Camera cameraPe;
+    public Camera cameraAgacha;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +25,10 @@ public class Player : MonoBehaviour
         animator_Player.SetFloat("Y", y);
 
        animator_Player.SetBool("IsSpriting",Input.GetKey(KeyCode.LeftShift));
-        
-        
+
+        animator_Player.SetBool("IsCrouch", Input.GetKey(KeyCode.LeftControl));
+
+        cameraAgacha.enabled = Input.GetKey(KeyCode.LeftControl);
+        cameraPe.enabled = !Input.GetKey(KeyCode.LeftControl);
     }
 }
