@@ -882,7 +882,7 @@ GameObject:
   - component: {fileID: 6834992329975133587}
   - component: {fileID: 5213494226197173730}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: CameraPe
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1084,6 +1084,7 @@ GameObject:
   - component: {fileID: 3650579985252047549}
   - component: {fileID: 5648343740432618871}
   - component: {fileID: 2263058542061649228}
+  - component: {fileID: 140877230608921587}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -1147,6 +1148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d314317bd7e955f4caf5dfdd760ebcff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraPe: {fileID: 6333802639587890841}
+  cameraAgacha: {fileID: 4180828688481480705}
 --- !u!54 &2263058542061649228
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1163,6 +1166,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &140877230608921587
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4105810714852936795}
+  m_Material: {fileID: 13400000, guid: 38ac6464cd47c8c4b9f894ef2419b520, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.8299164
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9350417, z: 0}
 --- !u!1 &4412081017467959633
 GameObject:
   m_ObjectHideFlags: 0
@@ -2331,7 +2348,7 @@ GameObject:
   - component: {fileID: 1368415630396415970}
   - component: {fileID: 982192125021071841}
   m_Layer: 0
-  m_Name: Main Camera (1)
+  m_Name: CameraAgacha
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

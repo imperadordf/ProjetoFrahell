@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 131.16855, g: 162.52502, b: 215.10977, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Profile: {fileID: 11400000, guid: a123fc0ac58cb774e8592c925f167e7c, type: 2}
   m_StaticLightingSkyUniqueID: 1
-  m_SkySettings: {fileID: 1540999425}
+  m_SkySettings: {fileID: 1329303027}
   m_SkySettingsFromProfile: {fileID: -1658960478407648048, guid: a123fc0ac58cb774e8592c925f167e7c,
     type: 2}
 --- !u!4 &313761475
@@ -451,26 +451,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a7c8c89f88f0ed48a22347c04b178f0, type: 3}
---- !u!1 &853402120 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4105810714852936795, guid: 90b65d8b0af1a6446a9b66887a13be94,
-    type: 3}
-  m_PrefabInstance: {fileID: 3032523003597340077}
-  m_PrefabAsset: {fileID: 0}
---- !u!136 &853402122
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 853402120}
-  m_Material: {fileID: 13400000, guid: 38ac6464cd47c8c4b9f894ef2419b520, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1.8299164
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.9350417, z: 0}
 --- !u!1001 &1082666065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -540,13 +520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85dfed960e44db444b5ee7f2bbf17ba5, type: 3}
---- !u!20 &1388472019 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 4180828688481480705, guid: 90b65d8b0af1a6446a9b66887a13be94,
-    type: 3}
-  m_PrefabInstance: {fileID: 3032523003597340077}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1540999425
+--- !u!114 &1329303027
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -647,6 +621,12 @@ MonoBehaviour:
   rectLightShadow:
     m_OverrideState: 0
     m_Value: 0
+--- !u!20 &1388472019 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4180828688481480705, guid: 90b65d8b0af1a6446a9b66887a13be94,
+    type: 3}
+  m_PrefabInstance: {fileID: 3032523003597340077}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1547029145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,11 +1766,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.0019606117
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650579985252047549, guid: 90b65d8b0af1a6446a9b66887a13be94,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4102522650179826061, guid: 90b65d8b0af1a6446a9b66887a13be94,
         type: 3}
