@@ -25,10 +25,12 @@ public class Player : MonoBehaviour
     void Update()
     { 
         //Entrada do Usuario 
-         x = Input.GetAxis("Horizontal");
-         y = Input.GetAxis("Vertical");
+         x = Input.GetAxis("Horizontal")*100*Time.deltaTime;
+         y = Input.GetAxis("Vertical")*100* Time.deltaTime;
         
         isCrouch = Input.GetKey(KeyCode.LeftControl);
+
+        //Maquina de estado
         switch (state)
         {
             case EstadoPlayer.IDLE:
@@ -104,6 +106,8 @@ public class Player : MonoBehaviour
         }
 
     }
+
+    //Mudar o State
     public void MudarState(EstadoPlayer newState)
     {
         switch(newState)
@@ -128,6 +132,7 @@ public class Player : MonoBehaviour
         state = newState;
     }
 
+    //Parametros de animação
     private void ParametrosAnimator()
     {
         animator_Player.SetFloat("X", x);
@@ -136,7 +141,7 @@ public class Player : MonoBehaviour
         animator_Player.SetBool("IsSpriting", isSpriting);
         animator_Player.SetBool("IsIdle", isIdle);
     }
-
+    //Animação de rotação que tem referencia no Script "MouseLook"
     public void AnimationRotation(float mousex)
     {
         animator_Player.SetFloat("MouseX", mousex);
