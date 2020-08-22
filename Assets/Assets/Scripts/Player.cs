@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         animator_Player = GetComponent<Animator>();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
