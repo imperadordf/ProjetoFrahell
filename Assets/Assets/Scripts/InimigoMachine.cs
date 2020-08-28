@@ -34,20 +34,27 @@ public class InimigoMachine : MonoBehaviour
     public float distanceSeekCorrendo=20;
     public float distanceSeekAndando=10;
     public float distanceSeekAgachado=5;
-
+    // ALERTA
+    public float TimeAlerta;
+    float timealerta;
     // Start is called before the first frame update
+    
     void Start()
     {
         navEnemy = GetComponent<NavMeshAgent>();
         anime = GetComponent<Animator>();
         StartCoroutine(RadarAuditivo());
+        timealerta = TimeAlerta;
+        state = EnemyState.PATROL;
     }
 
     // Update is called once per frame
-    void Update()
+   
+    void FixedUpdate()
     {
         switch (state)
         {
+            //Maquina de estado Patrol
             case EnemyState.PATROL:
                 if (Vector3.Distance(transform.position, PositionPlayer.position) <= distanceMinSeek)
                 {
@@ -65,19 +72,38 @@ public class InimigoMachine : MonoBehaviour
                         }                      
                     }
                     navEnemy.SetDestination(patrolObject[i].transform.position);
-                }
 
+                    
+                }
                 break;
+                //Maquina de estado Seek
             case EnemyState.SEEK:
                 if (Vector3.Distance(transform.position, PositionPlayer.position) >= distanceMaxSeek)
                 {
-                    MudarState(EnemyState.PATROL);
+                    MudarState(EnemyState.ALERTED);
                 }
                 else
                 {
                     MudarState(EnemyState.SEEK);
                 }
                 navEnemy.SetDestination(PositionPlayer.position);
+                break;
+            //Maquina de estado Alerta
+            case EnemyState.ALERTED:
+                if (Vector3.Distance(transform.position, PositionPlayer.position) <= distanceMinSeek)
+                {
+                    MudarState(EnemyState.SEEK);
+                }
+                else if(timealerta<=0)
+                {
+                    MudarState(EnemyState.PATROL);
+                }
+                else
+                {
+                    timealerta -= Time.deltaTime;
+                }
+
+               
                 break;
         }
 
@@ -93,9 +119,18 @@ public class InimigoMachine : MonoBehaviour
             case EnemyState.PATROL:
                 navEnemy.speed = 1;
                 seek = false;
+                timealerta = TimeAlerta;
+                navEnemy.isStopped = false;
                 break;
             case EnemyState.SEEK:
+                timealerta = TimeAlerta;
+                navEnemy.speed = 2;
                 seek = true;
+                navEnemy.isStopped = false;
+                break;
+            case EnemyState.ALERTED:
+                seek = false;
+                navEnemy.isStopped = true;
                 break;
         }
 
@@ -135,5 +170,6 @@ public class InimigoMachine : MonoBehaviour
 public enum EnemyState
 {
     SEEK,
-    PATROL
+    PATROL,
+    ALERTED
 }

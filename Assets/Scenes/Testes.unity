@@ -3814,9 +3814,10 @@ MonoBehaviour:
   - {fileID: 326848584}
   distanceMaxSeek: 20
   distanceMinSeek: 10
-  distanceSeekCorrendo: 20
-  distanceSeekAndando: 10
-  distanceSeekAgachado: 5
+  distanceSeekCorrendo: 10
+  distanceSeekAndando: 5
+  distanceSeekAgachado: 0
+  TimeAlerta: 7
 --- !u!1 &1828326729
 GameObject:
   m_ObjectHideFlags: 0
