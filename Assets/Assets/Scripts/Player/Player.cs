@@ -13,7 +13,22 @@ public class Player : MonoBehaviour
     //Variavel do Usuario
     bool isSpriting,isCrouch,isIdle;
     float x, y;
+
+    private Transform playerposition;
     // Start is called before the first frame update
+    public Transform PlayerPosition
+    {
+        get
+        {
+            return this.transform;
+        }
+    }
+
+    private void Awake()
+    {
+        
+    }
+
     void Start()
     {
         animator_Player = GetComponent<Animator>();
