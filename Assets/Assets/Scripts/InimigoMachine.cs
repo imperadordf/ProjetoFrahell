@@ -69,24 +69,25 @@ public class InimigoMachine : MonoBehaviour
                         if (patrolObject.Count <= i)
                         {
                             i = 0;
-                        }                      
+                        }
                     }
                     navEnemy.SetDestination(patrolObject[i].transform.position);
 
-                    
+
                 }
                 break;
-                //Maquina de estado Seek
+            //Maquina de estado Seek
             case EnemyState.SEEK:
                 if (Vector3.Distance(transform.position, PositionPlayer.position) >= distanceMaxSeek)
                 {
                     MudarState(EnemyState.ALERTED);
                 }
-                else
+                else 
                 {
                     MudarState(EnemyState.SEEK);
                 }
                 navEnemy.SetDestination(PositionPlayer.position);
+                
                 break;
             //Maquina de estado Alerta
             case EnemyState.ALERTED:
@@ -126,7 +127,11 @@ public class InimigoMachine : MonoBehaviour
                 timealerta = TimeAlerta;
                 navEnemy.speed = 2;
                 seek = true;
-                navEnemy.isStopped = false;
+                if (Vector3.Distance(transform.position, PositionPlayer.position) <= 1 && !anime.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+                {
+                    anime.SetTrigger("Attack");
+                }
+                navEnemy.isStopped = anime.GetCurrentAnimatorStateInfo(0).IsName("Attack");
                 break;
             case EnemyState.ALERTED:
                 seek = false;

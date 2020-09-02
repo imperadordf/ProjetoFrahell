@@ -6,8 +6,9 @@ public class GameManager : MonoBehaviour
 {
 
     public  Player playerscript;
-
+    private int vida = 3;
     public static GameManager instancie;
+    public UiScript uiscript;
     private void Awake()
     {
         if (!instancie)
@@ -20,15 +21,9 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         }
     }
-    // Start is called before the first frame update
-    void Start()
+
+    public void DanoSofre()
     {
-       
-    }
-   
-    // Update is called once per frame
-    void Update()
-    {
-       
+       StartCoroutine( uiscript.InterfaceDano());
     }
 }
