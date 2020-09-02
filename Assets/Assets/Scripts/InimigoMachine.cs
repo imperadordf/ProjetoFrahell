@@ -28,17 +28,24 @@ public class InimigoMachine : MonoBehaviour
     int i = 0;
     bool seek;
     // A distancia minima para seguir e a distancia maxima para seguir
+    [Range(0, 50)]
     public float distanceMaxSeek=20;
-    public float distanceMinSeek=10;
+    float distanceMinSeek=10;
     // Distancia da Audição
+    [Range(0, 30)]
     public float distanceSeekCorrendo=20;
     public float distanceSeekAndando=10;
-    public float distanceSeekAgachado=5;
+    public float distanceSeekAgachado=0;
     // ALERTA
     public float TimeAlerta;
     float timealerta;
+    //Distancia da visão
+    [Range(0, 30)]
+    public float distanceVision = 20;
+    public GameObject objectVision;
+
     // Start is called before the first frame update
-    
+
     void Start()
     {
         navEnemy = GetComponent<NavMeshAgent>();
@@ -72,7 +79,15 @@ public class InimigoMachine : MonoBehaviour
                         }
                     }
                     navEnemy.SetDestination(patrolObject[i].transform.position);
-
+                    RaycastHit hit1;
+                    if (Physics.Raycast(objectVision.transform.position, objectVision.transform.TransformDirection(Vector3.forward),out hit1, distanceVision))
+                    {
+                        Debug.DrawRay(objectVision.transform.position, objectVision.transform.TransformDirection(Vector3.forward) * hit1.distance, Color.yellow);
+                        if (hit1.collider.tag == "Player")
+                        {
+                            MudarState(EnemyState.SEEK);
+                        }
+                    }
 
                 }
                 break;
@@ -104,7 +119,16 @@ public class InimigoMachine : MonoBehaviour
                     timealerta -= Time.deltaTime;
                 }
 
-               
+                RaycastHit hit;
+                if (Physics.Raycast(objectVision.transform.position, objectVision.transform.TransformDirection(Vector3.forward), out hit, distanceVision))
+                {
+                    Debug.DrawRay(objectVision.transform.position, objectVision.transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+                    if (hit.collider.tag == "Player")
+                    {
+                        MudarState(EnemyState.SEEK);
+                    }
+                }
+
                 break;
         }
 
