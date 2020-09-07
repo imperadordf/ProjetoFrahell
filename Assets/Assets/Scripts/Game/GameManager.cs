@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     private int vida = 3;
     public static GameManager instancie;
     public UiScript uiscript;
+    public GameObject inventarioCanvas;
+   public bool ativarInventario;
     private void Awake()
     {
         if (!instancie)
@@ -21,7 +23,21 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         }
     }
+    private void Update()
+    {
+        
 
+        if (ativarInventario)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+    }
     public void DanoSofre()
     {
        StartCoroutine( uiscript.InterfaceDano());
