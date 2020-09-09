@@ -31,11 +31,13 @@ public class GameManager : MonoBehaviour
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0;
         }
         else
         {
             Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+             Cursor.visible = false;
+            Time.timeScale = 1;
         }
     }
     public void DanoSofre()

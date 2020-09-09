@@ -8,10 +8,17 @@ public class Item : MonoBehaviour
     public string textItem;
     public string nomedoItem;
     public Sprite imagemItem;
-    
+    public GameObject itemObject;
+    public RenderTexture texture2dCanvas;
     public  virtual void UsarItem()
     {
 
+    }
+
+    public  virtual RenderTexture ExpandirItem()
+    {
+        
+        return texture2dCanvas;
     }
 
 }

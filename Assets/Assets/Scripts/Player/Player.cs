@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     Vector3 velocity;
     //Camera em Pé e Camera Agachado
     public Camera cameraPe;
-    public Camera cameraAgacha;
+    
     public EstadoPlayer state;
     //Variavel do Usuario
     bool isSpriting,isCrouch,isIdle;
@@ -32,13 +32,14 @@ public class Player : MonoBehaviour
     void Start()
     {
         animator_Player = GetComponent<Animator>();
-        Cursor.lockState = CursorLockMode.Locked;
+       Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     { 
+       
         //Entrada do Usuario 
          x = Input.GetAxis("Horizontal")*100*Time.deltaTime;
          y = Input.GetAxis("Vertical")*100* Time.deltaTime;

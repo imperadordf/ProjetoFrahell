@@ -9,4 +9,10 @@ public class CameraItem : Item
     {
         base.UsarItem();
     }
+
+    public override RenderTexture ExpandirItem()
+    {
+        return base.ExpandirItem();
+
+    }
 }

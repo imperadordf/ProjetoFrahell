@@ -10,6 +10,8 @@ public class GerenciadorItem : MonoBehaviour
     public  TextMeshProUGUI textItem;
     public Image imageItem;
     public GameObject inventarioCanvas;
+    Item itemSelecionado;
+    public RawImage itemExpandir;
     private void Awake()
     {
         if (!instacie)
@@ -55,5 +57,19 @@ public class GerenciadorItem : MonoBehaviour
     {
         textItem.text = item.textItem;
         imageItem.sprite = item.imagemItem;
+        itemSelecionado = item;
+    }
+
+    public void UsarItem()
+    {
+       
+        itemSelecionado.UsarItem();
+    }
+
+    public void ExpandirItem()
+    {
+        Instantiate(itemSelecionado.itemObject, new Vector3(0, 0, 0), Quaternion.identity);
+        itemExpandir.texture = itemSelecionado.texture2dCanvas;
+        itemExpandir.gameObject.SetActive(true);
     }
 }
