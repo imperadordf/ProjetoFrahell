@@ -12,6 +12,7 @@ public class GerenciadorItem : MonoBehaviour
     public GameObject inventarioCanvas;
     Item itemSelecionado;
     public RawImage itemExpandir;
+    GameObject itemObjectInstancie;
     private void Awake()
     {
         if (!instacie)
@@ -61,15 +62,21 @@ public class GerenciadorItem : MonoBehaviour
     }
 
     public void UsarItem()
-    {
-       
+    {   
         itemSelecionado.UsarItem();
     }
 
     public void ExpandirItem()
     {
-        Instantiate(itemSelecionado.itemObject, new Vector3(0, 0, 0), Quaternion.identity);
+        itemObjectInstancie = Instantiate(itemSelecionado.itemObject, new Vector3(0, 0, 0), Quaternion.identity);
         itemExpandir.texture = itemSelecionado.texture2dCanvas;
         itemExpandir.gameObject.SetActive(true);
+    }
+
+    public void ExpandirItemSair()
+    {
+        itemExpandir.gameObject.SetActive(false);
+        Destroy(itemObjectInstancie);
+
     }
 }
