@@ -45,7 +45,7 @@ public class GerenciadorItem : MonoBehaviour
     {
         foreach(ButtonItem itens in listButtonitens)
         {
-            if (itens.RetornItem() == null)
+            if (itens.RetornItem()==null)
             {
                 itens.RecebeItem(item);
                 break;

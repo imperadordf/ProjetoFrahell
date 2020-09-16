@@ -8,7 +8,7 @@ public class RaycastMouse : MonoBehaviour
     public LayerMask layer;
     Image mouseImagem;
     public Camera cam;
-
+    
     private void Start()
     {
         mouseImagem = GetComponent<Image>();
@@ -23,8 +23,11 @@ public class RaycastMouse : MonoBehaviour
             mouseImagem.color = Color.red;
             if (Input.GetKeyDown(KeyCode.E))
             {
-                GerenciadorItem.instacie.ReceberItem(hit.collider.GetComponent<Item>());
+                Item item = new Item();
+                item = hit.collider.GetComponent<GetItem>().ItemPrefab.GetComponent<Item>();
+                GerenciadorItem.instacie.ReceberItem(item);
                 Destroy(hit.collider.gameObject);
+                
             }
         }
         else

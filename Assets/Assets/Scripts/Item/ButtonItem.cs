@@ -5,13 +5,18 @@ using UnityEngine.UI;
 
 public class ButtonItem : MonoBehaviour
 {
-    private Item item;
+    public Item item;
     public Image imagemitem;
     // Start is called before the first frame update
 
-    
+
+    private void Start()
+    {
+        print(item + "oi");
+    }
     public void RecebeItem(Item item)
     {
+        
         this.item = item;
         imagemitem.sprite = item.imagemItem;
     }

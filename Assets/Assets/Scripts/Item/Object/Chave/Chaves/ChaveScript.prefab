@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4669596690143369783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3258686230206596200}
+  - component: {fileID: 6656532500274363603}
+  m_Layer: 0
+  m_Name: ChaveScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3258686230206596200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4669596690143369783}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.38, y: 1.26, z: -20.71}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6656532500274363603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4669596690143369783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb3947f1915a6f46b64a1afc3cb90cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textItem: Abre a Porta
+  nomedoItem: Chave
+  imagemItem: {fileID: 21300000, guid: d186176155fd6ac44a21cbbc5f489beb, type: 3}
+  itemObject: {fileID: 55988275587006604, guid: 827afbba89c341d41981f3d674424114,
+    type: 3}
+  texture2dCanvas: {fileID: 8400000, guid: 1d28d8b1a6a4d1b4ba199a52f7425e31, type: 2}

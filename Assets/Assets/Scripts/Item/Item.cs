@@ -10,6 +10,8 @@ public class Item : MonoBehaviour
     public Sprite imagemItem;
     public GameObject itemObject;
     public RenderTexture texture2dCanvas;
+    
+    
     public  virtual void UsarItem()
     {
 
