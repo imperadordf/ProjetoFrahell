@@ -9,6 +9,7 @@ public class MouseLook : MonoBehaviour
     public Transform playerTransforme;
     public Player scriptPlayer;
     public float xRotation=0;
+    public Transform pescoco;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,5 +30,10 @@ public class MouseLook : MonoBehaviour
         
         playerTransforme.Rotate(Vector3.up * mouseX);
         scriptPlayer.AnimationRotation(mouseX);
+    }
+
+    public void Morreu()
+    {
+        transform.SetParent(pescoco);
     }
 }

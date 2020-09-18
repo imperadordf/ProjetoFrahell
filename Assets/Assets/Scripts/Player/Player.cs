@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
 
     private Transform playerposition;
     // Start is called before the first frame update
-
+    public MouseLook mousePlayer;
     public Item itemPlayer;
     public Transform PlayerPosition
     {
@@ -121,6 +121,8 @@ public class Player : MonoBehaviour
                     MudarState(EstadoPlayer.IDLE);
                 }
                 break;
+            case EstadoPlayer.DEATH:
+                break;
         }
 
     }
@@ -144,6 +146,8 @@ public class Player : MonoBehaviour
             case EstadoPlayer.RUN:
                 isSpriting = Input.GetKey(KeyCode.LeftShift);
                 isIdle = false;
+                break;
+            case EstadoPlayer.DEATH:
                 break;
         }
         ParametrosAnimator();
@@ -169,6 +173,13 @@ public class Player : MonoBehaviour
         return state;
     }
 
+    public void Morrer()
+    {
+        animator_Player.SetTrigger("Dead");
+        MudarState(EstadoPlayer.DEATH);
+        mousePlayer.Morreu();
+        mousePlayer.enabled = false;
+    }
 
 }
 
@@ -177,6 +188,7 @@ public enum EstadoPlayer
     WALK,
     RUN,
     CROUCHED,
-    IDLE
+    IDLE,
+    DEATH
 
 }

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject inventarioCanvas;
    public bool ativarInventario;
     public bool portaOn;
+    bool morreu;
     private void Awake()
     {
         if (!instancie)
@@ -40,7 +41,17 @@ public class GameManager : MonoBehaviour
     }
     public void DanoSofre()
     {
-       StartCoroutine( uiscript.InterfaceDano());
+      
+        if (vida <= 0 && !morreu)
+        {
+            playerscript.Morrer();
+            morreu = true;
+        }
+        else
+        {
+            StartCoroutine(uiscript.InterfaceDano());
+            vida--;
+        }
     }
 
 

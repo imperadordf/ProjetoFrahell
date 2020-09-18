@@ -532,6 +532,11 @@ PrefabInstance:
       propertyPath: scriptPlayer
       value: 
       objectReference: {fileID: 1379875191}
+    - target: {fileID: 5213494226197173730, guid: 90b65d8b0af1a6446a9b66887a13be94,
+        type: 3}
+      propertyPath: pescoco
+      value: 
+      objectReference: {fileID: 671937991}
     - target: {fileID: 6333802639587890841, guid: 90b65d8b0af1a6446a9b66887a13be94,
         type: 3}
       propertyPath: m_AllowDynamicResolution
@@ -2665,6 +2670,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!4 &671937991 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8698292754682191426, guid: 90b65d8b0af1a6446a9b66887a13be94,
+    type: 3}
+  m_PrefabInstance: {fileID: 56571140}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &674365501
 GameObject:
   m_ObjectHideFlags: 0
