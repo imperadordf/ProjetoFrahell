@@ -12,7 +12,7 @@ public class Item : MonoBehaviour
     public RenderTexture texture2dCanvas;
     
     
-    public  virtual void UsarItem()
+    public  virtual void UsarItem(VariavelGames vargeral)
     {
 
     }

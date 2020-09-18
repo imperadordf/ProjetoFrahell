@@ -13,6 +13,10 @@ public class GerenciadorItem : MonoBehaviour
     Item itemSelecionado;
     public RawImage itemExpandir;
     GameObject itemObjectInstancie;
+
+    // Verificador se esta dentro da area para usar o Item
+    public bool useritemArea = false;
+    public VariavelGames variaveGeral = new VariavelGames();
     private void Awake()
     {
         if (!instacie)
@@ -56,14 +60,16 @@ public class GerenciadorItem : MonoBehaviour
 
     public void ClicouItem(Item item)
     {
+        itemSelecionado = item;
         textItem.text = item.textItem;
         imageItem.sprite = item.imagemItem;
         itemSelecionado = item;
     }
 
     public void UsarItem()
-    {   
-        itemSelecionado.UsarItem();
+    {
+        if(useritemArea)
+        itemSelecionado.UsarItem(variaveGeral);
     }
 
     public void ExpandirItem()
@@ -79,4 +85,6 @@ public class GerenciadorItem : MonoBehaviour
         Destroy(itemObjectInstancie);
 
     }
+
+   
 }

@@ -11,17 +11,15 @@ public class GameManager : MonoBehaviour
     public UiScript uiscript;
     public GameObject inventarioCanvas;
    public bool ativarInventario;
+    public bool portaOn;
     private void Awake()
     {
         if (!instancie)
         {
             instancie = this;
-            DontDestroyOnLoad(this);
+            
         }
-        else
-        {
-            Destroy(this);
-        }
+        
     }
     private void Update()
     {
@@ -44,4 +42,6 @@ public class GameManager : MonoBehaviour
     {
        StartCoroutine( uiscript.InterfaceDano());
     }
+
+
 }

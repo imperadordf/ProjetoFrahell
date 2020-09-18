@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class RaycastMouse : MonoBehaviour
 {
     public LayerMask layer;
-    Image mouseImagem;
+    public Image mouseImagem;
     public Camera cam;
     
     private void Start()
     {
-        mouseImagem = GetComponent<Image>();
+       
     }
     private void FixedUpdate()
     {
@@ -23,16 +23,53 @@ public class RaycastMouse : MonoBehaviour
             mouseImagem.color = Color.red;
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Item item = new Item();
-                item = hit.collider.GetComponent<GetItem>().ItemPrefab.GetComponent<Item>();
-                GerenciadorItem.instacie.ReceberItem(item);
-                Destroy(hit.collider.gameObject);
+                if (hit.collider.tag == "Item")
+                {
+                    Item item = new Item();
+                    item = hit.collider.GetComponent<GetItem>().ItemPrefab.GetComponent<Item>();
+                    GerenciadorItem.instacie.ReceberItem(item);
+                    Destroy(hit.collider.gameObject);
+                    mouseImagem.color = Color.red;
+                }
+                else if (hit.collider.tag=="Porta" )
+                {
+                    PortaScript portascript = hit.collider.GetComponent<PortaScript>();
+                    GerenciadorItem.instacie.useritemArea = true;
+                    if (portascript.locked)
+                    {
+                        GerenciadorItem.instacie.variaveGeral.scriptPorta = portascript;
+                    }
+                    else
+                    {
+                        hit.collider.GetComponent<PortaScript>().OpenTheDoorOurClose();
+                    }
+                    
+                }
+
                 
+
             }
         }
         else
         {
             mouseImagem.color = Color.white;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Porta"))
+        {
+            GerenciadorItem.instacie.variaveGeral.scriptPorta = other.GetComponent<PortaScript>();
+            GerenciadorItem.instacie.useritemArea = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Porta"))
+        {
+            GerenciadorItem.instacie.useritemArea = false;
         }
     }
 }

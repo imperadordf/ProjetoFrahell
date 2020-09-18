@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
 
     private Transform playerposition;
     // Start is called before the first frame update
+
+    public Item itemPlayer;
     public Transform PlayerPosition
     {
         get
@@ -166,6 +168,8 @@ public class Player : MonoBehaviour
     {
         return state;
     }
+
+
 }
 
 public enum EstadoPlayer

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ChaveItem : Item
 {
-    public override void UsarItem()
+    public override void UsarItem(VariavelGames varGeral)
     {
-        base.UsarItem();
+        varGeral.scriptPorta.locked = false;
     }
 
     public override RenderTexture ExpandirItem()
