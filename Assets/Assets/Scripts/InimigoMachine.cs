@@ -151,7 +151,7 @@ public class InimigoMachine : MonoBehaviour
                 timealerta = TimeAlerta;
                 navEnemy.speed = 2;
                 seek = true;
-                if (Vector3.Distance(transform.position, PositionPlayer.position) <= 1 && !anime.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+                if (Vector3.Distance(transform.position, PositionPlayer.position) <= 2 && !anime.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
                 {
                     anime.SetTrigger("Attack");
                 }
