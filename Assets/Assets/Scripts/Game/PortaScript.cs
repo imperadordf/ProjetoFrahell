@@ -4,19 +4,16 @@ using UnityEngine;
 
 public class PortaScript : MonoBehaviour
 {
-    Animator anime;
+    public Animator anime;
     
     public bool locked;
-    private void Start()
-    {
-        anime = GetComponent<Animator>();
-    }
+    
 
     public  void OpenTheDoorOurClose()
     {
         if (!locked)
         {
-            if (!anime.GetCurrentAnimatorStateInfo(0).IsName("PortaAbre"))
+            if (!anime.GetCurrentAnimatorStateInfo(0).IsName("Porta_Abre"))
             {
                 anime.SetTrigger("Open");
             }
