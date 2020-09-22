@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     Vector3 velocity;
     //Camera em Pé e Camera Agachado
     public Camera cameraPe;
-    public Camera cameraAgacha;
+    
     public EstadoPlayer state;
     //Variavel do Usuario
     bool isSpriting,isCrouch,isIdle;
@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
 
     private Transform playerposition;
     // Start is called before the first frame update
+    public MouseLook mousePlayer;
+    public Item itemPlayer;
     public Transform PlayerPosition
     {
         get
@@ -32,13 +34,14 @@ public class Player : MonoBehaviour
     void Start()
     {
         animator_Player = GetComponent<Animator>();
-        Cursor.lockState = CursorLockMode.Locked;
+       Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     { 
+       
         //Entrada do Usuario 
          x = Input.GetAxis("Horizontal")*100*Time.deltaTime;
          y = Input.GetAxis("Vertical")*100* Time.deltaTime;
@@ -118,6 +121,8 @@ public class Player : MonoBehaviour
                     MudarState(EstadoPlayer.IDLE);
                 }
                 break;
+            case EstadoPlayer.DEATH:
+                break;
         }
 
     }
@@ -142,6 +147,8 @@ public class Player : MonoBehaviour
                 isSpriting = Input.GetKey(KeyCode.LeftShift);
                 isIdle = false;
                 break;
+            case EstadoPlayer.DEATH:
+                break;
         }
         ParametrosAnimator();
         state = newState;
@@ -165,6 +172,15 @@ public class Player : MonoBehaviour
     {
         return state;
     }
+
+    public void Morrer()
+    {
+        animator_Player.SetTrigger("Dead");
+        MudarState(EstadoPlayer.DEATH);
+        mousePlayer.Morreu();
+        mousePlayer.enabled = false;
+    }
+
 }
 
 public enum EstadoPlayer
@@ -172,6 +188,7 @@ public enum EstadoPlayer
     WALK,
     RUN,
     CROUCHED,
-    IDLE
+    IDLE,
+    DEATH
 
 }

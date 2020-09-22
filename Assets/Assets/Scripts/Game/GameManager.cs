@@ -9,21 +9,50 @@ public class GameManager : MonoBehaviour
     private int vida = 3;
     public static GameManager instancie;
     public UiScript uiscript;
+    public GameObject inventarioCanvas;
+   public bool ativarInventario;
+    public bool portaOn;
+    bool morreu;
     private void Awake()
     {
         if (!instancie)
         {
             instancie = this;
-            DontDestroyOnLoad(this);
+            
+        }
+        
+    }
+    private void Update()
+    {
+        
+
+        if (ativarInventario)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0;
         }
         else
         {
-            Destroy(this);
+            Cursor.lockState = CursorLockMode.Locked;
+             Cursor.visible = false;
+            Time.timeScale = 1;
+        }
+    }
+    public void DanoSofre()
+    {
+      
+        if (vida <= 0 && !morreu)
+        {
+            playerscript.Morrer();
+            morreu = true;
+        }
+        else
+        {
+            StartCoroutine(uiscript.InterfaceDano());
+            vida--;
         }
     }
 
-    public void DanoSofre()
-    {
-       StartCoroutine( uiscript.InterfaceDano());
-    }
+
 }
