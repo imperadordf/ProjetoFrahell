@@ -1073,6 +1073,7 @@ MonoBehaviour:
   playerTransforme: {fileID: 1981143648537265103}
   scriptPlayer: {fileID: 5648343740432618871}
   xRotation: 0
+  pescoco: {fileID: 0}
 --- !u!1 &4105810714852936795
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,6 +1088,7 @@ GameObject:
   - component: {fileID: 2263058542061649228}
   - component: {fileID: 140877230608921587}
   - component: {fileID: 2293468079441803651}
+  - component: {fileID: 2290333761414499156}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -1179,10 +1181,10 @@ CapsuleCollider:
   m_Material: {fileID: 13400000, guid: 38ac6464cd47c8c4b9f894ef2419b520, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.2
   m_Height: 1.8299164
   m_Direction: 1
-  m_Center: {x: 0, y: 0.9350417, z: 0}
+  m_Center: {x: 0, y: 0.9350417, z: -0.04}
 --- !u!114 &2293468079441803651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1200,6 +1202,19 @@ MonoBehaviour:
     m_Bits: 1024
   mouseImagem: {fileID: 0}
   cam: {fileID: 6333802639587890841}
+--- !u!65 &2290333761414499156
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4105810714852936795}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15, y: 0.09, z: 0.2}
+  m_Center: {x: 0, y: 1.53, z: 0.54}
 --- !u!1 &4412081017467959633
 GameObject:
   m_ObjectHideFlags: 0
