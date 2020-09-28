@@ -544,7 +544,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23788
+  m_Name: pb_Mesh18796
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4274,6 +4274,16 @@ PrefabInstance:
       propertyPath: patrolObject.Array.data[3]
       value: 
       objectReference: {fileID: 326848584}
+    - target: {fileID: 2664853609138746565, guid: 5115944193493ca489e34c833c9412e1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0033448539
+      objectReference: {fileID: 0}
+    - target: {fileID: 2664853609138746565, guid: 5115944193493ca489e34c833c9412e1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.032482337
+      objectReference: {fileID: 0}
     - target: {fileID: 6755208639382891429, guid: 5115944193493ca489e34c833c9412e1,
         type: 3}
       propertyPath: m_LocalPosition.x
