@@ -35,10 +35,15 @@ public class GerenciadorItem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            GameManager.instancie.ativarInventario = !GameManager.instancie.ativarInventario;
-            
-            inventarioCanvas.SetActive(GameManager.instancie.ativarInventario);
+            FecharTela();
         }
+
+    }
+
+    public void FecharTela()
+    {
+        GameManager.instancie.ativarInventario = !GameManager.instancie.ativarInventario;
+        inventarioCanvas.SetActive(GameManager.instancie.ativarInventario);
     }
     public void ReceberItem(Item item)
     {

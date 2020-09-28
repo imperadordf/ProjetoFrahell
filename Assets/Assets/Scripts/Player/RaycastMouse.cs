@@ -38,10 +38,12 @@ public class RaycastMouse : MonoBehaviour
                     if (portascript.locked)
                     {
                         GerenciadorItem.instacie.variaveGeral.scriptPorta = portascript;
+                        hit.collider.GetComponent<PortaScript>().OpenTheDoorOurClose();
                     }
                     else
                     {
                         hit.collider.GetComponent<PortaScript>().OpenTheDoorOurClose();
+
                     }
                     
                 }
