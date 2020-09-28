@@ -43,8 +43,8 @@ public class Player : MonoBehaviour
     { 
        
         //Entrada do Usuario 
-         x = Input.GetAxis("Horizontal")*100*Time.deltaTime;
-         y = Input.GetAxis("Vertical")*100* Time.deltaTime;
+         x = Input.GetAxis("Horizontal");
+         y = Input.GetAxis("Vertical");
         
         isCrouch = Input.GetKey(KeyCode.LeftControl);
         print(animator_Player.GetFloat("X")+"eixo X");
