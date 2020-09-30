@@ -178,10 +178,14 @@ public class Player : MonoBehaviour
     {
         animator_Player.SetTrigger("Dead");
         MudarState(EstadoPlayer.DEATH);
-        mousePlayer.Morreu();
         mousePlayer.enabled = false;
+        this.enabled = false;
     }
 
+    public void MorrerCamera()
+    {
+        mousePlayer.Morreu();
+    }
 }
 
 public enum EstadoPlayer

@@ -37,6 +37,8 @@ public class MouseLook : MonoBehaviour
 
     public void Morreu()
     {
+        //pescoco.transform.position = new Vector3(0, 0, 0);
         transform.SetParent(pescoco);
+        
     }
 }
