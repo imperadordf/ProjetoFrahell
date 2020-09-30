@@ -11,7 +11,13 @@ public class Item : MonoBehaviour
     public GameObject itemObject;
     public RenderTexture texture2dCanvas;
     public ItemName nomeItem;
-    
+    public virtual bool Intertive 
+    {
+        get
+        {
+            return false;
+        }
+    }
     public  virtual void UsarItem(VariavelGames vargeral)
     {
 

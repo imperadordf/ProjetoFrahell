@@ -73,8 +73,13 @@ public class GerenciadorItem : MonoBehaviour
 
     public void UsarItem()
     {
-        if(useritemArea)
-        itemSelecionado.UsarItem(variaveGeral);
+        if (useritemArea && itemSelecionado.Intertive)
+        {
+            itemSelecionado.UsarItem(variaveGeral);
+            FecharTela();
+        }
+        
+
     }
 
     public void ExpandirItem()
