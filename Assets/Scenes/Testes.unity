@@ -471,6 +471,11 @@ PrefabInstance:
       propertyPath: m_UpdateMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 1c485166f91e3c14bb807cb2a93036dc,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 03e26c37abb1efe4ebdba1805e050117, type: 2}
     - target: {fileID: -4216859302048453862, guid: 1c485166f91e3c14bb807cb2a93036dc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -529,7 +534,12 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 1c485166f91e3c14bb807cb2a93036dc,
         type: 3}
       propertyPath: m_Name
-      value: Ch30_nonPBR
+      value: ReceptaculoTeste
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1c485166f91e3c14bb807cb2a93036dc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c485166f91e3c14bb807cb2a93036dc, type: 3}
@@ -632,7 +642,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh62588
+  m_Name: pb_Mesh18814
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2043,6 +2053,38 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &894631684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894631682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48d8201a20bcd54d9a6bcb514cd9a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  patrolObject:
+  - {fileID: 209518021}
+  - {fileID: 987386683}
+  navEnemy: {fileID: 0}
+  PlayerScript: {fileID: 0}
+  distanceMaxSeek: 20
+  distanceSeekCorrendo: 20
+  distanceSeekAndando: 10
+  distanceSeekAgachado: 0
+  TimeAlerta: 0
+  distanceVision: 8.5
+  objectVision: {fileID: 1416579250}
+  oi: {fileID: 0}
+--- !u!4 &894631686 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 1c485166f91e3c14bb807cb2a93036dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 99489880}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &928375997
 GameObject:
   m_ObjectHideFlags: 0
@@ -2932,6 +2974,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemPrefab: {fileID: 2255969615365248998, guid: 9fd543c39fa632b47b20bce3610f614e,
     type: 3}
+--- !u!1 &1416579250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1416579251}
+  m_Layer: 0
+  m_Name: Vision
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1416579251
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416579250}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.64, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 894631686}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1446011608
 GameObject:
   m_ObjectHideFlags: 0
@@ -3818,6 +3890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inimigosScripts:
   - {fileID: 1605969967}
+  - {fileID: 894631684}
 --- !u!4 &1594031308
 Transform:
   m_ObjectHideFlags: 0

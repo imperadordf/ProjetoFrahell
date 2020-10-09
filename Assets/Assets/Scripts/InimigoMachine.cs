@@ -7,30 +7,18 @@ public class InimigoMachine : MonoBehaviour
 {
     public EnemyState state;
     public List<GameObject> patrolObject;
-    private NavMeshAgent navEnemy;
-    private Animator anime;
-    private Player scriptplayer;
-    public Transform PositionPlayer { set; get; }
-    public Player PlayerScript
-    {
-        get
-        {
-            return scriptplayer;
-        }
-        set
-        {
-            if (!scriptplayer)
-            {
-                scriptplayer = value;
-            }
-        }
-    }
-    int i = 0;
-    bool seek;
+    public NavMeshAgent navEnemy;
+    public static Animator anime;
+    
+    public virtual Transform PositionPlayer { set; get; }
+    public Player PlayerScript;
+    
+    public static int i = 0;
+    public static bool seek;
     // A distancia minima para seguir e a distancia maxima para seguir
     [Range(0, 50)]
     public float distanceMaxSeek=20;
-    float distanceMinSeek=10;
+    public static float distanceMinSeek=10;
     // Distancia da Audição
     [Range(0, 30)]
     public float distanceSeekCorrendo=20;
@@ -38,7 +26,7 @@ public class InimigoMachine : MonoBehaviour
     public float distanceSeekAgachado=0;
     // ALERTA
     public float TimeAlerta;
-    float timealerta;
+    public static float timealerta;
     //Distancia da visão
     [Range(0, 30)]
     public float distanceVision = 20;
@@ -48,16 +36,25 @@ public class InimigoMachine : MonoBehaviour
 
     void Start()
     {
+        PegarComponentes();
+    }
+
+    public virtual void PegarComponentes()
+    {
         navEnemy = GetComponent<NavMeshAgent>();
         anime = GetComponent<Animator>();
         StartCoroutine(RadarAuditivo());
         timealerta = TimeAlerta;
         state = EnemyState.PATROL;
     }
-
     // Update is called once per frame
-   
+
     void FixedUpdate()
+    {
+        MaquinaDeEstado();
+    }
+
+    public virtual void MaquinaDeEstado()
     {
         switch (state)
         {
@@ -80,7 +77,7 @@ public class InimigoMachine : MonoBehaviour
                     }
                     navEnemy.SetDestination(patrolObject[i].transform.position);
                     RaycastHit hit1;
-                    if (Physics.Raycast(objectVision.transform.position, objectVision.transform.TransformDirection(Vector3.forward),out hit1, distanceVision))
+                    if (Physics.Raycast(objectVision.transform.position, objectVision.transform.TransformDirection(Vector3.forward), out hit1, distanceVision))
                     {
                         Debug.DrawRay(objectVision.transform.position, objectVision.transform.TransformDirection(Vector3.forward) * hit1.distance, Color.yellow);
                         if (hit1.collider.tag == "Player")
@@ -97,12 +94,12 @@ public class InimigoMachine : MonoBehaviour
                 {
                     MudarState(EnemyState.ALERTED);
                 }
-                else 
+                else
                 {
                     MudarState(EnemyState.SEEK);
                 }
                 navEnemy.SetDestination(PositionPlayer.position);
-                
+
                 break;
             //Maquina de estado Alerta
             case EnemyState.ALERTED:
@@ -110,7 +107,7 @@ public class InimigoMachine : MonoBehaviour
                 {
                     MudarState(EnemyState.SEEK);
                 }
-                else if(timealerta<=0)
+                else if (timealerta <= 0)
                 {
                     MudarState(EnemyState.PATROL);
                 }
@@ -135,8 +132,7 @@ public class InimigoMachine : MonoBehaviour
         anime.SetFloat("Velocity", Mathf.Abs(navEnemy.velocity.magnitude));
         anime.SetBool("Seeking", seek);
     }
-
-    private void MudarState(EnemyState newstate)
+    public virtual void MudarState(EnemyState newstate)
     {
 
         switch (newstate)
@@ -167,7 +163,7 @@ public class InimigoMachine : MonoBehaviour
     }
 
     //Sabe se o player esta correndo, andando ou agachado
-    IEnumerator RadarAuditivo()
+   public virtual IEnumerator RadarAuditivo()
     {
         while(true)
         {
