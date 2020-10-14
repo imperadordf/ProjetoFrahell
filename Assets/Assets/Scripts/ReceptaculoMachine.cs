@@ -9,8 +9,13 @@ public class ReceptaculoMachine : InimigoMachine
   
    
     public Player oi;
-   
 
+    float tempo;
+    public AudioClip [] audioclipSeek;
+    public AudioClip [] audioclipPatrol;
+    public AudioClip [] audioclipPatrolINSeek;
+
+     AudioSource audioReceptaculo;
     private void Start()
     {
         PegarComponentes();
@@ -24,6 +29,7 @@ public class ReceptaculoMachine : InimigoMachine
         timealerta = TimeAlerta;
         state = EnemyState.PATROL;
         oi = PlayerScript;
+        audioReceptaculo = GetComponent<AudioSource>();
     }
     private void FixedUpdate()
     {
@@ -109,6 +115,8 @@ public class ReceptaculoMachine : InimigoMachine
         anime.SetBool("Seeking", seek);
     }
 
+     
+    
     public override IEnumerator RadarAuditivo()
     {
         while (true)
