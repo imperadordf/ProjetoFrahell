@@ -3,38 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ReceptaculoMachine : InimigoMachine
+public class Ocultista : InimigoMachine
 {
-   
-  
-   
-    public Player oi;
 
-    float tempo;
-    public AudioClip [] audioclipSeek;
-    public AudioClip [] audioclipPatrol;
-    public AudioClip [] audioclipPatrolINSeek;
-
-     AudioSource audioReceptaculo;
-    private void Start()
+    void Start()
     {
         PegarComponentes();
     }
 
     public override void PegarComponentes()
     {
-        audioReceptaculo = GetComponent<AudioSource>();
         base.PegarComponentes();
     }
-    private void FixedUpdate()
+
+    void FixedUpdate()
     {
         MaquinaDeEstado();
         anime.SetFloat("Velocity", Mathf.Abs(navEnemy.velocity.magnitude));
         anime.SetBool("Seeking", seek);
     }
-
     public override void MaquinaDeEstado()
     {
+
         switch (state)
         {
             //Maquina de estado Patrol
@@ -107,15 +97,6 @@ public class ReceptaculoMachine : InimigoMachine
 
                 break;
         }
-
-       
-    }
-
-     
-    
-    public override IEnumerator RadarAuditivo()
-    {
-        return base.RadarAuditivo();
     }
 
     public override void MudarState(EnemyState newstate)
@@ -123,14 +104,14 @@ public class ReceptaculoMachine : InimigoMachine
         switch (newstate)
         {
             case EnemyState.PATROL:
-                navEnemy.speed = 1;
+                navEnemy.speed = 2;
                 seek = false;
                 timealerta = TimeAlerta;
                 navEnemy.isStopped = false;
                 break;
             case EnemyState.SEEK:
                 timealerta = TimeAlerta;
-                navEnemy.speed = 2;
+                navEnemy.speed = 3;
                 seek = true;
                 if (Vector3.Distance(transform.position, PositionPlayer.position) <= 2 && !anime.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
                 {
@@ -145,5 +126,10 @@ public class ReceptaculoMachine : InimigoMachine
         }
 
         state = newstate;
+    }
+
+    public override IEnumerator RadarAuditivo()
+    {
+        return base.RadarAuditivo();
     }
 }
