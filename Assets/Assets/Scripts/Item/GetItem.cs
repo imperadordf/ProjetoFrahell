@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class GetItem : MonoBehaviour
 {
-    public GameObject ItemPrefab;
-    
-    public GameObject GetItemObject()
+   
+    public Item item;
+    public Item GetItemObject()
     {
-        return ItemPrefab;
+        return item;
     }
 }

@@ -25,8 +25,8 @@ public class RaycastMouse : MonoBehaviour
             {
                 if (hit.collider.tag == "Item")
                 {
-                    Item item = new Item();
-                    item = hit.collider.GetComponent<GetItem>().ItemPrefab.GetComponent<Item>();
+                    
+                    Item item = hit.collider.GetComponent<GetItem>().item;
                     GerenciadorItem.instacie.ReceberItem(item);
                     Destroy(hit.collider.gameObject);
                     mouseImagem.color = Color.red;

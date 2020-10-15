@@ -3,21 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Item : MonoBehaviour
+[CreateAssetMenu(fileName ="New Item",menuName ="Item")]
+public class Item : ScriptableObject
 {
     public string textItem;
     
     public Sprite imagemItem;
     public GameObject itemObject;
     public RenderTexture texture2dCanvas;
-    public ItemName nomeItem;
-    public virtual bool Intertive 
-    {
-        get
-        {
-            return false;
-        }
-    }
+    public ItemName nomeItem=ItemName.N_Interative;
+   
     public  virtual void UsarItem(VariavelGames vargeral)
     {
 
@@ -35,5 +30,5 @@ public enum ItemName
 {
     Camera,
     Chave,
-    Chave1
+    N_Interative
 }

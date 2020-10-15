@@ -73,12 +73,24 @@ public class GerenciadorItem : MonoBehaviour
 
     public void UsarItem()
     {
-        if (useritemArea && itemSelecionado.Intertive)
+        switch (itemSelecionado.nomeItem)
         {
-            itemSelecionado.UsarItem(variaveGeral);
-            FecharTela();
+            case ItemName.N_Interative:
+                break;
+            case ItemName.Camera:
+                FecharTela();
+                break;
+            case ItemName.Chave:
+                if (useritemArea)
+                {
+                    itemSelecionado.UsarItem(variaveGeral);
+                    FecharTela();
+                }
+                break;
+            default:
+                break;
+
         }
-        
 
     }
 
