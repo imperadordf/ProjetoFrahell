@@ -28,8 +28,10 @@ public class RaycastMouse : MonoBehaviour
                     
                     Item item = hit.collider.GetComponent<GetItem>().item;
                     GerenciadorItem.instacie.ReceberItem(item);
+                   // item.clipSom;
                     Destroy(hit.collider.gameObject);
                     mouseImagem.color = Color.red;
+                    
                 }
                 else if (hit.collider.tag=="Porta" )
                 {

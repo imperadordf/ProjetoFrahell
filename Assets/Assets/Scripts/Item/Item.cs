@@ -12,6 +12,7 @@ public class Item : ScriptableObject
     public GameObject itemObject;
     public RenderTexture texture2dCanvas;
     public ItemName nomeItem=ItemName.N_Interative;
+    public AudioClip clipSom;
    
     public  virtual void UsarItem(VariavelGames vargeral)
     {
@@ -23,6 +24,8 @@ public class Item : ScriptableObject
         
         return texture2dCanvas;
     }
+
+   
 
 }
 

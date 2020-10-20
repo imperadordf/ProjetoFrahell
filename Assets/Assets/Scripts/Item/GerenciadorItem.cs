@@ -83,7 +83,7 @@ public class GerenciadorItem : MonoBehaviour
             case ItemName.Chave:
                 if (useritemArea)
                 {
-                    itemSelecionado.UsarItem(variaveGeral);
+                    variaveGeral.scriptPorta.locked = false;
                     FecharTela();
                 }
                 break;

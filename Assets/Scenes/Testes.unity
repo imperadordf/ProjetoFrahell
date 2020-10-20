@@ -247,6 +247,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 666701855483381445, guid: 90b65d8b0af1a6446a9b66887a13be94,
+        type: 3}
+      propertyPath: m_StepOffset
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 982192125021071841, guid: 90b65d8b0af1a6446a9b66887a13be94,
         type: 3}
       propertyPath: scriptPlayer
@@ -355,7 +360,7 @@ PrefabInstance:
     - target: {fileID: 2263058542061649228, guid: 90b65d8b0af1a6446a9b66887a13be94,
         type: 3}
       propertyPath: m_Interpolate
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2293468079441803651, guid: 90b65d8b0af1a6446a9b66887a13be94,
         type: 3}
