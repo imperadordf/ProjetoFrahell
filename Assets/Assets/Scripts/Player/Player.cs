@@ -47,8 +47,7 @@ public class Player : MonoBehaviour
          y = Input.GetAxis("Vertical")*5;
         
         isCrouch = Input.GetKey(KeyCode.LeftControl);
-        print(animator_Player.GetFloat("X")+"eixo X");
-        print(animator_Player.GetFloat("Y") + "eixo Y");
+       
         //Maquina de estado
         switch (state)
         {

@@ -15,7 +15,9 @@ public class ReceptaculoMachine : InimigoMachine
     public AudioClip [] audioclipPatrol;
     public AudioClip [] audioclipPatrolINSeek;
 
-     AudioSource audioReceptaculo;
+    public AudioSource audioReceptaculo;
+    public AudioSource AudioFundo;
+    bool seeking;
     private void Start()
     {
         PegarComponentes();
@@ -23,7 +25,7 @@ public class ReceptaculoMachine : InimigoMachine
 
     public override void PegarComponentes()
     {
-        audioReceptaculo = GetComponent<AudioSource>();
+        StartCoroutine(Falar());
         base.PegarComponentes();
     }
     private void FixedUpdate()
@@ -33,6 +35,32 @@ public class ReceptaculoMachine : InimigoMachine
         anime.SetBool("Seeking", seek);
     }
 
+    IEnumerator Falar()
+    {
+        while (true)
+        {
+            if (!audioReceptaculo.isPlaying)
+            {
+                yield return new WaitForSeconds(5);
+                switch (state)
+                {
+                    case EnemyState.PATROL:
+                        audioReceptaculo.clip = audioclipPatrol[Random.Range(0, audioclipPatrol.Length)];
+                        audioReceptaculo.Play();
+                        break;
+                    case EnemyState.SEEK:
+                        audioReceptaculo.clip = audioclipSeek[Random.Range(0, audioclipSeek.Length)];
+                        audioReceptaculo.Play();
+                        break;
+
+                }
+                    
+                
+            }
+            yield return new WaitForSeconds(Random.Range(6,13));
+        }
+       
+    }
     public override void MaquinaDeEstado()
     {
         switch (state)
@@ -42,6 +70,10 @@ public class ReceptaculoMachine : InimigoMachine
                 if (Vector3.Distance(transform.position, PositionPlayer.position) <= distanceMinSeek)
                 {
                     MudarState(EnemyState.SEEK);
+                    audioReceptaculo.Stop();
+                    audioReceptaculo.clip = audioclipPatrolINSeek[Random.Range(0, audioclipPatrolINSeek.Length)];
+                    if(!audioReceptaculo.isPlaying)
+                    audioReceptaculo.Play();
                 }
                 else
                 {
@@ -127,11 +159,20 @@ public class ReceptaculoMachine : InimigoMachine
                 seek = false;
                 timealerta = TimeAlerta;
                 navEnemy.isStopped = false;
+                AudioFundo.Stop();
+                seeking = false;
                 break;
             case EnemyState.SEEK:
                 timealerta = TimeAlerta;
                 navEnemy.speed = 2;
+                if (!seeking && !audioReceptaculo.isPlaying)
+                {
+                    AudioFundo.Play();
+                    print("Foi");
+                    seeking = true;
+                }
                 seek = true;
+                
                 if (Vector3.Distance(transform.position, PositionPlayer.position) <= 2 && !anime.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
                 {
                     anime.SetTrigger("Attack");
@@ -141,6 +182,8 @@ public class ReceptaculoMachine : InimigoMachine
             case EnemyState.ALERTED:
                 seek = false;
                 navEnemy.isStopped = true;
+                AudioFundo.Stop();
+                seeking = false;
                 break;
         }
 
