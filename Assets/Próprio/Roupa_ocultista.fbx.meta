@@ -3,7 +3,17 @@ guid: e108eb7f7b95581478d2ac9d245ad855
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: db079eba89b34194781b64c2a45be51b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Retopologia ocultista
+    second: {fileID: 2100000, guid: db079eba89b34194781b64c2a45be51b, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
