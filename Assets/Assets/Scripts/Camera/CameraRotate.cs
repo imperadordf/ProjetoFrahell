@@ -10,23 +10,26 @@ public class CameraRotate : MonoBehaviour
     public Camera cameraoi;
     private void Update()
     {
-        RaycastHit hit;
-        Ray ray = cameraoi.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(ray, out hit,layer))
+        if (Input.GetMouseButton(0))
         {
-           
-            float mouseX = Input.GetAxis("Mouse X") * velocidadeRotacao;
+            RaycastHit hit;
+            Ray ray = cameraoi.ScreenPointToRay(Input.mousePosition);
 
 
-            if (Input.GetMouseButton(0))
+            if (Physics.Raycast(ray, out hit, layer))
             {
+
+                float mouseX = Input.GetAxis("Mouse X") * velocidadeRotacao;
+
+
+
                 hit.collider.gameObject.transform.Rotate((new Vector3(0, 0, -mouseX)));
 
                 if (hit.collider.TryGetComponent<CameraScript>(out CameraScript camerascript))
                 {
                     camerascript.CameraRotate2(mouseX);
                 }
+
             }
         }
     }
