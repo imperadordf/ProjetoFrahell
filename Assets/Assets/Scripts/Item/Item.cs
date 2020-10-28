@@ -13,7 +13,7 @@ public class Item : ScriptableObject
     public RenderTexture texture2dCanvas;
     public ItemName nomeItem=ItemName.N_Interative;
     public AudioClip clipSom;
-   
+    public bool pegou;
     public  virtual void UsarItem(VariavelGames vargeral)
     {
 
@@ -26,7 +26,7 @@ public class Item : ScriptableObject
     }
 
    
-
+   
 }
 
 public enum ItemName
