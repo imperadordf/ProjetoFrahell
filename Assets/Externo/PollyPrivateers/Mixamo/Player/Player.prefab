@@ -1117,6 +1117,7 @@ Transform:
   - {fileID: 879692770079924503}
   - {fileID: 1662337508576168061}
   - {fileID: 8356078220796160397}
+  - {fileID: 1966810636679105936}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1154,7 +1155,7 @@ MonoBehaviour:
   cameraPe: {fileID: 6333802639587890841}
   state: 0
   mousePlayer: {fileID: 5213494226197173730}
-  itemPlayer: {fileID: 0}
+  SpawnItem: {fileID: 1966810636679105936}
 --- !u!54 &2263058542061649228
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2543,6 +2544,36 @@ Transform:
   - {fileID: 5797293257515647604}
   m_Father: {fileID: 6870826167049581377}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8089029718759749457
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1966810636679105936}
+  m_Layer: 9
+  m_Name: Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1966810636679105936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8089029718759749457}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.002, z: 1.333}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1981143648537265103}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8123834695798274385
 GameObject:

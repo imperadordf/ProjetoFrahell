@@ -17,7 +17,8 @@ public class Player : MonoBehaviour
     private Transform playerposition;
     // Start is called before the first frame update
     public MouseLook mousePlayer;
-    public Item itemPlayer;
+   
+    public Transform SpawnItem;
     public Transform PlayerPosition
     {
         get

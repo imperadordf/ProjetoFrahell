@@ -96,7 +96,7 @@ public class GerenciadorItem : MonoBehaviour
 
     public void ExpandirItem()
     {
-        itemObjectInstancie = Instantiate(itemSelecionado.itemObject, new Vector3(0, 0, 0), Quaternion.identity);
+        itemObjectInstancie = Instantiate(itemSelecionado.itemObject,GameManager.instancie.playerscript.SpawnItem.transform.position, Quaternion.identity);
         itemExpandir.texture = itemSelecionado.texture2dCanvas;
         itemExpandir.gameObject.SetActive(true);
     }
