@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1312821732456411929}
   - component: {fileID: 7270585961104762117}
   m_Layer: 10
-  m_Name: TurnoPortaInteractive
+  m_Name: TunelPortaInteractive
   m_TagString: Turnel
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -45,9 +45,9 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 632210108f1c8324c9e29ebdeffd336c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_CullingMode: 1
+  m_UpdateMode: 1
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -67,6 +67,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NomeDaFase: 
   anime: {fileID: 6347967833910787027}
+  isback: 0
+  rotationy: 0
+  animes: {fileID: 0}
 --- !u!65 &7270585961104762117
 BoxCollider:
   m_ObjectHideFlags: 0

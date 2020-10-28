@@ -298,8 +298,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 32.8, y: 0}
+  m_SizeDelta: {x: 90.4, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &38978733
 MonoBehaviour:
@@ -1142,6 +1142,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &180333806 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8096501722545355721, guid: ec84b1e916994e14ca3eefc22e16d523,
+    type: 3}
+  m_PrefabInstance: {fileID: 7758172875215330691}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &180333810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180333806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d186bf25e3563245af98a4d76ab0bce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NomeFase: Cena1
+  isback: 0
 --- !u!1 &184946015
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,8 +1888,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -7.700012}
-  m_SizeDelta: {x: 0, y: 15.5}
+  m_AnchoredPosition: {x: -2, y: -7.700012}
+  m_SizeDelta: {x: 36, y: 15.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &256033509
 MonoBehaviour:
@@ -2796,8 +2816,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -3.600006, y: 0}
+  m_SizeDelta: {x: 60, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &425751216
 MonoBehaviour:
@@ -5000,7 +5020,7 @@ RectTransform:
   m_Father: {fileID: 860937357}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.023333311}
+  m_AnchorMin: {x: 0, y: 0.02333343}
   m_AnchorMax: {x: 1, y: 0.9999999}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -9091,7 +9111,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1062332210}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.9766667
+  m_Size: 0.97666657
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9544,6 +9564,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 539728473}
     m_Modifications:
+    - target: {fileID: 1349016544257033549, guid: ec84b1e916994e14ca3eefc22e16d523,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1349016544257033549, guid: ec84b1e916994e14ca3eefc22e16d523,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1349016544257033549, guid: ec84b1e916994e14ca3eefc22e16d523,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1349016544257033549, guid: ec84b1e916994e14ca3eefc22e16d523,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 180333810}
+    - target: {fileID: 1349016544257033549, guid: ec84b1e916994e14ca3eefc22e16d523,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CarregaFase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1349016544257033549, guid: ec84b1e916994e14ca3eefc22e16d523,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5729755947545624742, guid: ec84b1e916994e14ca3eefc22e16d523,
         type: 3}
       propertyPath: m_LocalPosition.x
