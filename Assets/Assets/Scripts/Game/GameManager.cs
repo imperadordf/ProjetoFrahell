@@ -9,10 +9,12 @@ public class GameManager : MonoBehaviour
     private int vida = 3;
     public static GameManager instancie;
     public UiScript uiscript;
-    public GameObject inventarioCanvas;
+    
    public bool ativarInventario;
     public bool portaOn;
     bool morreu;
+    public bool carregandoFase;
+    
     private void Awake()
     {
         if (!instancie)
@@ -20,6 +22,11 @@ public class GameManager : MonoBehaviour
             instancie = this;
             
         }
+        
+    }
+
+    private void Start()
+    {
         
     }
     private void Update()

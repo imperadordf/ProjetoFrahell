@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99c289645b3ac214393f531a9d578fed, type: 3}
-  m_Name: Foto
+  m_Name: Cartao
   m_EditorClassIdentifier: 
-  textItem: "Um peda\xE7o da foto do meu Pai e com alguns numeros"
-  imagemItem: {fileID: 21300000, guid: 49fbbed25a3ea754093424dc127e13a2, type: 3}
-  itemObject: {fileID: 7353343710949164419, guid: b653f60eef5c9f946a0fc4f01842bfcb,
+  textItem: 
+  imagemItem: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  itemObject: {fileID: 4164839044770924563, guid: 087713baf9e6d784a85c03b02d04fba6,
     type: 3}
-  texture2dCanvas: {fileID: 8400000, guid: cdd3601935111e64d8964284a04c6474, type: 2}
+  texture2dCanvas: {fileID: 8400000, guid: f6a49fcf7d1eaf3438f6ebe406485089, type: 2}
   nomeItem: 2
   clipSom: {fileID: 0}

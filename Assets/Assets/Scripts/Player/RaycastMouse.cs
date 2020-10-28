@@ -18,7 +18,7 @@ public class RaycastMouse : MonoBehaviour
         RaycastHit hit;
 
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
-        if ((Physics.Raycast(ray, out hit, 2,layer)))
+        if ((Physics.Raycast(ray, out hit, 3,layer)))
         {
             mouseImagem.color = Color.red;
             if (Input.GetKeyDown(KeyCode.E))
@@ -48,6 +48,18 @@ public class RaycastMouse : MonoBehaviour
 
                     }
                     
+                }
+                else if (hit.collider.tag == "Turnel")
+                {
+                    hit.collider.GetComponent<CarregaFase>().PlayAnimation();
+                }
+                else if (hit.collider.tag == "TurnelTurnel")
+                {
+                    hit.collider.GetComponent<CarregaFaseTurnel>().CarregaFase();
+                }
+                else if (hit.collider.tag == "Puzzle")
+                {
+                    hit.collider.GetComponent<PuzzleRei>().PuzzleGo();
                 }
 
                 
