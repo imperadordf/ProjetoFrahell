@@ -14,6 +14,8 @@ public class Item : ScriptableObject
     public ItemName nomeItem=ItemName.N_Interative;
     public AudioClip clipSom;
     public bool pegou;
+    
+     
     public  virtual void UsarItem(VariavelGames vargeral)
     {
 
@@ -33,5 +35,7 @@ public enum ItemName
 {
     Camera,
     Chave,
-    N_Interative
+    N_Interative,
+    Cartao,
+    Foto1
 }

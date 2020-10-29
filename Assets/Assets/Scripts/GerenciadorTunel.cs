@@ -15,13 +15,12 @@ public class GerenciadorTunel : MonoBehaviour
         if (!ManageFase.instancie.voltando)
         {
 
-            player.SetPositionAndRotation(pos1.position, pos1.rotation);          
-           // playerAnimation.updateMode = AnimatorUpdateMode.AnimatePhysics;
+            player.SetPositionAndRotation(pos1.position, pos1.rotation);
         }
         else
         {
             player.SetPositionAndRotation(pos2.position, pos2.rotation);
-           // playerAnimation.updateMode = AnimatorUpdateMode.AnimatePhysics;
+
         }
     }
 }
