@@ -880,7 +880,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: MouseX
-    m_EventTreshold: -3
+    m_EventTreshold: -10
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5795671764690966499}
   m_Solo: 0
@@ -935,7 +935,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: MouseX
-    m_EventTreshold: 3
+    m_EventTreshold: 10
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -756385376756131168}
   m_Solo: 0
