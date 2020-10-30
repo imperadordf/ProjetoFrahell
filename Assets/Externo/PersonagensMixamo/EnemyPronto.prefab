@@ -3532,7 +3532,6 @@ GameObject:
   - component: {fileID: 3689945312497338079}
   - component: {fileID: 1785086509691994297}
   - component: {fileID: 1785086509691994298}
-  - component: {fileID: 1785086509691994299}
   m_Layer: 0
   m_Name: EnemyPronto
   m_TagString: Untagged
@@ -3614,31 +3613,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1785086509691994299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7774351704766011830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3f77dae97340ca40b9d51104c06df39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state: 0
-  patrolObject:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  distanceMaxSeek: 20
-  distanceSeekCorrendo: 10
-  distanceSeekAndando: 5
-  distanceSeekAgachado: 0
-  TimeAlerta: 7
-  distanceVision: 20
-  objectVision: {fileID: 1785086511461700266}
 --- !u!1 &7879311587197239138
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class Ocultista : InimigoMachine
 {
-
+    bool abriuPorta;
     void Start()
     {
         PegarComponentes();
@@ -35,14 +35,12 @@ public class Ocultista : InimigoMachine
                 }
                 else
                 {
-                    MudarState(EnemyState.PATROL);
-                    if (Vector3.Distance(transform.position, patrolObject[i].transform.position) < 2)
+
+                    if (Vector3.Distance(transform.position, patrolObject[i].transform.position) < 0.5f)
                     {
-                        i++;
-                        if (patrolObject.Count <= i)
-                        {
-                            i = 0;
-                        }
+                       
+                        MudarState(EnemyState.ALERTED);
+                        
                     }
                     navEnemy.SetDestination(patrolObject[i].transform.position);
                     RaycastHit hit1;
@@ -53,6 +51,7 @@ public class Ocultista : InimigoMachine
                         {
                             MudarState(EnemyState.SEEK);
                         }
+                      
                     }
 
                 }
@@ -63,11 +62,13 @@ public class Ocultista : InimigoMachine
                 {
                     MudarState(EnemyState.ALERTED);
                 }
-                else
+                else 
                 {
                     MudarState(EnemyState.SEEK);
+                    navEnemy.SetDestination(PositionPlayer.position);
+
                 }
-                navEnemy.SetDestination(PositionPlayer.position);
+                
 
                 break;
             //Maquina de estado Alerta
@@ -106,13 +107,20 @@ public class Ocultista : InimigoMachine
             case EnemyState.PATROL:
                 navEnemy.speed = 2;
                 seek = false;
-                timealerta = TimeAlerta;
+                timealerta = TimeAlerta/2;
                 navEnemy.isStopped = false;
+                i++;
+                anime.applyRootMotion = false;
+                if (patrolObject.Count <= i)
+                {
+                    i = 0;
+                }
                 break;
             case EnemyState.SEEK:
                 timealerta = TimeAlerta;
                 navEnemy.speed = 3;
                 seek = true;
+                anime.applyRootMotion = false;
                 if (Vector3.Distance(transform.position, PositionPlayer.position) <= 2 && !anime.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
                 {
                     anime.SetTrigger("Attack");
@@ -122,6 +130,7 @@ public class Ocultista : InimigoMachine
             case EnemyState.ALERTED:
                 seek = false;
                 navEnemy.isStopped = true;
+                anime.applyRootMotion = true;
                 break;
         }
 
@@ -131,5 +140,24 @@ public class Ocultista : InimigoMachine
     public override IEnumerator RadarAuditivo()
     {
         return base.RadarAuditivo();
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.TryGetComponent<PortaIa>(out PortaIa porta) && !abriuPorta)
+        {
+            porta.AbrirPortaIa();
+            abriuPorta = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.TryGetComponent<PortaIa>(out PortaIa porta) && abriuPorta)
+        {
+            porta.FecharPortaIa();
+            abriuPorta = false;
+        }
     }
 }

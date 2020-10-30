@@ -5,12 +5,12 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    public  Player playerscript;
+   
     private int vida = 3;
     public static GameManager instancie;
     public UiScript uiscript;
-    
-   public bool ativarInventario;
+    public Player playerscript;
+    public bool ativarInventario;
     public bool portaOn;
     bool morreu;
     public bool carregandoFase;

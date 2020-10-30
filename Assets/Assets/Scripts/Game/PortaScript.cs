@@ -21,13 +21,13 @@ public class PortaScript : MonoBehaviour
             
                 if (!anime.GetCurrentAnimatorStateInfo(0).IsName(stringPortaAberta))
                 {
-                    anime.SetTrigger("Open");
-                audioPorta.PlayOneShot(somPortaAbrir);
-                }
+                AbrirPortaSom();
+            }
             else {
 
-                audioPorta.PlayOneShot(somPortaFechar);
-                 anime.SetTrigger("Close");
+                FecharPortaIa();
+
+
             }
         }
         else
@@ -37,6 +37,17 @@ public class PortaScript : MonoBehaviour
         }
     }
 
-    
+    public void AbrirPortaSom()
+    {
 
+          anime.SetTrigger("Open");
+          audioPorta.PlayOneShot(somPortaAbrir);
+ 
+    }
+    
+  public void FecharPortaIa()
+    {
+        anime.SetTrigger("Close");
+        audioPorta.PlayOneShot(somPortaFechar);
+    }
 }

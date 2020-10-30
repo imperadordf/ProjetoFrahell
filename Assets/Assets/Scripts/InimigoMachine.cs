@@ -9,8 +9,8 @@ public class InimigoMachine : MonoBehaviour
     public List<GameObject> patrolObject;
     public NavMeshAgent navEnemy;
     public  Animator anime;
-    
-    public virtual Transform PositionPlayer { set; get; }
+
+    public Transform PositionPlayer;
     public Player PlayerScript;
     
     public static int i = 0;
