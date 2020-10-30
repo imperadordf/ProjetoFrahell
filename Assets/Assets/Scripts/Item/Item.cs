@@ -9,8 +9,8 @@ public class Item : ScriptableObject
     public string textItem;
     
     public Sprite imagemItem;
-    public GameObject itemObject;
-    public RenderTexture texture2dCanvas;
+    
+    
     public ItemName nomeItem=ItemName.N_Interative;
     public AudioClip clipSom;
     public bool pegou;
@@ -21,11 +21,7 @@ public class Item : ScriptableObject
 
     }
 
-    public  virtual RenderTexture ExpandirItem()
-    {
-        
-        return texture2dCanvas;
-    }
+  
 
    
    
@@ -37,5 +33,14 @@ public enum ItemName
     Chave,
     N_Interative,
     Cartao,
-    Foto1
+    Foto1,
+    Foto2,
+    Foto3,
+    Foto4,
+    FotoMetade,
+    FotoInteira,
+    Medalhao1,
+    Medalhao2,
+    Medalhao3,
+    Medalhao4
 }

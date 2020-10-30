@@ -13,7 +13,8 @@ public class GerenciadorItem : MonoBehaviour
     Item itemSelecionado;
     public RawImage itemExpandir;
     GameObject itemObjectInstancie;
-
+    public GameObject itemExpadirObject;
+   public TelaExpadir itensExpadinScript;
     // Verificador se esta dentro da area para usar o Item
     public bool useritemArea = false;
     public VariavelGames variaveGeral = new VariavelGames();
@@ -44,6 +45,7 @@ public class GerenciadorItem : MonoBehaviour
     {
         GameManager.instancie.ativarInventario = !GameManager.instancie.ativarInventario;
         inventarioCanvas.SetActive(GameManager.instancie.ativarInventario);
+        ExpandirItemSair();
     }
     public void ReceberItem(Item item)
     {
@@ -96,15 +98,21 @@ public class GerenciadorItem : MonoBehaviour
 
     public void ExpandirItem()
     {
-        itemObjectInstancie = Instantiate(itemSelecionado.itemObject,GameManager.instancie.playerscript.SpawnItem.transform.position, Quaternion.identity);
-        itemExpandir.texture = itemSelecionado.texture2dCanvas;
+       
+        itensExpadinScript.ExpadirItem(itemSelecionado.nomeItem);
+        itemObjectInstancie = Instantiate(itemExpadirObject, GameManager.instancie.playerscript.SpawnItem.transform.position, Quaternion.identity);
+       
+        itemExpandir.texture = itensExpadinScript.textureItem;
         itemExpandir.gameObject.SetActive(true);
+        
     }
 
     public void ExpandirItemSair()
     {
         itemExpandir.gameObject.SetActive(false);
+        itensExpadinScript.Fechartelas();
         Destroy(itemObjectInstancie);
+       // itensExpadinScript = null;
 
     }
 

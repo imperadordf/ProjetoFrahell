@@ -29,7 +29,7 @@ public class GerenciadorFase : MonoBehaviour
        cenaManager = FindObjectOfType<ManagerCena>();
         
        
-            if(level==1 || level==3 || level == 5 || level == 7 || level == 9 || level ==11 || level == 13 || level == 15)
+            if(level==1 || level==3 || level == 5 || level == 7 || level == 9 || level ==11 || level == 13 || level == 15 && cenaManager)
             {
                 foreach (ButtonItem listaitem in GerenciadorItem.instacie.listButtonitens)
                 {
