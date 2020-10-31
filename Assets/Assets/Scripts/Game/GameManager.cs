@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
             playerscript.Morrer();
             morreu = true;
         }
-        else
+        else if(!morreu)
         {
             StartCoroutine(uiscript.InterfaceDano());
             vida--;

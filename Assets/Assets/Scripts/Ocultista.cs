@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class Ocultista : InimigoMachine
 {
     bool abriuPorta;
-    bool podeabrirPorta;
+    bool podeabrirPorta=true;
     public GameObject danoObject;
     void Start()
     {
@@ -114,7 +114,7 @@ public class Ocultista : InimigoMachine
                 break;
         }
 
-        danoObject.SetActive(anime.GetBool("Attack"));
+        danoObject.SetActive(anime.GetBool("Attack")); 
     }
 
     public override void MudarState(EnemyState newstate)
@@ -167,7 +167,7 @@ public class Ocultista : InimigoMachine
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.TryGetComponent<PortaIa>(out PortaIa porta) && !abriuPorta && !porta.scritPorta.locked)
+        if(other.TryGetComponent<PortaIa>(out PortaIa porta) && !abriuPorta && !porta.scritPorta.locked && podeabrirPorta)
         {
             porta.AbrirPortaIa();
             abriuPorta = true;
@@ -176,7 +176,7 @@ public class Ocultista : InimigoMachine
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.TryGetComponent<PortaIa>(out PortaIa porta) && abriuPorta && !porta.scritPorta.locked)
+        if (other.TryGetComponent<PortaIa>(out PortaIa porta) && abriuPorta && !porta.scritPorta.locked && podeabrirPorta)
         {
             porta.FecharPortaIa();
             abriuPorta = false;
