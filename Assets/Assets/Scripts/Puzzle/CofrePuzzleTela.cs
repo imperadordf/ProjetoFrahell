@@ -6,9 +6,10 @@ public class CofrePuzzleTela : PuzzleRei
 {
     public GameObject canvasCofre;
     GameObject canvas;
+    bool concluir;
     public override void PuzzleGo()
     {
-        if (!canvas)
+        if (!canvas &&!concluir)
         {
             canvas = Instantiate(canvasCofre);
             Time.timeScale = 0;

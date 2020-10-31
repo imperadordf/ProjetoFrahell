@@ -13,7 +13,7 @@ public class CofrePuzzle : MonoBehaviour
     public TextMeshProUGUI TextCofre;
     string textNumeros;
     bool tentou;
-
+    public Item itemGanha;
     private void Start()
     {
         TextCofre.text = "Digite";
@@ -76,6 +76,8 @@ public class CofrePuzzle : MonoBehaviour
             TextCofre.alignment = TextAlignmentOptions.Center;
             TextCofre.text = "Correto";
             TextCofre.characterSpacing = 0;
+            GerenciadorItem.instacie.ReceberItem(itemGanha);
+            Destroy(this.gameObject);
         }
         else
         {
