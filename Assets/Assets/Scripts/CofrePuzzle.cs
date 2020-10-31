@@ -14,11 +14,21 @@ public class CofrePuzzle : MonoBehaviour
     string textNumeros;
     bool tentou;
     public Item itemGanha;
+    private PuzzleRei puzzleScript;
+    public AudioSource audiosource;
+    public AudioClip somConcluir;
+    public AudioClip somApertou;
+    public AudioClip somErrou;
     private void Start()
     {
         TextCofre.text = "Digite";
         TextCofre.alignment = TextAlignmentOptions.Center;
         TextCofre.characterSpacing = 0;
+    }
+
+    public void PegarPuzzle(PuzzleRei script)
+    {
+        puzzleScript = script;
     }
     public void RecebeNumero(int numero)
     {
@@ -43,7 +53,8 @@ public class CofrePuzzle : MonoBehaviour
         }
 
         TextCofre.text = textNumeros;
-       
+        audiosource.PlayOneShot(somApertou);
+        audiosource.volume = 1;
     }
 
     public void Cancelar()
@@ -57,6 +68,7 @@ public class CofrePuzzle : MonoBehaviour
         }
         textNumeros = "";
         TextCofre.text = textNumeros;
+      
     }
 
 
@@ -77,7 +89,10 @@ public class CofrePuzzle : MonoBehaviour
             TextCofre.text = "Correto";
             TextCofre.characterSpacing = 0;
             GerenciadorItem.instacie.ReceberItem(itemGanha);
-            Destroy(this.gameObject);
+            audiosource.PlayOneShot(somConcluir);
+            audiosource.volume = 0.4f;
+            StartCoroutine(Concluiur());
+          
         }
         else
         {
@@ -86,8 +101,16 @@ public class CofrePuzzle : MonoBehaviour
             tentou = true;
             cont = 0;
             TextCofre.alignment = TextAlignmentOptions.Center;
+            audiosource.PlayOneShot(somErrou);
+            audiosource.volume = 0.4f;
         }
 
     }
 
+   IEnumerator Concluiur()
+    {      
+        yield return new WaitForSecondsRealtime(1.2f);
+        puzzleScript.Concluiu();
+    }
+ 
 }
