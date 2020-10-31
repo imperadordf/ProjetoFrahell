@@ -18,7 +18,7 @@ public class RaycastMouse : MonoBehaviour
         RaycastHit hit;
 
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
-        if ((Physics.Raycast(ray, out hit, 3,layer)))
+        if ((Physics.Raycast(ray, out hit, 1,layer)))
         {
             mouseImagem.color = Color.red;
             if (Input.GetKeyDown(KeyCode.E))

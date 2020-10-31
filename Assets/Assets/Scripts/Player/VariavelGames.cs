@@ -5,6 +5,6 @@ using UnityEngine;
 public class VariavelGames 
 {
     public PortaScript scriptPorta;
-    
+    public CofrePuzzle cofre;
    
 }

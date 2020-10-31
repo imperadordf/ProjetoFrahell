@@ -89,6 +89,13 @@ public class GerenciadorItem : MonoBehaviour
                     FecharTela();
                 }
                 break;
+            case ItemName.Cartao:
+                if (useritemArea)
+                {
+                    variaveGeral.cofre.locked = false;
+                    FecharTela();
+                }
+                break;
             default:
                 break;
 
