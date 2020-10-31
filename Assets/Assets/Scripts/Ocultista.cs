@@ -6,6 +6,8 @@ using UnityEngine.AI;
 public class Ocultista : InimigoMachine
 {
     bool abriuPorta;
+    bool podeabrirPorta;
+    public GameObject danoObject;
     void Start()
     {
         PegarComponentes();
@@ -62,11 +64,14 @@ public class Ocultista : InimigoMachine
                 {
                     MudarState(EnemyState.ALERTED);
                 }
-                else 
+                else if((Vector3.Distance(transform.position, PositionPlayer.position) > 2))
                 {
                     MudarState(EnemyState.SEEK);
                     navEnemy.SetDestination(PositionPlayer.position);
-
+                }
+                else
+                {
+                    MudarState(EnemyState.ATTACK);
                 }
                 
 
@@ -84,6 +89,7 @@ public class Ocultista : InimigoMachine
                 else
                 {
                     timealerta -= Time.deltaTime;
+                    MudarState(EnemyState.ALERTED);
                 }
 
                 RaycastHit hit;
@@ -95,9 +101,20 @@ public class Ocultista : InimigoMachine
                         MudarState(EnemyState.SEEK);
                     }
                 }
-
+                break;
+            case EnemyState.ATTACK:
+                if (Vector3.Distance(transform.position, PositionPlayer.position) <= 2)
+                {
+                    MudarState(EnemyState.ATTACK);
+                }
+                else
+                {
+                    MudarState(EnemyState.SEEK);
+                }
                 break;
         }
+
+        danoObject.SetActive(anime.GetBool("Attack"));
     }
 
     public override void MudarState(EnemyState newstate)
@@ -111,6 +128,7 @@ public class Ocultista : InimigoMachine
                 navEnemy.isStopped = false;
                 i++;
                 anime.applyRootMotion = false;
+                podeabrirPorta = true;
                 if (patrolObject.Count <= i)
                 {
                     i = 0;
@@ -121,16 +139,20 @@ public class Ocultista : InimigoMachine
                 navEnemy.speed = 3;
                 seek = true;
                 anime.applyRootMotion = false;
-                if (Vector3.Distance(transform.position, PositionPlayer.position) <= 2 && !anime.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
-                {
-                    anime.SetTrigger("Attack");
-                }
-                navEnemy.isStopped = anime.GetCurrentAnimatorStateInfo(0).IsName("Attack");
+                podeabrirPorta = true;
+                anime.SetBool("Attack", false);
+                navEnemy.isStopped = false;
+                break;
+            case EnemyState.ATTACK:
+                anime.SetBool("Attack", true);
+                podeabrirPorta = false;
+                navEnemy.isStopped = true;
                 break;
             case EnemyState.ALERTED:
                 seek = false;
                 navEnemy.isStopped = true;
                 anime.applyRootMotion = true;
+                podeabrirPorta = false;
                 break;
         }
 
@@ -145,7 +167,7 @@ public class Ocultista : InimigoMachine
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.TryGetComponent<PortaIa>(out PortaIa porta) && !abriuPorta)
+        if(other.TryGetComponent<PortaIa>(out PortaIa porta) && !abriuPorta && !porta.scritPorta.locked)
         {
             porta.AbrirPortaIa();
             abriuPorta = true;
@@ -154,7 +176,7 @@ public class Ocultista : InimigoMachine
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.TryGetComponent<PortaIa>(out PortaIa porta) && abriuPorta)
+        if (other.TryGetComponent<PortaIa>(out PortaIa porta) && abriuPorta && !porta.scritPorta.locked)
         {
             porta.FecharPortaIa();
             abriuPorta = false;

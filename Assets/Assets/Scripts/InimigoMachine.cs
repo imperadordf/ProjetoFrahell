@@ -91,5 +91,6 @@ public enum EnemyState
 {
     SEEK,
     PATROL,
-    ALERTED
+    ALERTED,
+    ATTACK
 }
