@@ -12,38 +12,81 @@ public class CofrePuzzle : MonoBehaviour
     };
     public TextMeshProUGUI TextCofre;
     string textNumeros;
-    bool tentou;
+    bool tentou,concluiu;
+   public bool locked = true;
     public Item itemGanha;
+    private PuzzleRei puzzleScript;
+    public AudioSource audiosource;
+    public AudioClip somConcluir;
+    public AudioClip somApertou;
+    public AudioClip somErrou;
     private void Start()
     {
-        TextCofre.text = "Digite";
-        TextCofre.alignment = TextAlignmentOptions.Center;
-        TextCofre.characterSpacing = 0;
+        
+        if (locked)
+        {
+            TextCofre.text = "Blocked";
+            TextCofre.alignment = TextAlignmentOptions.Center;
+            TextCofre.characterSpacing = 0;
+        }
+        else
+        {
+            TextCofre.text = "Type";
+            TextCofre.alignment = TextAlignmentOptions.Center;
+            TextCofre.characterSpacing = 0;
+        }
+        
+    }
+
+   
+    public void PegarPuzzle(PuzzleRei script)
+    {
+        puzzleScript = script;
+    }
+    private void OnEnable()
+    {
+        if (locked)
+        {
+            TextCofre.text = "Blocked";
+            TextCofre.alignment = TextAlignmentOptions.Center;
+            TextCofre.characterSpacing = 0;
+        }
+        else
+        {
+            TextCofre.text = "Type";
+            TextCofre.alignment = TextAlignmentOptions.Center;
+            TextCofre.characterSpacing = 0;
+        }
     }
     public void RecebeNumero(int numero)
     {
-        TextCofre.characterSpacing = 120;
-        TextCofre.alignment = TextAlignmentOptions.Left;
-        if (tentou)
+        if (!locked && !concluiu)
         {
-            Cancelar();
-            tentou = false;
-           
-        }
-       
-        for(int i = 0; i<listaNumeroBotao.Length;i++)
-        {
-            if (listaNumeroBotao[i] == 0)
+            TextCofre.characterSpacing = 120;
+            TextCofre.alignment = TextAlignmentOptions.Left;
+            if (tentou)
             {
-                listaNumeroBotao[i] = numero;
-                textNumeros += listaNumeroBotao[i];
-                break;
+                Cancelar();
+                tentou = false;
+
             }
 
-        }
+            for (int i = 0; i < listaNumeroBotao.Length; i++)
+            {
+                if (listaNumeroBotao[i] == 0)
+                {
+                    listaNumeroBotao[i] = numero;
+                    textNumeros += listaNumeroBotao[i];
+                    break;
+                }
 
-        TextCofre.text = textNumeros;
-       
+            }
+
+            TextCofre.text = textNumeros;
+            audiosource.PlayOneShot(somApertou);
+            audiosource.volume = 1;
+        }
+          
     }
 
     public void Cancelar()
@@ -57,11 +100,16 @@ public class CofrePuzzle : MonoBehaviour
         }
         textNumeros = "";
         TextCofre.text = textNumeros;
+      
     }
 
 
     public void Confirmar()
     {
+        if (!locked &&!concluiu)
+        {
+
+       
         int cont = 0;
         for (int i = 0; i < listaNumeroBotao.Length; i++)
         {
@@ -74,20 +122,32 @@ public class CofrePuzzle : MonoBehaviour
         if (cont == 4)
         {
             TextCofre.alignment = TextAlignmentOptions.Center;
-            TextCofre.text = "Correto";
+            TextCofre.text = "Correct";
             TextCofre.characterSpacing = 0;
             GerenciadorItem.instacie.ReceberItem(itemGanha);
-            Destroy(this.gameObject);
+            audiosource.PlayOneShot(somConcluir);
+            audiosource.volume = 0.4f;
+            StartCoroutine(Concluiur());
+                concluiu = true;
+          
         }
         else
         {
-            TextCofre.text = "Incorreto";
+            TextCofre.text = "Incorrect";
             TextCofre.characterSpacing = 0;
             tentou = true;
             cont = 0;
             TextCofre.alignment = TextAlignmentOptions.Center;
+            audiosource.PlayOneShot(somErrou);
+            audiosource.volume = 0.4f;
         }
-
+        }
     }
 
+   IEnumerator Concluiur()
+    {      
+        yield return new WaitForSecondsRealtime(1.2f);
+        puzzleScript.Concluiu();
+    }
+ 
 }
