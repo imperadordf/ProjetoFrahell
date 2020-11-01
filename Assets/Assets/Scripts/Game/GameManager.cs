@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instancie;
     public UiScript uiscript;
     public Player playerscript;
-    public bool ativarInventario;
+    public GameObject playerImagem;
+    public bool ativarInventario,ativarMenu;
     public bool portaOn;
     bool morreu;
     public bool carregandoFase;
@@ -33,17 +34,19 @@ public class GameManager : MonoBehaviour
     {
         
 
-        if (ativarInventario)
+        if (ativarInventario || ativarMenu)
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0;
+            playerImagem.SetActive(false);
         }
         else
         {
             Cursor.lockState = CursorLockMode.Locked;
              Cursor.visible = false;
             Time.timeScale = 1;
+            playerImagem.SetActive(true);
         }
     }
     public void DanoSofre()
