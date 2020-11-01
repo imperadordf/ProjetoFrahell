@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class GameManager : MonoBehaviour
     public bool portaOn;
     bool morreu;
     public bool carregandoFase;
-    
+    public string nomedacena;
     private void Awake()
     {
         if (!instancie)
@@ -28,7 +29,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        
+        nomedacena = SceneManager.GetActiveScene().name;
     }
     private void Update()
     {
@@ -55,6 +56,7 @@ public class GameManager : MonoBehaviour
         if (vida <= 0 && !morreu)
         {
             playerscript.Morrer();
+            Invoke("MorreuCarregaFase", 4f);
             morreu = true;
         }
         else if(!morreu)
@@ -64,5 +66,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+    public void MorreuCarregaFase()
+    {
+        SceneManager.LoadScene(nomedacena);
+        
+    }
 }

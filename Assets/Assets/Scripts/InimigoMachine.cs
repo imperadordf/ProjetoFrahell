@@ -76,6 +76,10 @@ public class InimigoMachine : MonoBehaviour
                 case EstadoPlayer.WALK:
                     distanceMinSeek = distanceSeekAndando;
                     break;
+                case EstadoPlayer.DEATH:
+                    distanceMinSeek = 0;
+                    break;
+
             }
             
             yield return new WaitForSeconds(1f);

@@ -1503,6 +1503,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Volta
       objectReference: {fileID: 0}
+    - target: {fileID: 7872876023624913087, guid: 0ff8693f6fa2efb4eaaade0d4ca21755,
+        type: 3}
+      propertyPath: NomeFase
+      value: Cena4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ff8693f6fa2efb4eaaade0d4ca21755, type: 3}
 --- !u!1 &1388963121
@@ -2723,6 +2728,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834075089015330797, guid: 4f96fd6f78d492245adc43d2e30b3094,
+        type: 3}
+      propertyPath: NomeFase
+      value: Cena5
       objectReference: {fileID: 0}
     - target: {fileID: 1834075089015330798, guid: 4f96fd6f78d492245adc43d2e30b3094,
         type: 3}

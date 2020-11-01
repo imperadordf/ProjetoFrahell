@@ -158,11 +158,14 @@ public class Player : MonoBehaviour
     //Parametros de animação
     private void ParametrosAnimator()
     {
-        animator_Player.SetFloat("X", x);
-        animator_Player.SetFloat("Y", y);
-        animator_Player.SetBool("IsCrouch", isCrouch);
-        animator_Player.SetBool("IsSpriting", isSpriting);
-        animator_Player.SetBool("IsIdle", isIdle);
+        if (state != EstadoPlayer.DEATH)
+        {
+            animator_Player.SetFloat("X", x);
+            animator_Player.SetFloat("Y", y);
+            animator_Player.SetBool("IsCrouch", isCrouch);
+            animator_Player.SetBool("IsSpriting", isSpriting);
+            animator_Player.SetBool("IsIdle", isIdle);
+        }
     }
     //Animação de rotação que tem referencia no Script "MouseLook"
     public void AnimationRotation(float mousex)
