@@ -42,5 +42,6 @@ public enum ItemName
     Medalhao1,
     Medalhao2,
     Medalhao3,
-    Medalhao4
+    Medalhao4,
+    Pagina
 }
