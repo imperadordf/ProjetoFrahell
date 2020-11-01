@@ -731,7 +731,7 @@ GameObject:
   - component: {fileID: 5151425755730590214}
   - component: {fileID: 5151425755730590219}
   - component: {fileID: 5151425755730590217}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1693,7 +1693,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 569d8f46cf1fc684ea10af36bdd2873c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 569d8f46cf1fc684ea10af36bdd2873c, type: 3}

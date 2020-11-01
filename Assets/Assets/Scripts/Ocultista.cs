@@ -122,7 +122,7 @@ public class Ocultista : InimigoMachine
         switch (newstate)
         {
             case EnemyState.PATROL:
-                navEnemy.speed = 2;
+                navEnemy.speed =1.72f;
                 seek = false;
                 timealerta = TimeAlerta/2;
                 navEnemy.isStopped = false;
@@ -136,7 +136,7 @@ public class Ocultista : InimigoMachine
                 break;
             case EnemyState.SEEK:
                 timealerta = TimeAlerta;
-                navEnemy.speed = 3;
+                navEnemy.speed = 2.3f;
                 seek = true;
                 anime.applyRootMotion = false;
                 podeabrirPorta = true;
