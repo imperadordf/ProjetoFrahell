@@ -15,6 +15,10 @@ public class EnemyManager : MonoBehaviour
         {
             instancie = this;
         }
+        else
+        {
+            Destroy(this);
+        }
 
     }
     // Start is called before the first frame update

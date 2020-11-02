@@ -61,7 +61,7 @@ public class GerenciadorItem : MonoBehaviour
                 itens.RecebeItem(item);
                 break;
             }
-            yield return new WaitForSeconds(0.15f);
+            yield return new WaitForSeconds(0.05f);
         }
     }
 

@@ -22,7 +22,10 @@ public class GameManager : MonoBehaviour
         if (!instancie)
         {
             instancie = this;
-            
+        }
+        else
+        {
+            Destroy(this);
         }
         
     }

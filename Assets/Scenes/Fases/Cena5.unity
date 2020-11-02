@@ -160,18 +160,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &14138270 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2358970752503653787, guid: 2f3a6ddd67b8ef941b4d77d7871ea3dc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1560882703}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64248a332c61fe347ae3001facc661ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!43 &27359159
 Mesh:
   m_ObjectHideFlags: 0
@@ -2543,80 +2531,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 323d27655bf39824eb282d98e18ab862, type: 3}
---- !u!1001 &96839287
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4867854474912653875, guid: fb615d1fef4b1974ea0d64111a324ea0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 4867854474912653875, guid: fb615d1fef4b1974ea0d64111a324ea0,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.0285408
-      objectReference: {fileID: 0}
-    - target: {fileID: 4867854474912653875, guid: fb615d1fef4b1974ea0d64111a324ea0,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -84.71342
-      objectReference: {fileID: 0}
-    - target: {fileID: 4867854474912653875, guid: fb615d1fef4b1974ea0d64111a324ea0,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4867854474912653875, guid: fb615d1fef4b1974ea0d64111a324ea0,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4867854474912653875, guid: fb615d1fef4b1974ea0d64111a324ea0,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4867854474912653875, guid: fb615d1fef4b1974ea0d64111a324ea0,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4867854474912653875, guid: fb615d1fef4b1974ea0d64111a324ea0,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 36
-      objectReference: {fileID: 0}
-    - target: {fileID: 4867854474912653875, guid: fb615d1fef4b1974ea0d64111a324ea0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4867854474912653875, guid: fb615d1fef4b1974ea0d64111a324ea0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4867854474912653875, guid: fb615d1fef4b1974ea0d64111a324ea0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4867854474912653884, guid: fb615d1fef4b1974ea0d64111a324ea0,
-        type: 3}
-      propertyPath: inimigosScripts.Array.data[0]
-      value: 
-      objectReference: {fileID: 14138270}
-    - target: {fileID: 4867854474912653885, guid: fb615d1fef4b1974ea0d64111a324ea0,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemyManager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fb615d1fef4b1974ea0d64111a324ea0, type: 3}
 --- !u!1 &143842360
 GameObject:
   m_ObjectHideFlags: 0
@@ -15160,7 +15074,7 @@ Transform:
   - {fileID: 1341915165}
   - {fileID: 844149378}
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1400846528
 GameObject:
@@ -16721,7 +16635,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1464256899
 GameObject:
