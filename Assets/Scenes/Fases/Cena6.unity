@@ -3561,7 +3561,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh137672
+  m_Name: pb_Mesh78476
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7110,7 +7110,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d19b2d171e016f6459c2f420bf4cb64d, type: 2}
+  - {fileID: 2100000, guid: a33a16f670944654cb86bf8bf5c5c186, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7147,7 +7147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 825910222}
   m_LocalRotation: {x: -0, y: 0.91196966, z: -0, w: 0.41025773}
-  m_LocalPosition: {x: 37.714, y: 0.021, z: -58.332}
+  m_LocalPosition: {x: 37.714, y: 0.021, z: -58.86}
   m_LocalScale: {x: 0.2168946, y: 0.2168946, z: 0.2168946}
   m_Children: []
   m_Father: {fileID: 0}
@@ -16927,7 +16927,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a1d095e36d50d094d983eb7f77aff7c1, type: 2}
+  - {fileID: 2100000, guid: f335de097ce98f644b38bbed8299049b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16963,13 +16963,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567501519}
-  m_LocalRotation: {x: 0.70174545, y: -0.086909875, z: -0.086909875, w: 0.70174545}
+  m_LocalRotation: {x: 0.70682245, y: -0.020051876, z: -0.020051876, w: 0.70682245}
   m_LocalPosition: {x: 35.71, y: 1.849, z: -68.083}
   m_LocalScale: {x: 0.12767935, y: 0.12767935, z: 0.12767935}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 75.880005, y: -90.00001, z: -90.00001}
+  m_LocalEulerAnglesHint: {x: 86.75001, y: -90.00001, z: -90.00001}
 --- !u!1 &1582816020
 GameObject:
   m_ObjectHideFlags: 0
@@ -20322,9 +20322,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiscript: {fileID: 0}
   playerscript: {fileID: 1893266208}
+  playerImagem: {fileID: 0}
   ativarInventario: 0
+  ativarMenu: 0
   portaOn: 0
   carregandoFase: 0
+  nomedacena: 
 --- !u!4 &1866675556
 Transform:
   m_ObjectHideFlags: 0
