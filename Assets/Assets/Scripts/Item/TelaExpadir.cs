@@ -14,6 +14,7 @@ public class TelaExpadir : MonoBehaviour
             {
                 itens.AtivareDesativaGameObject(true);
                 print(itens.nameitem);
+                break;
                 
             }
             print(itens.name);
