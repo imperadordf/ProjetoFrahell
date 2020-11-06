@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    Animator animator_Player;
+    public Animator animator_Player;
     Vector3 velocity;
     //Camera em Pé e Camera Agachado
     public Camera cameraPe;
@@ -179,7 +179,7 @@ public class Player : MonoBehaviour
 
     public void Morrer()
     {
-        animator_Player.SetTrigger("Dead");
+        
         MudarState(EstadoPlayer.DEATH);
         mousePlayer.enabled = false;
         this.enabled = false;

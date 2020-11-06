@@ -15,19 +15,19 @@ public class InimigoMachine : MonoBehaviour
     
     public static int i = 0;
     public static bool seek;
-    // A distancia minima para seguir e a distancia maxima para seguir
+    [Header("Distancia da Perseguição")]
     [Range(0, 50)]
     public float distanceMaxSeek=20;
     public static float distanceMinSeek=10;
-    // Distancia da Audição
+    [Header("Distancia da Audição")]
     [Range(0, 30)]
     public float distanceSeekCorrendo=20;
     public float distanceSeekAndando=10;
     public float distanceSeekAgachado=0;
-    // ALERTA
+    [Header("Alerta")]
     public float TimeAlerta;
     public static float timealerta;
-    //Distancia da visão
+     [Header("Distancia da Visão")]
     [Range(0, 30)]
     public float distanceVision = 20;
     public GameObject objectVision;
@@ -96,5 +96,7 @@ public enum EnemyState
     SEEK,
     PATROL,
     ALERTED,
-    ATTACK
+    ATTACK,
+    ABRIUPORTA
+
 }

@@ -8,6 +8,9 @@ public class Ocultista : InimigoMachine
     bool abriuPorta;
     bool podeabrirPorta=true;
     public GameObject danoObject;
+    public float tempoPortaMax;
+    float tempoporta;
+  public EnemyState ultimoState;
     void Start()
     {
         PegarComponentes();
@@ -16,6 +19,7 @@ public class Ocultista : InimigoMachine
     public override void PegarComponentes()
     {
         base.PegarComponentes();
+        tempoporta = tempoPortaMax;
     }
 
     void FixedUpdate()
@@ -23,6 +27,7 @@ public class Ocultista : InimigoMachine
         MaquinaDeEstado();
         anime.SetFloat("Velocity", Mathf.Abs(navEnemy.velocity.magnitude));
         anime.SetBool("Seeking", seek);
+        
     }
     public override void MaquinaDeEstado()
     {
@@ -45,16 +50,6 @@ public class Ocultista : InimigoMachine
                         
                     }
                     navEnemy.SetDestination(patrolObject[i].transform.position);
-                    RaycastHit hit1;
-                    if (Physics.Raycast(objectVision.transform.position, objectVision.transform.TransformDirection(Vector3.forward), out hit1, distanceVision))
-                    {
-                        Debug.DrawRay(objectVision.transform.position, objectVision.transform.TransformDirection(Vector3.forward) * hit1.distance, Color.yellow);
-                        if (hit1.collider.tag == "Player")
-                        {
-                            MudarState(EnemyState.SEEK);
-                        }
-                      
-                    }
 
                 }
                 break;
@@ -92,24 +87,27 @@ public class Ocultista : InimigoMachine
                     MudarState(EnemyState.ALERTED);
                 }
 
-                RaycastHit hit;
-                if (Physics.Raycast(objectVision.transform.position, objectVision.transform.TransformDirection(Vector3.forward), out hit, distanceVision))
-                {
-                    Debug.DrawRay(objectVision.transform.position, objectVision.transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-                    if (hit.collider.tag == "Player")
-                    {
-                        MudarState(EnemyState.SEEK);
-                    }
-                }
+                
                 break;
             case EnemyState.ATTACK:
-                if (Vector3.Distance(transform.position, PositionPlayer.position) <= 2)
+                if (Vector3.Distance(transform.position, PositionPlayer.position) <= 1.0)
                 {
                     MudarState(EnemyState.ATTACK);
                 }
                 else
                 {
                     MudarState(EnemyState.SEEK);
+                }
+                break;
+            case EnemyState.ABRIUPORTA:
+                if (tempoporta <= 0)
+                {
+                    MudarState(ultimoState);
+                }
+                else
+                {
+                    tempoporta -= Time.deltaTime;
+                    MudarState(EnemyState.ABRIUPORTA);
                 }
                 break;
         }
@@ -122,7 +120,7 @@ public class Ocultista : InimigoMachine
         switch (newstate)
         {
             case EnemyState.PATROL:
-                navEnemy.speed =1.72f;
+                navEnemy.speed =1.0f;
                 seek = false;
                 timealerta = TimeAlerta/2;
                 navEnemy.isStopped = false;
@@ -133,26 +131,36 @@ public class Ocultista : InimigoMachine
                 {
                     i = 0;
                 }
+                ultimoState = newstate;
                 break;
             case EnemyState.SEEK:
                 timealerta = TimeAlerta;
-                navEnemy.speed = 2.3f;
+                navEnemy.speed = 1.7f;
                 seek = true;
                 anime.applyRootMotion = false;
                 podeabrirPorta = true;
                 anime.SetBool("Attack", false);
                 navEnemy.isStopped = false;
+                ultimoState = newstate;
                 break;
             case EnemyState.ATTACK:
                 anime.SetBool("Attack", true);
                 podeabrirPorta = false;
                 navEnemy.isStopped = true;
+                ultimoState = newstate;
                 break;
             case EnemyState.ALERTED:
                 seek = false;
                 navEnemy.isStopped = true;
                 anime.applyRootMotion = true;
+                ultimoState = newstate;
                 podeabrirPorta = false;
+                ultimoState = newstate;
+                break;
+            case EnemyState.ABRIUPORTA:
+                anime.applyRootMotion = true;
+                podeabrirPorta = false;
+                navEnemy.isStopped = true;
                 break;
         }
 
@@ -164,6 +172,7 @@ public class Ocultista : InimigoMachine
         return base.RadarAuditivo();
     }
 
+   
 
     private void OnTriggerEnter(Collider other)
     {
@@ -171,6 +180,7 @@ public class Ocultista : InimigoMachine
         {
             porta.AbrirPortaIa();
             abriuPorta = true;
+          //  MudarState(EnemyState.ABRIUPORTA);
         }
     }
 

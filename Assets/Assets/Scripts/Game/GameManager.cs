@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         nomedacena = SceneManager.GetActiveScene().name;
+        vida = 3;
     }
     private void Update()
     {
@@ -58,6 +59,7 @@ public class GameManager : MonoBehaviour
       
         if (vida <= 0 && !morreu)
         {
+            playerscript.animator_Player.SetTrigger("Dead");
             playerscript.Morrer();
             Invoke("MorreuCarregaFase", 4f);
             morreu = true;

@@ -1632,6 +1632,7 @@ GameObject:
   - component: {fileID: 2358970752503653767}
   - component: {fileID: 2358970752503653787}
   - component: {fileID: 2358970752503653785}
+  - component: {fileID: 6999143246767055451}
   m_Layer: 0
   m_Name: Ocultista_Inimigo
   m_TagString: Untagged
@@ -1731,14 +1732,16 @@ MonoBehaviour:
   anime: {fileID: 2358970752503653767}
   PositionPlayer: {fileID: 0}
   PlayerScript: {fileID: 0}
-  distanceMaxSeek: 7.5
-  distanceSeekCorrendo: 10.9
+  distanceMaxSeek: 9.8
+  distanceSeekCorrendo: 8.1
   distanceSeekAndando: 5
   distanceSeekAgachado: 0
   TimeAlerta: 10
-  distanceVision: 20
+  distanceVision: 13.5
   objectVision: {fileID: 2358970753486537491}
   danoObject: {fileID: 2974506248322246688}
+  tempoPortaMax: 0
+  ultimoState: 0
 --- !u!195 &2358970752503653785
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1761,6 +1764,26 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &6999143246767055451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6025062520778882196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf5683adb809d12409f5742151089423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inimigoScript: {fileID: 2358970752503653787}
+  objectVision: {fileID: 2358970753486537488}
+  distanciaDeVisao: 6.17
+  tagDosInimigos: Player
+  raiosExtraPorCamada: 8.8
+  anguloDeVisao: 48
+  numeroDeCamadas: 3
+  distanciaEntreCamadas: 0.1245
 --- !u!1 &6029556670501702610
 GameObject:
   m_ObjectHideFlags: 0
