@@ -689,7 +689,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5151425755449549880
 Transform:
   m_ObjectHideFlags: 0
@@ -730,7 +730,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: 55bfd8ca544b049409fcc5c950f50e44, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -813,7 +813,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 20.618065
+  m_FocalLength: 34.362724
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -822,7 +822,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60.4
+  field of view: 38.5
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -912,7 +912,7 @@ MonoBehaviour:
   stopNaNs: 0
   taaSharpenStrength: 0.6
   physicalParameters:
-    m_Iso: 200
+    m_Iso: 230
     m_ShutterSpeed: 0.005
     m_Aperture: 11.5
     m_BladeCount: 5
