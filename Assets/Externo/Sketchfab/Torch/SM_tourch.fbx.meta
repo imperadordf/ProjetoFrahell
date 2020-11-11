@@ -3,7 +3,17 @@ guid: 1ad3137d71423b244af273703c32e0ed
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: coal
+    second: {fileID: 2100000, guid: 21e793bd63433814f80bbe6d72b4a4ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tourch
+    second: {fileID: 2100000, guid: 80258ee00d3624b47a15acfbbdc6f49c, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
