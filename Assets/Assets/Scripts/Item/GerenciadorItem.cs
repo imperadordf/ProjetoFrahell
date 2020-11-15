@@ -15,6 +15,7 @@ public class GerenciadorItem : MonoBehaviour
     GameObject itemObjectInstancie;
     public GameObject itemExpadirObject;
    public TelaExpadir itensExpadinScript;
+    public GameObject PanelExpadir;
     // Verificador se esta dentro da area para usar o Item
     public bool useritemArea = false;
     public VariavelGames variaveGeral = new VariavelGames();
@@ -108,15 +109,16 @@ public class GerenciadorItem : MonoBehaviour
        
         itensExpadinScript.ExpadirItem(itemSelecionado.nomeItem);
         itemObjectInstancie = Instantiate(itemExpadirObject, GameManager.instancie.playerscript.SpawnItem.transform.position, Quaternion.identity);
-       
+        inventarioCanvas.SetActive(false);
         itemExpandir.texture = itensExpadinScript.textureItem;
-        itemExpandir.gameObject.SetActive(true);
+        PanelExpadir.SetActive(true);
         
     }
 
     public void ExpandirItemSair()
     {
-        itemExpandir.gameObject.SetActive(false);
+        inventarioCanvas.SetActive(GameManager.instancie.ativarInventario);
+        PanelExpadir.SetActive(false);
         itensExpadinScript.Fechartelas();
         Destroy(itemObjectInstancie);
        // itensExpadinScript = null;
