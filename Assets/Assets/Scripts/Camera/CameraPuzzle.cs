@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class CameraPuzzle : MonoBehaviour
 {
-    
 
+    bool ganhou;
     public double numeroCerto1;
     public double numeroCerto2;
     public double numeroCerto3;
-
+    public Item GanhaItem;
     bool verificador1, verificador2, verificador3;
 
     public double numeroteste1, numeroteste2, numeroteste3;
@@ -52,9 +52,12 @@ public class CameraPuzzle : MonoBehaviour
                 break;
         }
 
-        if (verificador3 && verificador2 && verificador1)
+        if (verificador3 && verificador2 && verificador1 && !ganhou)
         {
             print("Foi Ganhou o item");
+            GerenciadorItem.instacie.ReceberItem(GanhaItem);
+            ganhou = true;
+            Destroy(this);
         }
     }
 }

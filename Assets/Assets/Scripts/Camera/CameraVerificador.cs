@@ -15,12 +15,18 @@ public class CameraVerificador : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.TryGetComponent<CameraNumero>(out CameraNumero cameranumero))
+        {
+            camerapuzzle.RecebeNumero(verificador, cameranumero.numero);
+            print("Foi");
+        }
+        else
         {
             camerapuzzle.RecebeNumero(verificador, 0);
             print("Foi");
         }
     }
+  
 }
