@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public UiScript uiscript;
     public Player playerscript;
     public GameObject playerImagem;
-    public bool ativarInventario,ativarMenu;
+    public bool ativarInventario,ativarMenu,ativarPuzzle;
     public bool portaOn;
     bool morreu;
     public bool carregandoFase;
@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     {
         
 
-        if (ativarInventario || ativarMenu)
+        if (ativarInventario || ativarMenu || ativarPuzzle )
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;

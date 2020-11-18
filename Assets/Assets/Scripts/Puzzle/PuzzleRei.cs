@@ -6,7 +6,7 @@ public class PuzzleRei : MonoBehaviour
 {
     public virtual void PuzzleGo()
     {
-
+        
     }
 
    public virtual void Concluiu()
