@@ -12,22 +12,19 @@ public class PortaScript : MonoBehaviour
     public AudioClip somPortaFechar;
     public AudioSource audioPorta;
     public string stringPortaAberta = "PortaAbre";
+    public string stringPortaFechado = "PortaFecha";
 
-    
     public void OpenTheDoorOurClose()
     {
         if (!locked)
         {
-            
-                if (!anime.GetCurrentAnimatorStateInfo(0).IsName(stringPortaAberta))
-                {
+            if (!anime.GetCurrentAnimatorStateInfo(0).IsName(stringPortaAberta))
+            {
                 AbrirPortaSom();
             }
-            else {
-
+            else if (!anime.GetCurrentAnimatorStateInfo(0).IsName(stringPortaFechado)) 
+            { 
                 FecharPortaIa();
-
-
             }
         }
         else
@@ -39,10 +36,8 @@ public class PortaScript : MonoBehaviour
 
     public void AbrirPortaSom()
     {
-
           anime.SetTrigger("Open");
           audioPorta.PlayOneShot(somPortaAbrir);
- 
     }
     
   public void FecharPortaIa()

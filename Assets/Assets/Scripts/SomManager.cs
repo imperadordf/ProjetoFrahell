@@ -23,5 +23,6 @@ public class SomManager : MonoBehaviour
     public void TocarSom(AudioClip som)
     {
         audioManager.PlayOneShot(som);
+        audioManager.volume = Random.Range(0.30f, 0.65f);
     }
 }

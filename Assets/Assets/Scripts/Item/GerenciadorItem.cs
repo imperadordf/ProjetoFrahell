@@ -50,6 +50,7 @@ public class GerenciadorItem : MonoBehaviour
     }
     public void ReceberItem(Item item)
     {
+        SomManager.instancie.TocarSom(item.clipSom);
         StartCoroutine(RecebeitemConstratine(item));
     }
 
