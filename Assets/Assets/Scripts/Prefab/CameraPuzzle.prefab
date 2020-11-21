@@ -3209,10 +3209,9 @@ GameObject:
   - component: {fileID: 3001932173698486027}
   - component: {fileID: 6390211869780184035}
   - component: {fileID: 1700048144119497810}
-  - component: {fileID: 1700048144119497811}
   m_Layer: 12
   m_Name: cilindro 2
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3299,24 +3298,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0020473443, y: 0.002071434, z: 0.00037577222}
   m_Center: {x: 0.0000000076838385, y: -0.0000000018617886, z: -0.000009626649}
---- !u!114 &1700048144119497811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6746312335361300720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 041a1f2ef11338448aad35fcb40dc7b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidadeRotacao: 5
-  layer:
-    serializedVersion: 2
-    m_Bits: 4096
-  objectItem: {fileID: 0}
-  cameraoi: {fileID: 0}
 --- !u!1 &7257029433152413403
 GameObject:
   m_ObjectHideFlags: 0
@@ -3327,6 +3308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5975568658687880392}
   - component: {fileID: 1700048144568365280}
+  - component: {fileID: 955303278}
   m_Layer: 0
   m_Name: CameraPuzzle
   m_TagString: Untagged
@@ -3375,6 +3357,24 @@ MonoBehaviour:
   numeroteste1: 0
   numeroteste2: 0
   numeroteste3: 0
+--- !u!114 &955303278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7257029433152413403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041a1f2ef11338448aad35fcb40dc7b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 5
+  layer:
+    serializedVersion: 2
+    m_Bits: 4096
+  objectItem: {fileID: 0}
+  cameraoi: {fileID: 0}
 --- !u!1 &8511993759212659943
 GameObject:
   m_ObjectHideFlags: 0
@@ -3475,10 +3475,9 @@ GameObject:
   - component: {fileID: 7917792317799818129}
   - component: {fileID: 8887019478847551318}
   - component: {fileID: 1700048144158904016}
-  - component: {fileID: 1700048144158904017}
   m_Layer: 12
   m_Name: cilindro
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3565,21 +3564,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0019249499, y: 0.0019376193, z: 0.0004576463}
   m_Center: {x: -0.0000000036088754, y: 5.820637e-11, z: -0.00001172452}
---- !u!114 &1700048144158904017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8796833468485202376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 041a1f2ef11338448aad35fcb40dc7b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidadeRotacao: 2
-  layer:
-    serializedVersion: 2
-    m_Bits: 4096
-  objectItem: {fileID: 4246262202591737580}
-  cameraoi: {fileID: 0}

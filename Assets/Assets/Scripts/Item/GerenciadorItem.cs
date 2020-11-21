@@ -52,6 +52,7 @@ public class GerenciadorItem : MonoBehaviour
     {
         SomManager.instancie.TocarSom(item.clipSom);
         StartCoroutine(RecebeitemConstratine(item));
+        GameManager.instancie.uiscript.ApareceuItem(item);
     }
 
     IEnumerator RecebeitemConstratine(Item item)

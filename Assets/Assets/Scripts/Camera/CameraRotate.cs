@@ -21,14 +21,14 @@ public class CameraRotate : MonoBehaviour
             {
                 
                 float mouseX = Input.GetAxis("Mouse X") * velocidadeRotacao;
-                Debug.DrawLine(hit.point, debugrayend, Color.red);
+                Debug.DrawLine(hit.point, Input.mousePosition, Color.red);
 
                 if (hit.collider.tag == "Puzzle") 
-                hit.collider.gameObject.transform.Rotate((new Vector3(0, 0, -mouseX)));
+               // hit.collider.gameObject.transform.Rotate((new Vector3(0, 0, -mouseX)));
 
                 if (hit.collider.TryGetComponent<CameraScript>(out CameraScript camerascript))
                 {
-                    camerascript.CameraRotate2(mouseX);
+                   // camerascript.CameraRotate2(mouseX);
                 }
 
             }

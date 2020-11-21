@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class UiScript : MonoBehaviour
 {
     public Image damageUi;
+    public Image itemImagem;
+    public Animator animeItem;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,14 @@ public class UiScript : MonoBehaviour
         damageUi.enabled = true;
         yield return new WaitForSeconds(0.5f);
         damageUi.enabled = false;
+    }
+
+    public void ApareceuItem(Item item)
+    {
+        itemImagem.sprite=item.imagemItem;
+        animeItem.gameObject.SetActive(true);
+        animeItem.enabled = true;
+        animeItem.Play("Painel_aparece", 0);
     }
 
 }
