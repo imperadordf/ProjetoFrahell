@@ -8,6 +8,8 @@ public class UiScript : MonoBehaviour
     public Image damageUi;
     public Image itemImagem;
     public Animator animeItem;
+
+    public Sprite maozinhaCurso;
     // Start is called before the first frame update
     void Start()
     {

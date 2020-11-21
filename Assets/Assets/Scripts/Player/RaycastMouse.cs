@@ -8,19 +8,20 @@ public class RaycastMouse : MonoBehaviour
     public LayerMask layer;
     public Image mouseImagem;
     public Camera cam;
-    
-    private void Start()
-    {
-       
-    }
+
+
+    public Sprite mouseMao;
+    public Sprite spritePorta;
+    public Sprite PadraoSprite;
+ 
     private void FixedUpdate()
     {
         RaycastHit hit;
 
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
-        if ((Physics.Raycast(ray, out hit, 2,layer)))
+        if ((Physics.Raycast(ray, out hit, 2, layer)))
         {
-            mouseImagem.color = Color.red;
+
             if (Input.GetKeyDown(KeyCode.E))
             {
                 switch (hit.collider.tag)
@@ -30,7 +31,7 @@ public class RaycastMouse : MonoBehaviour
                         GerenciadorItem.instacie.ReceberItem(item);
                         // item.clipSom;
                         Destroy(hit.collider.gameObject);
-                        
+
                         break;
                     case "Porta":
                         PortaScript portascript = hit.collider.GetComponent<PortaScript>();
@@ -66,19 +67,16 @@ public class RaycastMouse : MonoBehaviour
                             Destroy(hit.collider.GetComponent<GetItem>());
                             hit.collider.gameObject.layer = 0;
                         }
-                       
+
                         break;
                 }
-               
-                
-               
-              
-
             }
+            MudarCurso(hit);
         }
         else
         {
-            mouseImagem.color = Color.white;
+            mouseImagem.sprite = PadraoSprite;
+            mouseImagem.transform.localScale = new Vector3(0.1570803f, 0.1570803f, 0.1570803f);
         }
     }
 
@@ -96,6 +94,50 @@ public class RaycastMouse : MonoBehaviour
         if (other.CompareTag("Porta"))
         {
             GerenciadorItem.instacie.useritemArea = false;
+        }
+    }
+
+
+    private void MudarCurso(RaycastHit hit)
+    {
+        switch (hit.collider.tag)
+        {
+            case "Item":
+                mouseImagem.sprite = mouseMao;
+                mouseImagem.transform.localScale = new Vector3(0.3761445f, 0.3761445f, 0.3761445f);
+                break;
+            case "Porta":
+                mouseImagem.sprite = spritePorta;
+                mouseImagem.transform.localScale = new Vector3(0.3761445f, 0.3761445f, 0.3761445f);
+                break;
+            case "Turnel":
+                mouseImagem.sprite = spritePorta;
+                mouseImagem.transform.localScale = new Vector3(0.3761445f, 0.3761445f, 0.3761445f);
+                break;
+            case "TurnelTurnel":
+                mouseImagem.sprite = spritePorta;
+                mouseImagem.transform.localScale = new Vector3(0.3761445f, 0.3761445f, 0.3761445f);
+                break;
+            case "Puzzle":
+                mouseImagem.sprite = mouseMao;
+                mouseImagem.transform.localScale = new Vector3(0.3761445f, 0.3761445f, 0.3761445f);
+                break;
+            case "Armario":
+                mouseImagem.sprite = mouseMao;
+                mouseImagem.transform.localScale = new Vector3(0.3761445f, 0.3761445f, 0.3761445f);
+                break;
+            case "Roupa":
+                if (hit.collider.GetComponent<GetItem>())
+                {
+                    mouseImagem.sprite = mouseMao;
+                    mouseImagem.transform.localScale = new Vector3(0.3761445f, 0.3761445f, 0.3761445f);
+                }
+                else
+                { 
+                    mouseImagem.sprite = PadraoSprite;
+                    mouseImagem.transform.localScale = new Vector3(0.1570803f, 0.1570803f, 0.1570803f);
+                }
+                break;
         }
     }
 }
