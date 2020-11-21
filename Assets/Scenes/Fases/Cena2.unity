@@ -2373,6 +2373,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f8fdaf4566112d428ca61fa658ac2f5, type: 3}
+--- !u!114 &278913004 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8353336917060539089, guid: 0e6d4d6704833ae429243e544323065b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8353336917446090349}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21aebc95be4471d47a6062e6f379fde7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &290225974
 GameObject:
   m_ObjectHideFlags: 0
@@ -21496,6 +21508,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4424482901228084442, guid: 058f997310f02974c88ecac81c2b248f,
+        type: 3}
+      propertyPath: cenaManager
+      value: 
+      objectReference: {fileID: 278913004}
     - target: {fileID: 4424482901228084443, guid: 058f997310f02974c88ecac81c2b248f,
         type: 3}
       propertyPath: m_Name
