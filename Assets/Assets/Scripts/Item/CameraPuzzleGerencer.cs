@@ -13,32 +13,28 @@ public class CameraPuzzleGerencer : PuzzleRei
     {
         if (Input.GetKeyDown(KeyCode.Escape) && ativouPuzzle)
         {
-            GameManager.instancie.ativarPuzzle = false;
-            objetoCameraPuzzle.SetActive(false);
-            canvasCameraPuzzle.SetActive(false);
+            AtivarDesativaObject(false);
         }
     }
 
     public void FecharPuzzle()
     {
-        GameManager.instancie.ativarPuzzle = false;
-        objetoCameraPuzzle.SetActive(false);
-        canvasCameraPuzzle.SetActive(false);
+        AtivarDesativaObject(false);
     }
     public override void PuzzleGo()
     {
-        objetoCameraPuzzle.SetActive(true);
-        canvasCameraPuzzle.SetActive(true);
+        AtivarDesativaObject(true);
         ativouPuzzle = true;
-        GameManager.instancie.ativarPuzzle = true;
     }
-
+    private void AtivarDesativaObject(bool ativar)
+    {
+        GameManager.instancie.ativarPuzzle = ativar;
+        objetoCameraPuzzle.SetActive(ativar);
+        canvasCameraPuzzle.SetActive(ativar);
+    }
     public override void Concluiu()
     {
-        
-        GameManager.instancie.ativarPuzzle = false;
-        objetoCameraPuzzle.SetActive(false);
-        canvasCameraPuzzle.SetActive(false);
+        AtivarDesativaObject(false);
         ativouPuzzle = false;
         this.enabled = false;
     }

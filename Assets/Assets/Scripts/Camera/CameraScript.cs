@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 
-public class CameraScript : MonoBehaviour, IBeginDragHandler, IDragHandler
+public class CameraScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
 
     
@@ -25,12 +25,20 @@ public class CameraScript : MonoBehaviour, IBeginDragHandler, IDragHandler
         if (data.dragging)
         {
             CameraRotate2();
-            Time.timeScale = 0.5f;
+            
+        }
+        else
+        {
+            scriptRotate.ApagarDados();
         }
     }
 
 
-
+    public void OnEndDrag(PointerEventData data)
+    {
+        GameManager.instancie.DefinirTimeScale(1);
+        print("OIEE");
+    }
     
     public void CameraRotate2()
     {

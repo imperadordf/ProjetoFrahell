@@ -37,22 +37,38 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        
+            if (ativarInventario || ativarMenu || ativarPuzzle)
+            {
+                DefinirTimeScale(0);
+                AtivarDesativaMouse(true);
+            }
+            else
+            {
+                DefinirTimeScale(1);
+                AtivarDesativaMouse(false);
+            }
+    }
 
-        if (ativarInventario || ativarMenu || ativarPuzzle )
+    public void DefinirTimeScale(float time)
+    {
+        Time.timeScale = time;
+    }
+
+    public void AtivarDesativaMouse(bool verdade)
+    {
+        if (verdade)
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-            Time.timeScale = 0;
-            playerImagem.SetActive(false);
         }
         else
         {
             Cursor.lockState = CursorLockMode.Locked;
-             Cursor.visible = false;
-            Time.timeScale = 1;
-            playerImagem.SetActive(true);
+            Cursor.visible = false;
         }
+
+        playerImagem.SetActive(!verdade);
+
     }
     public void DanoSofre()
     {

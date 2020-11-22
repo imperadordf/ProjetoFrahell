@@ -1061,7 +1061,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh175552
+  m_Name: pb_Mesh18924
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2423,7 +2423,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh175464
+  m_Name: pb_Mesh18832
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5433,7 +5433,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh176508
+  m_Name: pb_Mesh19914
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6955,7 +6955,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh176030
+  m_Name: pb_Mesh19422
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7403,7 +7403,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh176000
+  m_Name: pb_Mesh19392
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7666,7 +7666,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh175910
+  m_Name: pb_Mesh19298
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10117,7 +10117,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh175742
+  m_Name: pb_Mesh19124
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11713,7 +11713,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh176200
+  m_Name: pb_Mesh19592
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12027,6 +12027,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: CameraNumero
       objectReference: {fileID: 0}
+    - target: {fileID: 1700048143777639371, guid: fe9bc8f5ad91cf444b21392e5fddbb0b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1700048143786957302, guid: fe9bc8f5ad91cf444b21392e5fddbb0b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12142,6 +12147,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: CameraNumero
       objectReference: {fileID: 0}
+    - target: {fileID: 1700048144159867965, guid: fe9bc8f5ad91cf444b21392e5fddbb0b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1700048144353757707, guid: fe9bc8f5ad91cf444b21392e5fddbb0b,
         type: 3}
       propertyPath: m_Layer
@@ -12162,6 +12172,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: CameraNumero
       objectReference: {fileID: 0}
+    - target: {fileID: 1700048144386045487, guid: fe9bc8f5ad91cf444b21392e5fddbb0b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1700048144506517080, guid: fe9bc8f5ad91cf444b21392e5fddbb0b,
         type: 3}
       propertyPath: m_Layer
@@ -12171,6 +12186,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: CameraNumero
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700048144506517082, guid: fe9bc8f5ad91cf444b21392e5fddbb0b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1700048144554190246, guid: fe9bc8f5ad91cf444b21392e5fddbb0b,
         type: 3}
@@ -12222,6 +12242,11 @@ PrefabInstance:
       propertyPath: tamanhoRay
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1700048144900079561, guid: fe9bc8f5ad91cf444b21392e5fddbb0b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1700048144900079567, guid: fe9bc8f5ad91cf444b21392e5fddbb0b,
         type: 3}
       propertyPath: m_Layer
@@ -12230,7 +12255,7 @@ PrefabInstance:
     - target: {fileID: 1700048144900079567, guid: fe9bc8f5ad91cf444b21392e5fddbb0b,
         type: 3}
       propertyPath: m_TagString
-      value: CameraNumero
+      value: Roupa
       objectReference: {fileID: 0}
     - target: {fileID: 1700048144907206264, guid: fe9bc8f5ad91cf444b21392e5fddbb0b,
         type: 3}
@@ -12242,6 +12267,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.1232
       objectReference: {fileID: 0}
+    - target: {fileID: 1700048144927274452, guid: fe9bc8f5ad91cf444b21392e5fddbb0b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1700048144927274458, guid: fe9bc8f5ad91cf444b21392e5fddbb0b,
         type: 3}
       propertyPath: m_Layer
@@ -12302,6 +12332,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: CameraNumero
       objectReference: {fileID: 0}
+    - target: {fileID: 1700048145163420664, guid: fe9bc8f5ad91cf444b21392e5fddbb0b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1700048145163420670, guid: fe9bc8f5ad91cf444b21392e5fddbb0b,
         type: 3}
       propertyPath: m_Layer
@@ -12321,6 +12356,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: CameraNumero
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700048145320045372, guid: fe9bc8f5ad91cf444b21392e5fddbb0b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1700048145531738532, guid: fe9bc8f5ad91cf444b21392e5fddbb0b,
         type: 3}
@@ -17182,7 +17222,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1373430681}
   - component: {fileID: 1373430684}
-  - component: {fileID: 1373430683}
   - component: {fileID: 1373430682}
   m_Layer: 0
   m_Name: Camera
@@ -17309,14 +17348,6 @@ MonoBehaviour:
       data1: 0
       data2: 0
   defaultFrameSettings: 0
---- !u!81 &1373430683
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1373430680}
-  m_Enabled: 1
 --- !u!20 &1373430684
 Camera:
   m_ObjectHideFlags: 0
@@ -21455,7 +21486,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh175614
+  m_Name: pb_Mesh18996
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22563,6 +22594,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.8474704
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: ea65a302fdcb31f4a85e3a7fbbb82db0, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: ea65a302fdcb31f4a85e3a7fbbb82db0, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: fbe3b40107ec370468ffa5062af311ea, type: 2}
+    - target: {fileID: 2300000, guid: ea65a302fdcb31f4a85e3a7fbbb82db0, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: c6a0c09de2ed85e44a4cb542c976a164, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea65a302fdcb31f4a85e3a7fbbb82db0, type: 3}
 --- !u!4 &1885758500 stripped
@@ -23498,7 +23541,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh175430
+  m_Name: pb_Mesh18798
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24086,7 +24129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh176276
+  m_Name: pb_Mesh19668
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

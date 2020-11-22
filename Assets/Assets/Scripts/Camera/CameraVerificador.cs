@@ -8,33 +8,43 @@ public class CameraVerificador : MonoBehaviour
    public  int verificador;
     public float tamanhoRay;
 
+   public CameraNumero numeroScript;
     public IEnumerator Verificar()
-   {
-        while (true)
-        {
-            RaycastHit hit = new RaycastHit();
-            if (Physics.Raycast(transform.position, transform.forward / 5, out hit, tamanhoRay))
+    {
+
+        RaycastHit hit;
+        Ray ray = new Ray(transform.position, transform.forward / 5);
+            if (Physics.Raycast(ray, out hit, tamanhoRay))
             {
-                if (hit.collider != null)
-                {
+                
                     if (hit.collider.tag == "CameraNumero")
                     {
-                        CameraNumero numeroScript = hit.collider.GetComponent<CameraNumero>();
+                        numeroScript = hit.collider.GetComponent<CameraNumero>();
                         camerapuzzle.RecebeNumero(verificador, numeroScript.numero);
-
                         print("Foi" + numeroScript.numero);
-                   
+             
+                
                     }
                     else
                     {
                         camerapuzzle.RecebeNumero(verificador, 0);
                         print("Foi" + 0);
                     }
-                }
-                Debug.DrawRay(transform.position, transform.forward / 5, Color.red, tamanhoRay);
-                yield return new WaitForSecondsRealtime(0.5f);
+
+               if(hit.transform.gameObject.tag=="CameraNumero")
+            {
+                print(hit.transform.GetComponent<CameraNumero>().numero);
             }
+                    
+                Debug.DrawRay(transform.position, transform.forward / 5, Color.red, tamanhoRay);
+            yield return new WaitForSecondsRealtime(1);
         }
+        
+    }
+
+    public void ApagarDados()
+    {
+        numeroScript = null;
     }
 
     private void OnDrawGizmos()
