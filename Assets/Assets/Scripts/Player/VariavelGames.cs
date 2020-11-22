@@ -6,5 +6,5 @@ public class VariavelGames
 {
     public PortaScript scriptPorta;
     public CofrePuzzle cofre;
-   
+    public BauPuzzle scriptBau;
 }
