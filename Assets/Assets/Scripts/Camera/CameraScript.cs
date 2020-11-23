@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 
-public class CameraScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class CameraScript : MonoBehaviour, IBeginDragHandler, IDragHandler
 {
 
     
@@ -17,7 +17,7 @@ public class CameraScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     public CameraVerificador scriptRotate;
     public void OnBeginDrag(PointerEventData data)
     {
-        StartCoroutine(scriptRotate.Verificar());
+       
     }
 
     public void OnDrag(PointerEventData data)
@@ -34,12 +34,19 @@ public class CameraScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     }
 
 
-    public void OnEndDrag(PointerEventData data)
+  
+    public void Confirmar()
     {
-        GameManager.instancie.DefinirTimeScale(1);
-        print("OIEE");
+      // scriptRotate.Verificar();
+        StartCoroutine(VerificarOsNumeros());
     }
-    
+
+    public IEnumerator VerificarOsNumeros()
+    {
+        GameManager.instancie.ativarPuzzle = false;
+        yield return new WaitForSeconds(0.3f);
+        GameManager.instancie.ativarPuzzle = true;
+    }
     public void CameraRotate2()
     {
         mouseX = Input.GetAxis("Mouse X");

@@ -11,7 +11,7 @@ public class CameraPuzzle : MonoBehaviour
     public double numeroCerto3;
     public Item GanhaItem;
     bool verificador1, verificador2, verificador3;
-
+    public CameraPuzzleGerencer scriptPuzzle;
     public double numeroteste1, numeroteste2, numeroteste3;
     public void RecebeNumero(int verificadornumero, double numero)
     {
@@ -57,6 +57,7 @@ public class CameraPuzzle : MonoBehaviour
             print("Foi Ganhou o item");
             GerenciadorItem.instacie.ReceberItem(GanhaItem);
             ganhou = true;
+            scriptPuzzle.Concluiu();
             Destroy(this);
         }
     }

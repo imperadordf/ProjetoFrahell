@@ -36,6 +36,7 @@ public class CameraPuzzleGerencer : PuzzleRei
     {
         AtivarDesativaObject(false);
         ativouPuzzle = false;
+        this.gameObject.layer = 0;
         this.enabled = false;
     }
 }
