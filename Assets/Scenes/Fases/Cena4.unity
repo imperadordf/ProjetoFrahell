@@ -5196,6 +5196,7 @@ GameObject:
   - component: {fileID: 304644372}
   - component: {fileID: 304644375}
   - component: {fileID: 304644376}
+  - component: {fileID: 304644377}
   m_Layer: 10
   m_Name: 3DGeom~422_4
   m_TagString: Roupa
@@ -5221,7 +5222,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2af5ef376dab55d45a6fe07c65226b95, type: 2}
+  - {fileID: 2100000, guid: 21dd639af6f79874681f7bf00ca54927, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5290,6 +5291,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 17.975517, y: 11.954494, z: 12.967613}
   m_Center: {x: -8.987637, y: 5.977247, z: 6.4838085}
+--- !u!114 &304644377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304644371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02845f078106c554ea1e7b0c05a82dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materias: []
+  mesh: {fileID: 304644372}
+  emissiveIntesity: 40000
+  EmissiveBugado: 1
 --- !u!1 &309995434
 GameObject:
   m_ObjectHideFlags: 0
@@ -9253,7 +9270,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh73714
+  m_Name: pb_Mesh274792
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16023,6 +16040,7 @@ GameObject:
   - component: {fileID: 913673816}
   - component: {fileID: 913673819}
   - component: {fileID: 913673820}
+  - component: {fileID: 913673821}
   m_Layer: 10
   m_Name: PapelGarrafaAlfabeto
   m_TagString: Roupa
@@ -16117,6 +16135,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 75.66753, y: 75.66746, z: 297.9454}
   m_Center: {x: -37.837578, y: 37.83385, z: 148.96877}
+--- !u!114 &913673821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913673815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02845f078106c554ea1e7b0c05a82dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materias: []
+  mesh: {fileID: 913673816}
+  emissiveIntesity: 50
+  EmissiveBugado: 0
 --- !u!1 &918844569
 GameObject:
   m_ObjectHideFlags: 0
@@ -27384,7 +27418,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh74994
+  m_Name: pb_Mesh276072
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -32023,7 +32057,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh74576
+  m_Name: pb_Mesh275654
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

@@ -9,11 +9,14 @@ public class RaycastMouse : MonoBehaviour
     public Image mouseImagem;
     public Camera cam;
 
-
+    [Header("Sprite do Cursor")]
     public Sprite mouseMao;
     public Sprite spritePorta;
     public Sprite PadraoSprite;
- 
+    public Sprite spritePuzzle;
+
+
+    private MateriaInterative itemselecionado;
     private void FixedUpdate()
     {
         RaycastHit hit;
@@ -77,6 +80,11 @@ public class RaycastMouse : MonoBehaviour
         {
             mouseImagem.sprite = PadraoSprite;
             mouseImagem.transform.localScale = new Vector3(0.1570803f, 0.1570803f, 0.1570803f);
+            if (itemselecionado)
+            {
+                itemselecionado.RaycastFora();
+                itemselecionado = null;
+            }
         }
     }
 
@@ -105,6 +113,8 @@ public class RaycastMouse : MonoBehaviour
             case "Item":
                 mouseImagem.sprite = mouseMao;
                 mouseImagem.transform.localScale = new Vector3(0.3761445f, 0.3761445f, 0.3761445f);
+                itemselecionado = hit.collider.GetComponent<MateriaInterative>();
+                itemselecionado.RaycastEmcima();
                 break;
             case "Porta":
                 mouseImagem.sprite = spritePorta;
@@ -119,7 +129,7 @@ public class RaycastMouse : MonoBehaviour
                 mouseImagem.transform.localScale = new Vector3(0.3761445f, 0.3761445f, 0.3761445f);
                 break;
             case "Puzzle":
-                mouseImagem.sprite = mouseMao;
+                mouseImagem.sprite = spritePuzzle;
                 mouseImagem.transform.localScale = new Vector3(0.3761445f, 0.3761445f, 0.3761445f);
                 break;
             case "Armario":
@@ -131,6 +141,8 @@ public class RaycastMouse : MonoBehaviour
                 {
                     mouseImagem.sprite = mouseMao;
                     mouseImagem.transform.localScale = new Vector3(0.3761445f, 0.3761445f, 0.3761445f);
+                    itemselecionado = hit.collider.GetComponent<MateriaInterative>();
+                    itemselecionado.RaycastEmcima();
                 }
                 else
                 { 

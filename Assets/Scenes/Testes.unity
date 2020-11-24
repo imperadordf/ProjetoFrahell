@@ -3673,7 +3673,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh56776
+  m_Name: pb_Mesh152930
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5292,6 +5292,27 @@ GameObject:
 --- !u!4 &1413745915 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 235256685746518379, guid: 7fadb69cde4cd364b9d8fe8e4c26c8d4,
+    type: 3}
+  m_PrefabInstance: {fileID: 235256686614476176}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1413745916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413745914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02845f078106c554ea1e7b0c05a82dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materias:
+  - {fileID: 2100000, guid: 4b52811d3e10ebf49ae4452491cb75c3, type: 2}
+  mesh: {fileID: 1413745919}
+--- !u!23 &1413745919 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 235256685746518382, guid: 7fadb69cde4cd364b9d8fe8e4c26c8d4,
     type: 3}
   m_PrefabInstance: {fileID: 235256686614476176}
   m_PrefabAsset: {fileID: 0}
@@ -7052,7 +7073,7 @@ PrefabInstance:
     - target: {fileID: 235256685746518379, guid: 7fadb69cde4cd364b9d8fe8e4c26c8d4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 235256685746518379, guid: 7fadb69cde4cd364b9d8fe8e4c26c8d4,
         type: 3}
@@ -7069,6 +7090,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 235256685746518382, guid: 7fadb69cde4cd364b9d8fe8e4c26c8d4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b52811d3e10ebf49ae4452491cb75c3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fadb69cde4cd364b9d8fe8e4c26c8d4, type: 3}
 --- !u!1001 &906413997162753026
@@ -7590,6 +7616,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lente_De_Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 5444379276449425568, guid: 7fd9dd22ab3ddac408050d2e4c75378c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9067166360497478323, guid: 7fd9dd22ab3ddac408050d2e4c75378c,
         type: 3}
