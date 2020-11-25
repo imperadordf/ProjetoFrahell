@@ -1131,6 +1131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materias: []
   mesh: {fileID: 41160540}
+  emissiveIntesity: 50
+  EmissiveBugado: 0
 --- !u!23 &41160540 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -1504981713932161579, guid: 2b6f1cb55e8e8ce48813179e7e3b4473,
@@ -4875,7 +4877,7 @@ MonoBehaviour:
   m_AreaLightShape: 0
   m_Intensity: 10
   m_EnableSpotReflector: 0
-  m_LuxAtDistance: 30
+  m_LuxAtDistance: 40
   m_InnerSpotPercent: 17
   m_LightDimmer: 1
   m_VolumetricDimmer: 1
@@ -4970,8 +4972,8 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 0.9292453, b: 0.9292453, a: 1}
-  m_Intensity: 9000
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 16000
   m_Range: 10
   m_SpotAngle: 179
   m_InnerSpotAngle: 1
@@ -12984,7 +12986,7 @@ MonoBehaviour:
   m_AreaLightShape: 0
   m_Intensity: 6.3
   m_EnableSpotReflector: 0
-  m_LuxAtDistance: 20
+  m_LuxAtDistance: 30
   m_InnerSpotPercent: 17
   m_LightDimmer: 1
   m_VolumetricDimmer: 1
@@ -13080,7 +13082,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.7971698, b: 0.7971698, a: 1}
-  m_Intensity: 2520
+  m_Intensity: 5670
   m_Range: 10
   m_SpotAngle: 179
   m_InnerSpotAngle: 1
@@ -16095,6 +16097,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materias: []
   mesh: {fileID: 1219682787}
+  emissiveIntesity: 50
+  EmissiveBugado: 0
 --- !u!114 &1219682785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28564,7 +28568,7 @@ MonoBehaviour:
   m_AreaLightShape: 0
   m_Intensity: 15
   m_EnableSpotReflector: 0
-  m_LuxAtDistance: 20
+  m_LuxAtDistance: 30
   m_InnerSpotPercent: 17
   m_LightDimmer: 1
   m_VolumetricDimmer: 1
@@ -28660,7 +28664,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 6000
+  m_Intensity: 13500
   m_Range: 10
   m_SpotAngle: 179
   m_InnerSpotAngle: 1
