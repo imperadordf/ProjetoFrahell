@@ -1555,7 +1555,6 @@ GameObject:
   m_Component:
   - component: {fileID: 103078386}
   - component: {fileID: 103078389}
-  - component: {fileID: 103078388}
   - component: {fileID: 103078387}
   m_Layer: 0
   m_Name: Camera (1)
@@ -1682,14 +1681,6 @@ MonoBehaviour:
       data1: 0
       data2: 0
   defaultFrameSettings: 0
---- !u!81 &103078388
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103078385}
-  m_Enabled: 1
 --- !u!20 &103078389
 Camera:
   m_ObjectHideFlags: 0
@@ -2078,6 +2069,7 @@ MonoBehaviour:
   mesh: {fileID: 195525321}
   emissiveIntesity: 50
   EmissiveBugado: 0
+  IsFoto: 0
 --- !u!23 &195525321 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 2567637893089044660, guid: 291f17aa28481cb45ba085d063d28f59,
@@ -7983,6 +7975,7 @@ MonoBehaviour:
   mesh: {fileID: 1296692568}
   emissiveIntesity: 50
   EmissiveBugado: 0
+  IsFoto: 0
 --- !u!23 &1296692568 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 9007380030335325150, guid: 9ac5f0f1bb9974e45851b24b6fb15bf0,
@@ -13949,7 +13942,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh37452
+  m_Name: pb_Mesh398150
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

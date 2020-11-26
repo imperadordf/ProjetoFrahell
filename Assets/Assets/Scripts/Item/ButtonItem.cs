@@ -28,6 +28,7 @@ public class ButtonItem : MonoBehaviour
 
     public void InteragerItem()
     {
+        if(item)
         GerenciadorItem.instacie.ClicouItem(item);
     }
 }

@@ -5505,6 +5505,7 @@ MonoBehaviour:
   mesh: {fileID: 304644372}
   emissiveIntesity: 20000
   EmissiveBugado: 1
+  IsFoto: 0
 --- !u!1 &309995434
 GameObject:
   m_ObjectHideFlags: 0
@@ -6279,7 +6280,7 @@ PrefabInstance:
     - target: {fileID: 1312821732456411929, guid: 6f8fdaf4566112d428ca61fa658ac2f5,
         type: 3}
       propertyPath: NomeDaFase
-      value: Tunel4
+      value: Tunel5
       objectReference: {fileID: 0}
     - target: {fileID: 2373190875178553636, guid: 6f8fdaf4566112d428ca61fa658ac2f5,
         type: 3}
@@ -10747,7 +10748,7 @@ PrefabInstance:
     - target: {fileID: 1312821732456411929, guid: 6f8fdaf4566112d428ca61fa658ac2f5,
         type: 3}
       propertyPath: NomeDaFase
-      value: Tunel3
+      value: Tunel2
       objectReference: {fileID: 0}
     - target: {fileID: 2373190875178553636, guid: 6f8fdaf4566112d428ca61fa658ac2f5,
         type: 3}
@@ -16349,6 +16350,7 @@ MonoBehaviour:
   mesh: {fileID: 913673816}
   emissiveIntesity: 20000
   EmissiveBugado: 1
+  IsFoto: 0
 --- !u!1 &918844569
 GameObject:
   m_ObjectHideFlags: 0

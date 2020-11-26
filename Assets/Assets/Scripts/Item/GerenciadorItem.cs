@@ -18,6 +18,8 @@ public class GerenciadorItem : MonoBehaviour
     public GameObject PanelExpadir;
     // Verificador se esta dentro da area para usar o Item
     public bool useritemArea = false;
+    [Header ("Fotos Item")]
+    public Item fotoMetade;
     public VariavelGames variaveGeral = new VariavelGames();
     private void Awake()
     {
@@ -58,10 +60,15 @@ public class GerenciadorItem : MonoBehaviour
     IEnumerator RecebeitemConstratine(Item item)
     {
         foreach(ButtonItem itens in listButtonitens)
-        {
+        {   
             if (itens.RetornItem()==null)
             {
                 itens.RecebeItem(item);
+                break;
+            }
+            else if (itens.RetornItem().nomeItem == ItemName.Foto1 && item.nomeItem == ItemName.Foto2 || itens.RetornItem().nomeItem == ItemName.Foto2 && item.nomeItem == ItemName.Foto1)
+            {
+                itens.RecebeItem(fotoMetade);
                 break;
             }
             yield return new WaitForSeconds(0.05f);
