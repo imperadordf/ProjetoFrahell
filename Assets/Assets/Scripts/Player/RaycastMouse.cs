@@ -15,14 +15,14 @@ public class RaycastMouse : MonoBehaviour
     public Sprite PadraoSprite;
     public Sprite spritePuzzle;
 
-
+    public float tamanhaRaycast;
     private MateriaInterative itemselecionado;
     private void FixedUpdate()
     {
         RaycastHit hit;
 
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
-        if ((Physics.Raycast(ray, out hit, 2, layer)))
+        if ((Physics.Raycast(ray, out hit, tamanhaRaycast, layer)))
         {
 
             if (Input.GetKeyDown(KeyCode.E))
