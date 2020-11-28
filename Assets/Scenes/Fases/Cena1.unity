@@ -1762,7 +1762,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh164066
+  m_Name: pb_Mesh27568
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2584,6 +2584,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1736835708667784844, guid: 7f310441136f9194293ab48e70eb2a6d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 12.491455
+      objectReference: {fileID: 0}
     - target: {fileID: 6399323096704629617, guid: 7f310441136f9194293ab48e70eb2a6d,
         type: 3}
       propertyPath: m_Name
@@ -10187,6 +10192,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5098581, y: 0.4295007, z: 0.8303054}
   m_Center: {x: -1.1890076, y: 0.14142866, z: 0.41515255}
+--- !u!1 &853706474 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 117374, guid: 140c8af3db00f124c8e70e230e3fb3c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1152770196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &853706476 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3620885979635983593, guid: 140c8af3db00f124c8e70e230e3fb3c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1152770196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &853706477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853706474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 647d51de11cf24b4a8dfdbf3da2c38f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anime: {fileID: 853706478}
+  locked: 0
+  somPortaTrancada: {fileID: 8300000, guid: 0b5fe75de4d669e49b62f48ef4fd58d2, type: 3}
+  somPortaAbrir: {fileID: 8300000, guid: eb3cb4724b221b64697fcff35ef22f29, type: 3}
+  somPortaFechar: {fileID: 8300000, guid: b62558e0bc12a5b469ab79b447599d72, type: 3}
+  audioPorta: {fileID: 853706476}
+  stringPortaAberta: Porta_Abre
+  stringPortaFechado: Porta_Fecha
+  tutorial: {fileID: 1473919274}
+--- !u!95 &853706478 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2801573062016718051, guid: 140c8af3db00f124c8e70e230e3fb3c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1152770196}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &859824732 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2678813976216837633, guid: 90b65d8b0af1a6446a9b66887a13be94,
@@ -11355,7 +11399,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh164276
+  m_Name: pb_Mesh27786
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13616,7 +13660,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7799985023255410161, guid: 140c8af3db00f124c8e70e230e3fb3c4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 140c8af3db00f124c8e70e230e3fb3c4, type: 3}
 --- !u!4 &1154091365 stripped
 Transform:
@@ -13923,7 +13968,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh163450
+  m_Name: pb_Mesh26956
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15213,7 +15258,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_textAlignment: 514
-  m_characterSpacing: 0
+  m_characterSpacing: 2.7
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -15513,10 +15558,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1445251117}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 969c3ba95f335ce4c8abe5721929756c, type: 3}
+  m_Script: {fileID: 11500000, guid: b1c9374d616b3a7498e759fa82010b61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 9ad0e4fd9cfb12848ba2566b4feab662, type: 2}
+  tutorial: {fileID: 2108777843}
 --- !u!65 &1445251119
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18154,7 +18200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
+  m_ReferencePixelsPerUnit: 82.25
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
@@ -18396,7 +18442,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh164078
+  m_Name: pb_Mesh27580
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24549,7 +24595,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: aaaaaaaaaaaaaaaaaaaaaa
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fe270b321f78eea41b4a1bda344e365e, type: 2}
   m_sharedMaterial: {fileID: -7717993822409064608, guid: fe270b321f78eea41b4a1bda344e365e,
@@ -24578,14 +24624,14 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 29.5
-  m_fontSizeBase: 29.5
+  m_fontSize: 24.4
+  m_fontSizeBase: 24.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_textAlignment: 258
+  m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -24619,13 +24665,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1980531188}
-    characterCount: 0
+    characterCount: 22
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -25037,7 +25083,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh163784
+  m_Name: pb_Mesh27292
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25230,7 +25276,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: a6b690f1499c2404391af921c6bf4da1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.087
+  m_Volume: 0.442
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -25340,6 +25386,7 @@ GameObject:
   - component: {fileID: 2108777841}
   - component: {fileID: 2108777840}
   - component: {fileID: 2108777839}
+  - component: {fileID: 2108777843}
   m_Layer: 5
   m_Name: CanvasLegenda
   m_TagString: Untagged
@@ -25428,6 +25475,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2108777843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108777838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e5e768b63da76429afe1d27383541a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1407797386}
 --- !u!1001 &2110787685
 PrefabInstance:
   m_ObjectHideFlags: 0

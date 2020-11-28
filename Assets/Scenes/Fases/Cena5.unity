@@ -6771,6 +6771,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.26
       objectReference: {fileID: 0}
+    - target: {fileID: 325379516378077736, guid: 140c8af3db00f124c8e70e230e3fb3c4,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233760537785039854, guid: 140c8af3db00f124c8e70e230e3fb3c4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 140c8af3db00f124c8e70e230e3fb3c4, type: 3}
 --- !u!1001 &789676988
@@ -17279,6 +17289,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1233760537785039854, guid: 140c8af3db00f124c8e70e230e3fb3c4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 140c8af3db00f124c8e70e230e3fb3c4, type: 3}
 --- !u!1001 &1487941049
@@ -20019,6 +20034,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 906413995870432938, guid: e86b253f77203764d8af9858492ce1b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -63
+      objectReference: {fileID: 0}
     - target: {fileID: 906413996254670508, guid: e86b253f77203764d8af9858492ce1b6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20424,6 +20444,11 @@ PrefabInstance:
     - target: {fileID: 438598, guid: 140c8af3db00f124c8e70e230e3fb3c4, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.3999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233760537785039854, guid: 140c8af3db00f124c8e70e230e3fb3c4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 140c8af3db00f124c8e70e230e3fb3c4, type: 3}

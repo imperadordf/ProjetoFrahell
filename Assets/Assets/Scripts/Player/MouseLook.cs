@@ -5,7 +5,6 @@ using UnityEngine;
 public class MouseLook : MonoBehaviour
 {
     public float sensibilidadeMouse=100;
-    RaycastHit hit = new RaycastHit();
     public Transform playerTransforme;
     public Player scriptPlayer;
     public float xRotation=0;

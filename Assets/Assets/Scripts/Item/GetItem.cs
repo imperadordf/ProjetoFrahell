@@ -7,7 +7,7 @@ public class GetItem : MonoBehaviour
     public Item item;
 
     
-    public Item GetItemObject()
+    public virtual Item GetItemObject()
     {
        
         item.pegou = true;

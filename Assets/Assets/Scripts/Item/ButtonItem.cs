@@ -10,10 +10,7 @@ public class ButtonItem : MonoBehaviour
     // Start is called before the first frame update
 
 
-    private void Start()
-    {
-        print(item + "oi");
-    }
+   
     public void RecebeItem(Item item)
     {
         

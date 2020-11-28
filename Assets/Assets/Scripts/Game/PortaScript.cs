@@ -14,7 +14,7 @@ public class PortaScript : MonoBehaviour
     public string stringPortaAberta = "PortaAbre";
     public string stringPortaFechado = "PortaFecha";
 
-    public void OpenTheDoorOurClose()
+    public virtual  void OpenTheDoorOurClose()
     {
         if (!locked)
         {
@@ -34,13 +34,13 @@ public class PortaScript : MonoBehaviour
         }
     }
 
-    public void AbrirPortaSom()
+    public virtual void AbrirPortaSom()
     {
           anime.SetTrigger("Open");
           audioPorta.PlayOneShot(somPortaAbrir);
     }
     
-  public void FecharPortaIa()
+  public   virtual void FecharPortaIa()
     {
         anime.SetTrigger("Close");
         audioPorta.PlayOneShot(somPortaFechar);
