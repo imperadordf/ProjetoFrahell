@@ -75,14 +75,14 @@ public class GameManager : MonoBehaviour
       
         if (vida <= 0 && !morreu)
         {
-            playerscript.animator_Player.SetTrigger("Dead");
+            
             playerscript.Morrer();
             Invoke("MorreuCarregaFase", 4f);
             morreu = true;
         }
         else if(!morreu)
         {
-            StartCoroutine(uiscript.InterfaceDano());
+            StartCoroutine(uiscript.InterfaceDano(vida));
             vida--;
         }
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Animator animator_Player;
-    Vector3 velocity;
+    
     //Camera em Pé e Camera Agachado
     public Camera cameraPe;
     
@@ -17,7 +17,8 @@ public class Player : MonoBehaviour
     private Transform playerposition;
     // Start is called before the first frame update
     public MouseLook mousePlayer;
-   
+
+    public AnimationClip animeDeath;
     public Transform SpawnItem;
     public Transform PlayerPosition
     {
@@ -166,6 +167,14 @@ public class Player : MonoBehaviour
             animator_Player.SetBool("IsSpriting", isSpriting);
             animator_Player.SetBool("IsIdle", isIdle);
         }
+        else
+        {
+            animator_Player.SetFloat("X", 0);
+            animator_Player.SetFloat("Y", 0);
+            animator_Player.SetBool("IsCrouch", false);
+            animator_Player.SetBool("IsSpriting", false);
+            animator_Player.SetBool("IsIdle", false);
+        }
     }
     //Animação de rotação que tem referencia no Script "MouseLook"
     public void AnimationRotation(float mousex)
@@ -179,10 +188,10 @@ public class Player : MonoBehaviour
 
     public void Morrer()
     {
-        
-        MudarState(EstadoPlayer.DEATH);
         mousePlayer.enabled = false;
-        this.enabled = false;
+        MudarState(EstadoPlayer.DEATH);
+        animator_Player.SetTrigger("Dead");       
+        
     }
 
     public void MorrerCamera()

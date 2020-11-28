@@ -8,7 +8,7 @@ public class UiScript : MonoBehaviour
     public Image damageUi;
     public Image itemImagem;
     public Animator animeItem;
-
+    
     public Sprite maozinhaCurso;
     // Start is called before the first frame update
     void Start()
@@ -22,8 +22,20 @@ public class UiScript : MonoBehaviour
         
     }
 
-    public IEnumerator InterfaceDano()
+    public IEnumerator InterfaceDano(int vida)
     {
+        switch (vida)
+        {
+            case 3:
+                damageUi.color = new Color(1, 1, 1, 0.10f);
+                break;
+            case 2:
+                damageUi.color = new Color(1, 1, 1, 0.4f);
+                break;
+            case 1:
+                damageUi.color = new Color(1, 1, 1, 0.81f);
+                break;
+        }
         damageUi.enabled = true;
         yield return new WaitForSeconds(0.5f);
         damageUi.enabled = false;
