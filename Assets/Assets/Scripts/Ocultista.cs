@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class Ocultista : InimigoMachine
 {
-    bool abriuPorta;
+   public  bool abriuPorta;
     bool podeabrirPorta=true;
     public GameObject danoObject;
     public float tempoPortaMax;
@@ -178,6 +178,7 @@ public class Ocultista : InimigoMachine
     {
         if(other.TryGetComponent<PortaIa>(out PortaIa porta) && !abriuPorta && !porta.scritPorta.locked && podeabrirPorta)
         {
+            print("Abriu");
             porta.AbrirPortaIa();
             abriuPorta = true;
           //  MudarState(EnemyState.ABRIUPORTA);
