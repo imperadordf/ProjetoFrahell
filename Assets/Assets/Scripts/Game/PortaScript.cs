@@ -37,12 +37,20 @@ public class PortaScript : MonoBehaviour
     public virtual void AbrirPortaSom()
     {
           anime.SetTrigger("Open");
-          audioPorta.PlayOneShot(somPortaAbrir);
+        if (!audioPorta.isPlaying)
+        {
+            audioPorta.PlayOneShot(somPortaAbrir);
+        }
+         
     }
     
   public   virtual void FecharPortaIa()
     {
         anime.SetTrigger("Close");
-        audioPorta.PlayOneShot(somPortaFechar);
+        if (!audioPorta.isPlaying)
+        {
+            audioPorta.PlayOneShot(somPortaFechar);
+        }
+        
     }
 }

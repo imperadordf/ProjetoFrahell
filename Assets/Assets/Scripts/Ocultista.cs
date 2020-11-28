@@ -11,6 +11,7 @@ public class Ocultista : InimigoMachine
     public float tempoPortaMax;
     float tempoporta;
   public EnemyState ultimoState;
+    bool portaDebug;
     void Start()
     {
         PegarComponentes();
@@ -182,6 +183,23 @@ public class Ocultista : InimigoMachine
             porta.AbrirPortaIa();
             abriuPorta = true;
           //  MudarState(EnemyState.ABRIUPORTA);
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.TryGetComponent<PortaIa>(out PortaIa porta)  && podeabrirPorta )
+        {
+            if(porta.scritPorta.anime.GetCurrentAnimatorStateInfo(0).IsName("Porta_Iddle") )
+            {
+                porta.AbrirPortaIa();
+                portaDebug = true;
+            }
+            else
+            {
+                portaDebug = false;
+            }
+                  
         }
     }
 

@@ -17,13 +17,7 @@ public class PortaIa : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Inimigo"))
-        {
-            scritPorta.AbrirPortaSom();
-        }
-    }
+   
 }
 
 

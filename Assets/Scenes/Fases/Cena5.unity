@@ -17657,6 +17657,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 325379516378077736, guid: 140c8af3db00f124c8e70e230e3fb3c4,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.41
+      objectReference: {fileID: 0}
     - target: {fileID: 1233760537785039854, guid: 140c8af3db00f124c8e70e230e3fb3c4,
         type: 3}
       propertyPath: m_Enabled
@@ -17890,6 +17895,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2358970752503653766, guid: 2f3a6ddd67b8ef941b4d77d7871ea3dc,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 2358970752503653784, guid: 2f3a6ddd67b8ef941b4d77d7871ea3dc,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2358970752503653787, guid: 2f3a6ddd67b8ef941b4d77d7871ea3dc,
         type: 3}
       propertyPath: patrolObject.Array.size
@@ -17934,6 +17949,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ocultista_Inimigo
+      objectReference: {fileID: 0}
+    - target: {fileID: 6025062520778882196, guid: 2f3a6ddd67b8ef941b4d77d7871ea3dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7333561860125200007, guid: 2f3a6ddd67b8ef941b4d77d7871ea3dc,
         type: 3}
