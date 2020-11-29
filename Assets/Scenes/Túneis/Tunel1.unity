@@ -555,7 +555,8 @@ PlayableDirector:
   - key: {fileID: 8764219430138799968, guid: 09b2d2047f0cfa547a4b7383e9266801, type: 2}
     value: {fileID: 504917507}
   m_ExposedReferences:
-    m_References: []
+    m_References:
+    - 70d464cd40a9b1e4a83ad688699d4b8c: {fileID: 1430946600}
 --- !u!4 &148014572
 Transform:
   m_ObjectHideFlags: 0
@@ -26428,7 +26429,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1430946601}
-  - component: {fileID: 1430946602}
   m_Layer: 0
   m_Name: Pos1
   m_TagString: Untagged
@@ -26450,18 +26450,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 869.138, z: 0}
---- !u!114 &1430946602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1430946600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b135c4a9d4b7a984e89f8c975b631b7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1508286370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26584,6 +26572,11 @@ PrefabInstance:
       propertyPath: m_UpdateMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3650579985252047549, guid: 90b65d8b0af1a6446a9b66887a13be94,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4102522650179826061, guid: 90b65d8b0af1a6446a9b66887a13be94,
         type: 3}
       propertyPath: m_IsActive
@@ -26607,7 +26600,7 @@ PrefabInstance:
     - target: {fileID: 5213494226197173730, guid: 90b65d8b0af1a6446a9b66887a13be94,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6333802639587890841, guid: 90b65d8b0af1a6446a9b66887a13be94,
         type: 3}
