@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
-public class SustoCena2 : MonoBehaviour
+public class SustoCena2 : Susto
 {
     public PlayableDirector timelineSusto;
     public GameObject inimigoSusto;

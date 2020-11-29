@@ -7,6 +7,7 @@ public class ManagerCena : MonoBehaviour
 
     public static ManagerCena instancie;
     public List<GetItem> itensCena;
+    public List<Susto> sustoLista;
     [SerializeField]
     
     private void Start()
