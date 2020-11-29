@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public UiScript uiscript;
     public Player playerscript;
     public GameObject playerImagem;
-    public bool ativarInventario,ativarMenu,ativarPuzzle;
+    public bool ativarInventario,ativarMenu,ativarPuzzle,ativarCutscene;
     public bool portaOn;
     bool morreu;
     public bool carregandoFase;

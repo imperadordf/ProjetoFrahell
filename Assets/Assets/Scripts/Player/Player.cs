@@ -42,8 +42,9 @@ public class Player : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
-       
+    {
+        if (GameManager.instancie.ativarCutscene)
+            return;
         //Entrada do Usuario 
          x = Input.GetAxis("Horizontal")*5;
          y = Input.GetAxis("Vertical")*5;

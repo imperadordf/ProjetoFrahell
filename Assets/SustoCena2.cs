@@ -14,6 +14,7 @@ public class SustoCena2 : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            GameManager.instancie.ativarCutscene = true;
             mouse.enabled = false;
             timelineSusto.Play();
             Invoke("LigaMouseLook",(float)timelineSusto.duration);
@@ -25,5 +26,6 @@ public class SustoCena2 : MonoBehaviour
     private void LigaMouseLook()
     {
         mouse.enabled = true;
+        GameManager.instancie.ativarCutscene = false;
     }
 }
