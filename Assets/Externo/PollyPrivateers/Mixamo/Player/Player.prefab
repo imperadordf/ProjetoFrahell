@@ -1357,6 +1357,7 @@ MonoBehaviour:
   cameraPe: {fileID: 6333802639587890841}
   state: 3
   mousePlayer: {fileID: 5213494226197173730}
+  animeDeath: {fileID: 0}
   SpawnItem: {fileID: 1966810636679105936}
 --- !u!54 &2263058542061649228
 Rigidbody:
@@ -1396,6 +1397,7 @@ MonoBehaviour:
   PadraoSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   spritePuzzle: {fileID: 21300000, guid: 8046819974fa10f47aa5769a60ba8287, type: 3}
   tamanhaRaycast: 4
+  scriptPlayer: {fileID: 5648343740432618871}
 --- !u!143 &666701855483381445
 CharacterController:
   m_ObjectHideFlags: 0

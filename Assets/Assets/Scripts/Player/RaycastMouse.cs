@@ -15,8 +15,12 @@ public class RaycastMouse : MonoBehaviour
     public Sprite PadraoSprite;
     public Sprite spritePuzzle;
 
+    GetItem itemGet;
+    Item item;
+    GameObject itemObject;
     public float tamanhaRaycast;
     private MateriaInterative itemselecionado;
+    public Player scriptPlayer;
     private void FixedUpdate()
     {
         RaycastHit hit;
@@ -30,11 +34,11 @@ public class RaycastMouse : MonoBehaviour
                 switch (hit.collider.tag)
                 {
                     case "Item":
-                        Item item = hit.collider.GetComponent<GetItem>().item;
-                        GerenciadorItem.instacie.ReceberItem(item);
-                        // item.clipSom;
-                        Destroy(hit.collider.gameObject);
-
+                        scriptPlayer.animator_Player.SetTrigger("PegouItem");
+                        itemGet = hit.collider.GetComponent<GetItem>();
+                        itemGet.gameObject.layer = 1;
+                        item = itemGet.item;
+                        itemObject = itemGet.gameObject;
                         break;
                     case "Porta":
                         PortaScript portascript = hit.collider.GetComponent<PortaScript>();
@@ -105,6 +109,11 @@ public class RaycastMouse : MonoBehaviour
         }
     }
 
+    public void PegarItem()
+    {
+        GerenciadorItem.instacie.ReceberItem(item);
+        Destroy(itemObject.gameObject);
+    }
 
     private void MudarCurso(RaycastHit hit)
     {
