@@ -964,7 +964,7 @@ PrefabInstance:
     - target: {fileID: 1312821732456411929, guid: 6f8fdaf4566112d428ca61fa658ac2f5,
         type: 3}
       propertyPath: isback
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1312821732456411929, guid: 6f8fdaf4566112d428ca61fa658ac2f5,
         type: 3}
@@ -5833,12 +5833,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1847831605999418034, guid: 7bc5ae0356caf124a83566828653d888,
+        type: 3}
+      propertyPath: voltando
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3104736908938932280, guid: 7bc5ae0356caf124a83566828653d888,
         type: 3}
       propertyPath: m_Name
       value: ManagerFase
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1847831605999418034, guid: 7bc5ae0356caf124a83566828653d888, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7bc5ae0356caf124a83566828653d888, type: 3}
 --- !u!1 &597321734 stripped
 GameObject:
@@ -8915,6 +8921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audiosource: {fileID: 1910676250}
+  id: 3
 --- !u!65 &1119074138
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11921,6 +11928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audiosource: {fileID: 0}
+  id: 2
   timelineSusto: {fileID: 2092829277}
   inimigoSusto: {fileID: 0}
   mouse: {fileID: 801634995}
@@ -24488,6 +24496,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8353336917060539089, guid: 0e6d4d6704833ae429243e544323065b,
         type: 3}
+      propertyPath: sustoLista.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353336917060539089, guid: 0e6d4d6704833ae429243e544323065b,
+        type: 3}
       propertyPath: itensCena.Array.data[0]
       value: 
       objectReference: {fileID: 313169591}
@@ -24496,6 +24509,16 @@ PrefabInstance:
       propertyPath: itensCena.Array.data[1]
       value: 
       objectReference: {fileID: 607593785}
+    - target: {fileID: 8353336917060539089, guid: 0e6d4d6704833ae429243e544323065b,
+        type: 3}
+      propertyPath: sustoLista.Array.data[0]
+      value: 
+      objectReference: {fileID: 1119074137}
+    - target: {fileID: 8353336917060539089, guid: 0e6d4d6704833ae429243e544323065b,
+        type: 3}
+      propertyPath: sustoLista.Array.data[1]
+      value: 
+      objectReference: {fileID: 1606934706}
     - target: {fileID: 8353336917060539094, guid: 0e6d4d6704833ae429243e544323065b,
         type: 3}
       propertyPath: m_Name

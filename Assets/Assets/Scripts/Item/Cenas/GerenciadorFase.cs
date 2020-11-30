@@ -8,7 +8,7 @@ public class GerenciadorFase : MonoBehaviour
     public static GerenciadorFase instancie;
 
    public  ManagerCena cenaManager;
-    
+    public List<int> sustoListId;
     private void Awake()
     {
         if (!instancie)
@@ -29,28 +29,68 @@ public class GerenciadorFase : MonoBehaviour
        cenaManager = FindObjectOfType<ManagerCena>();
         
        
-            if(level==1 || level==3 || level == 5 || level == 7 || level == 9 || level ==11 || level == 13 || level == 15 && cenaManager)
+        switch (level)
+        {
+            case 1:
+                VerificarItem();
+                break;
+            case 2:
+                VerificaSusto();
+                break;
+            case 3:
+                VerificaSusto();
+                VerificarItem();
+                break;
+            case 4:
+                break;
+            case 5:
+                VerificarItem();
+                break;
+            case 6:
+                break;
+            case 7:
+                VerificarItem();
+                break;
+        }
+            
+
+    }
+
+    private void VerificarItem()
+    {
+        foreach (ButtonItem listaitem in GerenciadorItem.instacie.listButtonitens)
+        {
+            if (listaitem.item == null)
             {
-                foreach (ButtonItem listaitem in GerenciadorItem.instacie.listButtonitens)
+                break;
+            }
+            else
+            {
+                for (int i = 0; i < cenaManager.itensCena.Count; i++)
                 {
-                    if (listaitem.item == null)
+
+                    if (cenaManager.itensCena[i].item.nomeItem == listaitem.item.nomeItem)
                     {
-                       break;
-                    }
-                    else
-                    {                 
-                    for(int i =0;i<cenaManager.itensCena.Count;i++)
-                    {
-                       
-                       if (cenaManager.itensCena[i].item.nomeItem == listaitem.item.nomeItem)
-                        {
-                            Destroy(cenaManager.itensCena[i].gameObject);
-                            cenaManager.itensCena.Remove(cenaManager.itensCena[i]);
-                        }
-                    }
+                        Destroy(cenaManager.itensCena[i].gameObject);
+                        cenaManager.itensCena.Remove(cenaManager.itensCena[i]);
                     }
                 }
             }
+        }
+    }
+    
+    public void VerificaSusto()
+    {
+       foreach(int sustos in sustoListId)
+        {
+            foreach(Susto sustoCena in cenaManager.sustoLista)
+            {
+                if(sustoCena.id == sustos) 
+                {
+                    Destroy(sustoCena.gameObject);
+                }
 
+            }
+        }
     }
 }

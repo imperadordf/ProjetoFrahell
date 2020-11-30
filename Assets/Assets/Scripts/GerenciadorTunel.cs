@@ -12,14 +12,20 @@ public class GerenciadorTunel : MonoBehaviour
 
     private void Awake()
     {
+       
+    }
+
+    private void Start()
+    {
         if (!ManageFase.instancie.voltando)
         {
-
             player.SetPositionAndRotation(pos1.position, pos1.rotation);
+            playerAnimation.enabled = true;
         }
         else
         {
             player.SetPositionAndRotation(pos2.position, pos2.rotation);
+            playerAnimation.enabled = true;
 
         }
     }

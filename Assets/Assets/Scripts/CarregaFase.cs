@@ -16,6 +16,7 @@ public class CarregaFase : MonoBehaviour
     {
 
         GameManager.instancie.playerscript.transform.SetPositionAndRotation(position.position,position.rotation);
+        
         StartCoroutine(CarregarCena());
          GameManager.instancie.carregandoFase = true;
         GameManager.instancie.ativarPuzzle = true;

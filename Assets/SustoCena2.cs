@@ -14,6 +14,7 @@ public class SustoCena2 : Susto
     {
         if (other.tag == "Player")
         {
+            GerenciadorFase.instancie.sustoListId.Add(id);
             GameManager.instancie.ativarCutscene = true;
             mouse.enabled = false;
             timelineSusto.Play();
