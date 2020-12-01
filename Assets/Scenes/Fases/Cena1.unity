@@ -1904,7 +1904,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh294050
+  m_Name: pb_Mesh23818
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8928,6 +8928,8 @@ PlayableDirector:
     value: {fileID: 1306531735}
   - key: {fileID: 3821664772065410094, guid: 20d78e7c22a9a114ea1ddee09f383849, type: 2}
     value: {fileID: 105136744}
+  - key: {fileID: -8287659060652355055, guid: 20d78e7c22a9a114ea1ddee09f383849, type: 2}
+    value: {fileID: 1980531188}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &629550037
@@ -11715,7 +11717,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh294276
+  m_Name: pb_Mesh24040
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14443,7 +14445,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh293404
+  m_Name: pb_Mesh23136
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19096,7 +19098,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh294062
+  m_Name: pb_Mesh23830
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25476,7 +25478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1980531187
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25514,7 +25516,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: aaaaaaaaaaaaaaaaaaaaaa
+  m_text: When I lost my job, the first thing that I thought was to call my dad asking
+    for advice
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fe270b321f78eea41b4a1bda344e365e, type: 2}
   m_sharedMaterial: {fileID: -7717993822409064608, guid: fe270b321f78eea41b4a1bda344e365e,
@@ -25560,7 +25563,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 81
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -25584,12 +25587,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1980531188}
-    characterCount: 22
+    characterCount: 87
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 18
+    wordCount: 19
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -25815,7 +25818,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh293758
+  m_Name: pb_Mesh23496
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
