@@ -8920,7 +8920,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 20d78e7c22a9a114ea1ddee09f383849, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -14472,7 +14472,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh97532
+  m_Name: pb_Mesh225542
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27125,6 +27125,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3883742510584319545, guid: 9af38d9ab128c7246b03553c694aa7db,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3883742510584319545, guid: 9af38d9ab128c7246b03553c694aa7db,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 3883742510584319545, guid: 9af38d9ab128c7246b03553c694aa7db,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3883742510584319545, guid: 9af38d9ab128c7246b03553c694aa7db,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3883742510584319545, guid: 9af38d9ab128c7246b03553c694aa7db,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3883742510584319545, guid: 9af38d9ab128c7246b03553c694aa7db,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 22.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 3883742510584319545, guid: 9af38d9ab128c7246b03553c694aa7db,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 22.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 3883742510584319545, guid: 9af38d9ab128c7246b03553c694aa7db,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3883742511072773953, guid: 9af38d9ab128c7246b03553c694aa7db,
         type: 3}
       propertyPath: m_IsActive

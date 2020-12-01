@@ -11,6 +11,7 @@ public class TimelineLegenda : Susto
     // Start is called before the first frame update
     void Start()
     {
+        timeline.Play();
         Invoke("ApagarTimeline", (float)timeline.duration);
     }
 
