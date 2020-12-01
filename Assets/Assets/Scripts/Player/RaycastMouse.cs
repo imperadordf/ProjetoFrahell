@@ -69,9 +69,8 @@ public class RaycastMouse : MonoBehaviour
                     case "Roupa":
                         if (hit.collider.GetComponent<GetItem>())
                         {
-                            Item itemn = hit.collider.GetComponent<GetItem>().item;
-                            GerenciadorItem.instacie.ReceberItem(itemn);
-                            Destroy(hit.collider.GetComponent<GetItem>());
+                            scriptPlayer.animator_Player.SetTrigger("PegouItem");
+                            itemGet = hit.collider.GetComponent<GetItem>();                                                     
                             hit.collider.gameObject.layer = 0;
                         }
 
@@ -112,6 +111,7 @@ public class RaycastMouse : MonoBehaviour
     public void PegarItem()
     {
         GerenciadorItem.instacie.ReceberItem(item);
+        if(itemObject.gameObject)
         Destroy(itemObject.gameObject);
     }
 
