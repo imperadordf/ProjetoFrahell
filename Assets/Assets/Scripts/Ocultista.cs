@@ -9,7 +9,7 @@ public class Ocultista : InimigoMachine
     bool podeabrirPorta=true;
     public GameObject danoObject;
     public float tempoPortaMax;
-    float tempoporta;
+    float tempoporta,timePorta;
   public EnemyState ultimoState;
     bool portaDebug;
     void Start()
@@ -190,15 +190,28 @@ public class Ocultista : InimigoMachine
     {
         if (other.TryGetComponent<PortaIa>(out PortaIa porta)  && podeabrirPorta )
         {
-            if(porta.scritPorta.anime.GetCurrentAnimatorStateInfo(0).IsName("Porta_Iddle") )
-            {
-                porta.AbrirPortaIa();
-                portaDebug = true;
-            }
-            else
-            {
-                portaDebug = false;
-            }
+            
+                if (porta.scritPorta.anime.GetCurrentAnimatorStateInfo(0).IsName("Porta_Iddle"))
+                {
+                    timePorta += Time.timeScale;
+                    if (timePorta >= 60)
+                    {
+                    porta.AbrirPortaIa();
+                    portaDebug = true;
+                    timePorta = 0;
+                    print("oi");
+                    print(timePorta);
+                     }
+                    
+                }
+                else
+                {
+                    timePorta = 0;
+                    portaDebug = false;
+                }
+
+
+           
                   
         }
     }

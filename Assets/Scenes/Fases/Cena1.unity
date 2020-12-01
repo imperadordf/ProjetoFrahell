@@ -8883,6 +8883,7 @@ GameObject:
   - component: {fileID: 629550037}
   - component: {fileID: 629550036}
   - component: {fileID: 629550035}
+  - component: {fileID: 629550038}
   m_Layer: 0
   m_Name: Animation
   m_TagString: Untagged
@@ -8946,6 +8947,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &629550038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629550034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab07b77bd7cc9e45bebfc596f802036, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audiosource: {fileID: 0}
+  id: 10
+  timeline: {fileID: 629550036}
+  textLegenda: {fileID: 1980531188}
 --- !u!1 &629892687
 GameObject:
   m_ObjectHideFlags: 0
@@ -12344,9 +12361,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8353336917060539089, guid: 0e6d4d6704833ae429243e544323065b,
         type: 3}
+      propertyPath: sustoLista.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353336917060539089, guid: 0e6d4d6704833ae429243e544323065b,
+        type: 3}
       propertyPath: itensCena.Array.data[0]
       value: 
       objectReference: {fileID: 1445251118}
+    - target: {fileID: 8353336917060539089, guid: 0e6d4d6704833ae429243e544323065b,
+        type: 3}
+      propertyPath: sustoLista.Array.data[0]
+      value: 
+      objectReference: {fileID: 629550038}
     - target: {fileID: 8353336917060539094, guid: 0e6d4d6704833ae429243e544323065b,
         type: 3}
       propertyPath: m_Name
@@ -14445,7 +14472,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23136
+  m_Name: pb_Mesh97532
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27098,6 +27125,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3883742511072773953, guid: 9af38d9ab128c7246b03553c694aa7db,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3883742511150031809, guid: 9af38d9ab128c7246b03553c694aa7db,
         type: 3}
       propertyPath: m_LocalPosition.x

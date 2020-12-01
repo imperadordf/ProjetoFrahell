@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class VisionIA : MonoBehaviour
 {
+    public LayerMask layerRay;
     public InimigoMachine inimigoScript;
     public Transform objectVision;
     public float distanciaDeVisao = 10;
@@ -43,7 +44,7 @@ public class VisionIA : MonoBehaviour
                 Vector3 rayDirection = Quaternion.AngleAxis(angleToRay, objectVision.up) * directionMultipl;
                 //
                 RaycastHit hitRaycast;
-                if (Physics.Raycast(objectVision.position, rayDirection, out hitRaycast, distanciaDeVisao))
+                if (Physics.Raycast(objectVision.position, rayDirection, out hitRaycast, distanciaDeVisao, layerRay))
                 {
                     if (!hitRaycast.transform.IsChildOf(transform.root) && !hitRaycast.collider.isTrigger)
                     {
