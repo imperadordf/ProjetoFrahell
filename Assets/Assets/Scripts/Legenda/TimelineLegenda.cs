@@ -12,13 +12,26 @@ public class TimelineLegenda : Susto
     void Start()
     {
         timeline.Play();
-        Invoke("ApagarTimeline", (float)timeline.duration);
+        Invoke("ApagarTimeline", (float)timeline.duration+1);
     }
 
-  public void ApagarTimeline()
+    private void Update()
+    {
+        if(GameManager.instancie.ativarMenu || GameManager.instancie.ativarInventario)
+        {
+            timeline.Pause();
+        }
+        else
+        {
+            timeline.Resume();
+        }
+    }
+
+    public void ApagarTimeline()
     {
         GerenciadorFase.instancie.sustoListId.Add(id);
         textLegenda.gameObject.SetActive(false);
+       
     }
 
     private void OnDestroy()
