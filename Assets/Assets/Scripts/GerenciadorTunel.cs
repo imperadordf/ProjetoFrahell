@@ -12,21 +12,23 @@ public class GerenciadorTunel : MonoBehaviour
 
     private void Awake()
     {
-       
+        if (!ManageFase.instancie.voltando)
+        {
+            player.position = pos1.position;
+            player.rotation = pos1.rotation;
+           // playerAnimation.applyRootMotion = true;
+        }
+        else
+        {
+            player.position = pos2.position;
+            player.rotation = pos2.rotation;
+            //playerAnimation.applyRootMotion = true;
+
+        }
     }
 
     private void Start()
     {
-        if (!ManageFase.instancie.voltando)
-        {
-            player.SetPositionAndRotation(pos1.position, pos1.rotation);
-            playerAnimation.enabled = true;
-        }
-        else
-        {
-            player.SetPositionAndRotation(pos2.position, pos2.rotation);
-            playerAnimation.enabled = true;
-
-        }
+        
     }
 }

@@ -13,10 +13,7 @@ public class SomManager : MonoBehaviour
             instancie = this;
 
         }
-        else
-        {
-            Destroy(this);
-        }
+       
     }
 
 

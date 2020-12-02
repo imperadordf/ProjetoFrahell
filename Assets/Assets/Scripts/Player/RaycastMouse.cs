@@ -70,7 +70,8 @@ public class RaycastMouse : MonoBehaviour
                         if (hit.collider.GetComponent<GetItem>())
                         {
                             scriptPlayer.animator_Player.SetTrigger("PegouItem");
-                            itemGet = hit.collider.GetComponent<GetItem>();                                                     
+                            itemGet = hit.collider.GetComponent<GetItem>();
+                            item = itemGet.item;
                             hit.collider.gameObject.layer = 0;
                         }
 
@@ -111,7 +112,7 @@ public class RaycastMouse : MonoBehaviour
     public void PegarItem()
     {
         GerenciadorItem.instacie.ReceberItem(item);
-        if(itemObject.gameObject)
+        if(itemObject!=null)
         Destroy(itemObject.gameObject);
     }
 
