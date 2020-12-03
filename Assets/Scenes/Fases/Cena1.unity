@@ -1904,7 +1904,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh519422
+  m_Name: pb_Mesh65586
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8890,7 +8890,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &629550035
 Animator:
   serializedVersion: 3
@@ -11800,7 +11800,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh519628
+  m_Name: pb_Mesh65792
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14538,7 +14538,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh275782
+  m_Name: pb_Mesh64898
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19111,7 +19111,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh519434
+  m_Name: pb_Mesh65598
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25686,7 +25686,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh519108
+  m_Name: pb_Mesh65264
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27529,6 +27529,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839590754782338582, guid: 6f8fdaf4566112d428ca61fa658ac2f5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839590754782338582, guid: 6f8fdaf4566112d428ca61fa658ac2f5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839590754782338582, guid: 6f8fdaf4566112d428ca61fa658ac2f5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839590754782338582, guid: 6f8fdaf4566112d428ca61fa658ac2f5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839590754782338582, guid: 6f8fdaf4566112d428ca61fa658ac2f5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7270585961104762117, guid: 6f8fdaf4566112d428ca61fa658ac2f5,
         type: 3}
