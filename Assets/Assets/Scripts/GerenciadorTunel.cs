@@ -16,13 +16,13 @@ public class GerenciadorTunel : MonoBehaviour
         {
             player.position = pos1.position;
             player.rotation = pos1.rotation;
-           // playerAnimation.applyRootMotion = true;
+            player.gameObject.SetActive(true);
         }
         else
         {
             player.position = pos2.position;
             player.rotation = pos2.rotation;
-            //playerAnimation.applyRootMotion = true;
+            player.gameObject.SetActive(true);
 
         }
     }
