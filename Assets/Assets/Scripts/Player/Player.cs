@@ -20,9 +20,13 @@ public class Player : MonoBehaviour
 
     public AnimationClip animeDeath;
     public Transform SpawnItem;
-
+    [Header("Som")]
+    [Header("Voz ")]
     public AudioClip [] somDano;
-    public AudioSource audiosource;
+    public AudioSource audiosourceVocal;
+    [Header("Geral")]
+    public AudioClip[] somPassos;
+    public AudioSource audiosourcePassos;
     public Transform PlayerPosition
     {
         get
@@ -144,14 +148,17 @@ public class Player : MonoBehaviour
             case EstadoPlayer.WALK:     
                 isSpriting = Input.GetKey(KeyCode.LeftShift);
                 isIdle = false;
+                audiosourcePassos.volume = 0.5f;
                 break;
             case EstadoPlayer.CROUCHED:
                 isSpriting = Input.GetKey(KeyCode.LeftShift);
                 isIdle = false;
+                audiosourcePassos.volume = 0.1f;
                 break;
             case EstadoPlayer.RUN:
                 isSpriting = Input.GetKey(KeyCode.LeftShift);
                 isIdle = false;
+                audiosourcePassos.volume = 1f;
                 break;
             case EstadoPlayer.DEATH:
                 break;
@@ -203,9 +210,13 @@ public class Player : MonoBehaviour
         mousePlayer.Morreu();
     }
 
+    public void SomPassos()
+    {
+        audiosourcePassos.PlayOneShot(somPassos[Random.Range(0, 2)]);
+    }
     public void SomDano()
     {
-        audiosource.PlayOneShot(somDano[Random.Range(0,2)]);
+        audiosourceVocal.PlayOneShot(somDano[Random.Range(0,2)]);
     }
 }
 
