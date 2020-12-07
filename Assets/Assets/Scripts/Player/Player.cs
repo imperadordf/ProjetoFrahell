@@ -20,6 +20,9 @@ public class Player : MonoBehaviour
 
     public AnimationClip animeDeath;
     public Transform SpawnItem;
+
+    public AudioClip [] somDano;
+    public AudioSource audiosource;
     public Transform PlayerPosition
     {
         get
@@ -198,6 +201,11 @@ public class Player : MonoBehaviour
     public void MorrerCamera()
     {
         mousePlayer.Morreu();
+    }
+
+    public void SomDano()
+    {
+        audiosource.PlayOneShot(somDano[Random.Range(0,2)]);
     }
 }
 
