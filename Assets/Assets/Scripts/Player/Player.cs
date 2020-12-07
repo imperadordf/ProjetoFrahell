@@ -148,7 +148,7 @@ public class Player : MonoBehaviour
             case EstadoPlayer.WALK:     
                 isSpriting = Input.GetKey(KeyCode.LeftShift);
                 isIdle = false;
-                audiosourcePassos.volume = 0.5f;
+                audiosourcePassos.volume = 0.3f;
                 break;
             case EstadoPlayer.CROUCHED:
                 isSpriting = Input.GetKey(KeyCode.LeftShift);
@@ -158,7 +158,7 @@ public class Player : MonoBehaviour
             case EstadoPlayer.RUN:
                 isSpriting = Input.GetKey(KeyCode.LeftShift);
                 isIdle = false;
-                audiosourcePassos.volume = 1f;
+                audiosourcePassos.volume = 0.7f;
                 break;
             case EstadoPlayer.DEATH:
                 break;
