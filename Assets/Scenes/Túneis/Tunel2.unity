@@ -9289,6 +9289,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 901590148137010232, guid: 90b65d8b0af1a6446a9b66887a13be94,
+        type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901590148137010232, guid: 90b65d8b0af1a6446a9b66887a13be94,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901590148137010232, guid: 90b65d8b0af1a6446a9b66887a13be94,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.509
+      objectReference: {fileID: 0}
     - target: {fileID: 1662337508576168061, guid: 90b65d8b0af1a6446a9b66887a13be94,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -9477,7 +9492,7 @@ PrefabInstance:
     - target: {fileID: 4105810714852936795, guid: 90b65d8b0af1a6446a9b66887a13be94,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5143673475481825652, guid: 90b65d8b0af1a6446a9b66887a13be94,
         type: 3}
@@ -9534,6 +9549,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5648343740432618871, guid: 90b65d8b0af1a6446a9b66887a13be94,
+        type: 3}
+      propertyPath: somPassos.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fe0602ad4cfc80842bf0c2a7d0dab635, type: 3}
+    - target: {fileID: 5648343740432618871, guid: 90b65d8b0af1a6446a9b66887a13be94,
+        type: 3}
+      propertyPath: somPassos.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: fe0602ad4cfc80842bf0c2a7d0dab635, type: 3}
+    - target: {fileID: 5648343740432618871, guid: 90b65d8b0af1a6446a9b66887a13be94,
+        type: 3}
+      propertyPath: somPassos.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cb7f2808950bcb45990abdeab267c36, type: 3}
     - target: {fileID: 6333802639587890841, guid: 90b65d8b0af1a6446a9b66887a13be94,
         type: 3}
       propertyPath: m_AllowDynamicResolution
