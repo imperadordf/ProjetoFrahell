@@ -84,6 +84,7 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(uiscript.InterfaceDano(vida));
             vida--;
+            playerscript.SomDano();
         }
     }
 
