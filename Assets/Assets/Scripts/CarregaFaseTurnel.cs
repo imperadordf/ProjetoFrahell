@@ -21,6 +21,6 @@ public class CarregaFaseTurnel : MonoBehaviour
     public void CarregarCena()
     {
         ManageFase.instancie.voltando = isback;
-        SceneManager.LoadScene(NomeFase);
+        ScriptLoading.instancie.AtivarLoad(NomeFase);
     }
 }

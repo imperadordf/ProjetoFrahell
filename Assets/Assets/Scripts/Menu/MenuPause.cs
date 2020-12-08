@@ -23,8 +23,8 @@ public class MenuPause : MonoBehaviour
        
         Destroy(GerenciadorItem.instacie.gameObject);
         Destroy(ManageFase.instancie.gameObject);
-        SceneManager.LoadScene(0);
-       
+        ScriptLoading.instancie.AtivarLoad("MenuPrincipal");
+
     }
 
     public void QuitarJogo()

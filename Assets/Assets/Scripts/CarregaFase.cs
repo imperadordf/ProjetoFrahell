@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.Playables;
 
 public class CarregaFase : MonoBehaviour
@@ -11,7 +10,7 @@ public class CarregaFase : MonoBehaviour
     public bool isback;
     public PlayableDirector timeline;
     public Transform position;
-
+    public GameObject carregaCena;
     public void PlayAnimation()
     {
 
@@ -27,7 +26,10 @@ public class CarregaFase : MonoBehaviour
     IEnumerator CarregarCena()
     {
         yield return new WaitForSecondsRealtime((float)timeline.duration - 1.0f);
-        SceneManager.LoadScene(NomeDaFase);
+        carregaCena.SetActive(true);
+        yield return new WaitForSecondsRealtime(0.5f);
+        ScriptLoading.instancie.AtivarLoad(NomeDaFase);
+       
         print("Carrega");
     }
    

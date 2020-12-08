@@ -23,7 +23,7 @@ public class MenuInicial : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
+        ScriptLoading.instancie.AtivarLoad("Cena1");
     }
 
     public void QuitarJogo()
