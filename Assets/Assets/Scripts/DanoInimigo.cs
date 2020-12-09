@@ -9,7 +9,7 @@ public class DanoInimigo : MonoBehaviour
     {
         if (other.CompareTag("Player") && !dano)
         {
-            GameManager.instancie.DanoSofre();
+            GameManager.instancie.DanoSofre(1);
             dano = true;
         }
 
