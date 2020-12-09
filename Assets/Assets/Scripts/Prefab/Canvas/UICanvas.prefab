@@ -166,7 +166,7 @@ RectTransform:
   m_GameObject: {fileID: 4005286400989281765}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.15708031, y: 0.15708031, z: 0.15708031}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 4005286401843681436}
   m_RootOrder: 1
@@ -403,6 +403,7 @@ MonoBehaviour:
   damageUi: {fileID: 4005286401765981258}
   itemImagem: {fileID: 1017777950481975169}
   animeItem: {fileID: 2416476490080879069}
+  maozinhaCurso: {fileID: 0}
 --- !u!1 &5226206287859320335
 GameObject:
   m_ObjectHideFlags: 0
