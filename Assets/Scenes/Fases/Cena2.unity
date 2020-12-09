@@ -7852,7 +7852,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41534
+  m_Name: pb_Mesh57144
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10347,6 +10347,12 @@ Transform:
   m_Father: {fileID: 1936682560}
   m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -90.229004}
+--- !u!82 &1259396757 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6755683723225547789, guid: 90b65d8b0af1a6446a9b66887a13be94,
+    type: 3}
+  m_PrefabInstance: {fileID: 1779632680}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1263969910
 GameObject:
   m_ObjectHideFlags: 0
@@ -12523,7 +12529,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh40436
+  m_Name: pb_Mesh56042
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15814,6 +15820,27 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 6755683723225547789, guid: 90b65d8b0af1a6446a9b66887a13be94,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: bad46e8796270734e9be344527b3483a, type: 3}
+    - target: {fileID: 6755683723225547789, guid: 90b65d8b0af1a6446a9b66887a13be94,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6755683723225547789, guid: 90b65d8b0af1a6446a9b66887a13be94,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6755683723225547789, guid: 90b65d8b0af1a6446a9b66887a13be94,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 355460674eed59445aab4988c1a259b5,
+        type: 2}
     - target: {fileID: 6829399744435876896, guid: 90b65d8b0af1a6446a9b66887a13be94,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -23977,7 +24004,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41096
+  m_Name: pb_Mesh56706
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24326,6 +24353,8 @@ PlayableDirector:
     value: {fileID: 597321734}
   - key: {fileID: -8670666542305602766, guid: 7bf757452503a5e4587e51d333581f84, type: 2}
     value: {fileID: 613521690}
+  - key: {fileID: 3984412136520246143, guid: 7bf757452503a5e4587e51d333581f84, type: 2}
+    value: {fileID: 1259396757}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &2092829278
@@ -24506,7 +24535,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41472
+  m_Name: pb_Mesh57082
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
