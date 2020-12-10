@@ -5,6 +5,9 @@ using UnityEngine;
 public class SustoPerseguicao : SustoCena2
 {
     public IAFumaca iaScript;
+    [Header("Tochas")]
+    public GameObject tocha1;
+    public GameObject tocha2;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -23,5 +26,11 @@ public class SustoPerseguicao : SustoCena2
     {
         iaScript.gameObject.SetActive(true);
         iaScript.StartPerseguicao();
+    }
+
+    private void OnDestroy()
+    {
+        tocha1.SetActive(false);
+        tocha2.SetActive(true);
     }
 }
