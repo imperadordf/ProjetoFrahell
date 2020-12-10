@@ -21,6 +21,7 @@ public class SustoPerseguicao : SustoCena2
 
     public void AtivarNave()
     {
+        iaScript.gameObject.SetActive(true);
         iaScript.StartPerseguicao();
     }
 }

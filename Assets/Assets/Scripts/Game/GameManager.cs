@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
     }
     public void DanoSofre(int dano)
     {
-      
+        vida -= dano;
         if (vida <= 0 && !morreu)
         {
             
@@ -83,7 +83,6 @@ public class GameManager : MonoBehaviour
         else if(!morreu)
         {
             StartCoroutine(uiscript.InterfaceDano(vida));
-            vida-=dano;
             playerscript.SomDano();
         }
     }
