@@ -1474,6 +1474,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1265461986}
     m_Modifications:
+    - target: {fileID: 6663535300532672715, guid: 7397e5e5395dcb448b5ef87a0ccc0593,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e0dd62d0700806e43a823d454ac71c25, type: 3}
+    - target: {fileID: 6663535300532672715, guid: 7397e5e5395dcb448b5ef87a0ccc0593,
+        type: 3}
+      propertyPath: BypassReverbZones
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663535300532672715, guid: 7397e5e5395dcb448b5ef87a0ccc0593,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663535300532672715, guid: 7397e5e5395dcb448b5ef87a0ccc0593,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663535300532672715, guid: 7397e5e5395dcb448b5ef87a0ccc0593,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.397
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663535300532672715, guid: 7397e5e5395dcb448b5ef87a0ccc0593,
+        type: 3}
+      propertyPath: Priority
+      value: 189
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663535300532672715, guid: 7397e5e5395dcb448b5ef87a0ccc0593,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: e2f63b3af4e8042448e8b34c84644b08,
+        type: 2}
     - target: {fileID: 6914039632795730454, guid: 7397e5e5395dcb448b5ef87a0ccc0593,
         type: 3}
       propertyPath: m_Name
@@ -1492,7 +1528,7 @@ PrefabInstance:
     - target: {fileID: 6914039632795730456, guid: 7397e5e5395dcb448b5ef87a0ccc0593,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.9517387
+      value: -462
       objectReference: {fileID: 0}
     - target: {fileID: 6914039632795730456, guid: 7397e5e5395dcb448b5ef87a0ccc0593,
         type: 3}
@@ -1551,6 +1587,61 @@ PrefabInstance:
       objectReference: {fileID: 1508286373}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7397e5e5395dcb448b5ef87a0ccc0593, type: 3}
+--- !u!1 &397097874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 397097876}
+  - component: {fileID: 397097875}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!167 &397097875
+AudioReverbZone:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397097874}
+  m_Enabled: 1
+  m_MinDistance: 10
+  m_MaxDistance: 120.4
+  m_ReverbPreset: 1
+  m_Room: -1000
+  m_RoomHF: -100
+  m_DecayTime: 1.49
+  m_DecayHFRatio: 0.83
+  m_Reflections: -2602
+  m_ReflectionsDelay: 0.007
+  m_Reverb: 200
+  m_ReverbDelay: 0.011
+  m_HFReference: 5000
+  m_Diffusion: 100
+  m_Density: 100
+  m_LFReference: 250
+  m_RoomLF: 0
+--- !u!4 &397097876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397097874}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -25.357145, y: 0.87, z: -473.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &398052280
 GameObject:
   m_ObjectHideFlags: 0
@@ -15016,7 +15107,7 @@ PrefabInstance:
     - target: {fileID: 4105810714852936795, guid: 90b65d8b0af1a6446a9b66887a13be94,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4150529957037728892, guid: 90b65d8b0af1a6446a9b66887a13be94,
         type: 3}

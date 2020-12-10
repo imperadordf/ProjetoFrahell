@@ -43,6 +43,7 @@ public class GerenciadorFase : MonoBehaviour
                 VerificarItem();
                 break;
             case 4:
+                VerificaSusto();
                 break;
             case 5:
                 VerificarItem();

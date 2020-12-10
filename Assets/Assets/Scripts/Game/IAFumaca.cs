@@ -15,6 +15,7 @@ public class IAFumaca : MonoBehaviour
     public AudioSource audioVoz;
     public VisualEffect effect;
     public AudioSource sourceFundo;
+    public SustoPerseguicao susto;
 
     [Header("TimelineLegenda")]
     public PlayableDirector timeline;
@@ -46,6 +47,7 @@ public class IAFumaca : MonoBehaviour
             effect.SendEvent("Stop");
             audioVoz.Stop();
             sourceFundo.Stop();
+            GerenciadorFase.instancie.sustoListId.Add(susto.id);
             Destroy(gameObject);
         }
     }

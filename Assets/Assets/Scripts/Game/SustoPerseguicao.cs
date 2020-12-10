@@ -18,8 +18,13 @@ public class SustoPerseguicao : SustoCena2
 
     public override void AtivarCustece()
     {
-        base.AtivarCustece();
-       Invoke("AtivarNave", (float)timelineSusto.duration);
+       
+        GameManager.instancie.ativarCutscene = true;
+        mouse.enabled = false;
+        timelineSusto.Play();
+        Invoke("LigaMouseLook", (float)timelineSusto.duration);
+        this.gameObject.SetActive(false);
+        Invoke("AtivarNave", (float)timelineSusto.duration);
     }
 
     public void AtivarNave()

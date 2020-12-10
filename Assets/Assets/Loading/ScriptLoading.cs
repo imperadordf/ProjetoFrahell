@@ -53,7 +53,7 @@ public class ScriptLoading : MonoBehaviour
             carregou = false;
             yield return null;
         }
-        Time.timeScale = 0;
+        GameManager.instancie.ativarloading = true;
         loading.SetActive(false);
         carregou = true;
         textLoading.SetActive(true);
@@ -62,7 +62,7 @@ public class ScriptLoading : MonoBehaviour
     private void FecharLoading()
     {
         gameObject.SetActive(false);
-        Time.timeScale = 1;
+        GameManager.instancie.ativarloading = false;
     }
 
 }

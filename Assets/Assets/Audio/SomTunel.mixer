@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-4601604688772300401
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: a34b7d548ac13af4592d36fdd34feeda
+  m_EffectName: Echo
+  m_MixLevel: e897dfcaaa47d664281e96c9a556ab8e
+  m_Parameters:
+  - m_ParameterName: Delay
+    m_GUID: 9cb7d84c51eaf2741a3386252e6a461f
+  - m_ParameterName: Decay
+    m_GUID: 8f5233fe513749d41bb1917875df84cc
+  - m_ParameterName: Max channels
+    m_GUID: 365fef65399385f43bda25dcd820e1af
+  - m_ParameterName: Drymix
+    m_GUID: 369f2fce33b002340a4e685db9e7c927
+  - m_ParameterName: Wetmix
+    m_GUID: 6a35028cca007b64eb77fb4816f9ca12
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!241 &24100000
+AudioMixerController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SomTunel
+  m_OutputGroup: {fileID: 0}
+  m_MasterGroup: {fileID: 24300002}
+  m_Snapshots:
+  - {fileID: 24500006}
+  m_StartSnapshot: {fileID: 24500006}
+  m_SuspendThreshold: -80
+  m_EnableSuspend: 1
+  m_UpdateMode: 0
+  m_ExposedParameters: []
+  m_AudioMixerGroupViews: []
+  m_CurrentViewIndex: 0
+  m_TargetSnapshot: {fileID: 24500006}
+--- !u!243 &24300002
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Master
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: ea28ecb854587354ba58ff5bf9690265
+  m_Children: []
+  m_Volume: 49d4551de3f39bd428307f076410c436
+  m_Pitch: e76478c1db0c8344ba6980b817cd5154
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 24400004}
+  - {fileID: -4601604688772300401}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &24400004
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: ef2594d4708fcbd41b1db3273c21f96c
+  m_EffectName: Attenuation
+  m_MixLevel: 1d1a832435b85b5479e670d246671285
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!245 &24500006
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Snapshot
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 23f179999d6617e4a832b9f5d19cef75
+  m_FloatValues:
+    9cb7d84c51eaf2741a3386252e6a461f: 779
+    49d4551de3f39bd428307f076410c436: 4
+  m_TransitionOverrides: {}

@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public UiScript uiscript;
     public Player playerscript;
     public GameObject playerImagem;
-    public bool ativarInventario,ativarMenu,ativarPuzzle,ativarCutscene;
+    public bool ativarInventario,ativarMenu,ativarPuzzle,ativarCutscene,ativarloading;
     public bool portaOn;
     bool morreu;
     public bool carregandoFase;
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-            if (ativarInventario || ativarMenu || ativarPuzzle)
+            if (ativarInventario || ativarMenu || ativarPuzzle || ativarloading)
             {
                 DefinirTimeScale(0);
                 AtivarDesativaMouse(true);

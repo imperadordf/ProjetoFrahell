@@ -26,7 +26,7 @@ public class CarregaFase : MonoBehaviour
     IEnumerator CarregarCena()
     {
         yield return new WaitForSecondsRealtime((float)timeline.duration - 1.0f);
-        carregaCena.SetActive(true);
+       // carregaCena.SetActive(true);
         yield return new WaitForSecondsRealtime(0.5f);
         ScriptLoading.instancie.AtivarLoad(NomeDaFase);
        
