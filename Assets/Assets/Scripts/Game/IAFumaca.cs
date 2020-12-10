@@ -18,23 +18,22 @@ public class IAFumaca : MonoBehaviour
 
     [Header("TimelineLegenda")]
     public PlayableDirector timeline;
-    PlayableGraph graph = PlayableGraph.Create();
+    public TextMeshProUGUI text;
+    public TimelineAsset assetTime;
+    LegendaTrack trackLegenda;
+    LegendaClip clipLegenda;
+    TimelineClip timelineclip;
     // Start is called before the first frame update
 
-    private void Start()
-    {
-        StartPerseguicao();
-    }
+  
     public void StartPerseguicao()
     {
-        
+        trackLegenda = (LegendaTrack)assetTime.GetOutputTrack(0);
         agent = GetComponent<NavMeshAgent>();
         sphere = GetComponent<SphereCollider>();
         agent.SetDestination(destinion.position);
         sphere.enabled = true;
-        StartCoroutine(Falar());
-        
-       
+        StartCoroutine(Falar());     
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -56,12 +55,48 @@ public class IAFumaca : MonoBehaviour
         yield return new WaitForSeconds(1);
         while (true)
         {
-            audioVoz.clip = clipVozes[Random.Range(0, clipVozes.Length)];
+            int random = Random.Range(0, clipVozes.Length);
+            audioVoz.clip = clipVozes[random];
+            LegendaFalar(random, audioVoz.clip);
             audioVoz.Play();
             yield return new WaitForSeconds(8);
         }
     }
     
-   
-   
+   public void LegendaFalar(int index, AudioClip clip)
+    {
+        timelineclip = trackLegenda.CreateClip<LegendaClip>();
+        clipLegenda = (LegendaClip)timelineclip.asset;
+        timelineclip.easeInDuration = 0.5f;
+        timelineclip.easeOutDuration = 0.5f;
+        switch (index)
+        {
+            case 0:
+                clipLegenda.legendaText = "Die Die Die";
+                break;
+            case 1:
+                clipLegenda.legendaText = "I'll kill you";
+                break;
+            case 2:
+                clipLegenda.legendaText = "You have no escape";
+                break;
+            case 3:
+                clipLegenda.legendaText = "Don't Run";
+                break;
+        }
+        timelineclip.duration = clip.length;
+        timeline.Play();
+        Invoke("DeleterClip",(float) timeline.duration);
+    }
+
+    private void DeleterClip()
+    {
+        trackLegenda.timelineAsset.DeleteClip(timelineclip);
+    }
+
+    private void OnDestroy()
+    {
+        DeleterClip();
+    }
+
 }
