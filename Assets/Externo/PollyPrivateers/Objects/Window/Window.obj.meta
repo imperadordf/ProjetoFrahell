@@ -1,50 +1,132 @@
 fileFormatVersion: 2
 guid: 3caaa88da5952d34f91ceb3a0ee2f431
-timeCreated: 1515354428
-licenseType: Store
 ModelImporter:
-  serializedVersion: 22
-  fileIDToRecycleName:
-    100000: Cube.000_Cube.003
-    100002: Cube.001
-    100004: Cube.002
-    100006: Cube.003_Cube.004
-    100008: //RootNode
-    100010: default
-    100012: Window
-    400000: Cube.000_Cube.003
-    400002: Cube.001
-    400004: Cube.002
-    400006: Cube.003_Cube.004
-    400008: //RootNode
-    400010: default
-    400012: Window
-    2300000: Cube.000_Cube.003
-    2300002: Cube.001
-    2300004: Cube.002
-    2300006: Cube.003_Cube.004
-    2300008: default
-    2300010: Window
-    3300000: Cube.000_Cube.003
-    3300002: Cube.001
-    3300004: Cube.002
-    3300006: Cube.003_Cube.004
-    3300008: default
-    3300010: Window
-    4300000: Cube.000_Cube.003
-    4300002: Cube.001
-    4300004: Cube.002
-    4300006: Cube.003_Cube.004
-    4300008: default
-    4300010: Window
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Cube.000_Cube.003
+  - first:
+      1: 100002
+    second: Cube.001
+  - first:
+      1: 100004
+    second: Cube.002
+  - first:
+      1: 100006
+    second: Cube.003_Cube.004
+  - first:
+      1: 100008
+    second: //RootNode
+  - first:
+      1: 100010
+    second: default
+  - first:
+      1: 100012
+    second: Window
+  - first:
+      4: 400000
+    second: Cube.000_Cube.003
+  - first:
+      4: 400002
+    second: Cube.001
+  - first:
+      4: 400004
+    second: Cube.002
+  - first:
+      4: 400006
+    second: Cube.003_Cube.004
+  - first:
+      4: 400008
+    second: //RootNode
+  - first:
+      4: 400010
+    second: default
+  - first:
+      4: 400012
+    second: Window
+  - first:
+      23: 2300000
+    second: Cube.000_Cube.003
+  - first:
+      23: 2300002
+    second: Cube.001
+  - first:
+      23: 2300004
+    second: Cube.002
+  - first:
+      23: 2300006
+    second: Cube.003_Cube.004
+  - first:
+      23: 2300008
+    second: default
+  - first:
+      23: 2300010
+    second: Window
+  - first:
+      33: 3300000
+    second: Cube.000_Cube.003
+  - first:
+      33: 3300002
+    second: Cube.001
+  - first:
+      33: 3300004
+    second: Cube.002
+  - first:
+      33: 3300006
+    second: Cube.003_Cube.004
+  - first:
+      33: 3300008
+    second: default
+  - first:
+      33: 3300010
+    second: Window
+  - first:
+      43: 4300000
+    second: Cube.000_Cube.003
+  - first:
+      43: 4300002
+    second: Cube.001
+  - first:
+      43: 4300004
+    second: Cube.002
+  - first:
+      43: 4300006
+    second: Cube.003_Cube.004
+  - first:
+      43: 4300008
+    second: default
+  - first:
+      43: 4300010
+    second: Window
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.001Mat
+    second: {fileID: 2100000, guid: 9069bf64db2d2524aa796919f53b7f6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.002Mat
+    second: {fileID: 2100000, guid: da97c86b6c407fb409730655880ed600, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.003_Cube.004Mat
+    second: {fileID: 2100000, guid: ca47ffab5d543e144bd73f4d89cc7f74, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.001
     second: {fileID: 2100000, guid: 8c91a1e15d3410a4891c5ac2300fe799, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WindowMat
+    second: {fileID: 2100000, guid: dfbe570c45f4e3c49950cb67dbfc146a, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -61,6 +143,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -75,6 +158,8 @@ ModelImporter:
     globalScale: 0.004110083
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -82,10 +167,13 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
@@ -97,10 +185,13 @@ ModelImporter:
     normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -110,14 +201,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.004110083
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
