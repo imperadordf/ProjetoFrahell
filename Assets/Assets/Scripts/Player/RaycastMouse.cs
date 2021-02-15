@@ -83,7 +83,7 @@ public class RaycastMouse : MonoBehaviour
         else
         {
             mouseImagem.sprite = PadraoSprite;
-            mouseImagem.transform.localScale = new Vector3(0.1570803f, 0.1570803f, 0.1570803f);
+            mouseImagem.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
             if (itemselecionado)
             {
                 itemselecionado.RaycastFora();
@@ -157,7 +157,7 @@ public class RaycastMouse : MonoBehaviour
                 else
                 { 
                     mouseImagem.sprite = PadraoSprite;
-                    mouseImagem.transform.localScale = new Vector3(0.1570803f, 0.1570803f, 0.1570803f);
+                    mouseImagem.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
                 }
                 break;
         }

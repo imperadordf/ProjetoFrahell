@@ -11,7 +11,7 @@ public class MenuPause : MonoBehaviour
    
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) )
         {
             ativado = !ativado;
             GameManager.instancie.ativarMenu = ativado;

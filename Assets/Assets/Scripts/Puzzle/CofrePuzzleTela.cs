@@ -35,7 +35,7 @@ public class CofrePuzzleTela : PuzzleRei
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && canvas.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Escape) && canvas.activeSelf || Input.GetKeyDown(KeyCode.F) && canvas.activeSelf)
         {
             canvas.SetActive(false);
             
