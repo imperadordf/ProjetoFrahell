@@ -1739,6 +1739,7 @@ MonoBehaviour:
   TimeAlerta: 10
   distanceVision: 13.5
   objectVision: {fileID: 2358970753486537491}
+  abriuPorta: 0
   danoObject: {fileID: 2974506248322246688}
   tempoPortaMax: 0
   ultimoState: 0
@@ -1776,6 +1777,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf5683adb809d12409f5742151089423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layerRay:
+    serializedVersion: 2
+    m_Bits: 0
   inimigoScript: {fileID: 2358970752503653787}
   objectVision: {fileID: 2358970753486537488}
   distanciaDeVisao: 6.17
