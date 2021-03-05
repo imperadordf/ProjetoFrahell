@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
+using TMPro;
 
 public class ScriptLoading : MonoBehaviour
 {
@@ -10,6 +11,16 @@ public class ScriptLoading : MonoBehaviour
     public bool carregou;
     public GameObject textLoading;
     public GameObject loading;
+
+
+    [Header("Referencia sobre a dica")]
+    public Image imagemItem;
+    public TextMeshProUGUI textItem;
+
+    public TextMeshProUGUI textItemName;
+
+    [Header("Lista de Dica")]
+    public List<DicasGame> dicaslist = new List<DicasGame>();
     private void Awake()
     {
         if (!instancie)
@@ -22,10 +33,20 @@ public class ScriptLoading : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    
 
     private void Start()
     {
         gameObject.SetActive(false);
+       DicaAleatoria();
+    }
+
+    private void DicaAleatoria()
+    {
+      int i =  Random.Range(0,dicaslist.Count);
+      textItem.text = dicaslist[i]?.dicaText;
+      imagemItem.sprite = dicaslist[i]?.imageItem;
+      textItemName.text = dicaslist[i]?.nameItem;
     }
 
     private void Update()
