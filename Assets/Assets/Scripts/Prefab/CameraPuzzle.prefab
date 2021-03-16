@@ -108,6 +108,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectItem: {fileID: 4099535351368932326}
   objectItem2: {fileID: 7073315210155175976}
+  select: {fileID: 0}
+  speed: 10
+  scriptRotate: {fileID: 1700048144907206264}
 --- !u!1 &1700048143696844331
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +126,7 @@ GameObject:
   - component: {fileID: 1700048143696844325}
   m_Layer: 2
   m_Name: 200 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -230,7 +233,7 @@ GameObject:
   - component: {fileID: 1700048143777639371}
   m_Layer: 2
   m_Name: 300 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -391,6 +394,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camerapuzzle: {fileID: 1700048144568365280}
   verificador: 3
+  tamanhoRay: 1
+  oie: 0
+  numeroScript: {fileID: 0}
 --- !u!54 &1700048143786957297
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -422,7 +428,7 @@ GameObject:
   - component: {fileID: 1700048143801736802}
   m_Layer: 2
   m_Name: 70 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -529,7 +535,7 @@ GameObject:
   - component: {fileID: 1700048143838216457}
   m_Layer: 2
   m_Name: 2.5 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -636,7 +642,7 @@ GameObject:
   - component: {fileID: 1700048143839332737}
   m_Layer: 2
   m_Name: 105 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -743,7 +749,7 @@ GameObject:
   - component: {fileID: 1700048144051605185}
   m_Layer: 2
   m_Name: 24 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -850,7 +856,7 @@ GameObject:
   - component: {fileID: 1700048144147577529}
   m_Layer: 2
   m_Name: 1.5 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -957,7 +963,7 @@ GameObject:
   - component: {fileID: 1700048144159867965}
   m_Layer: 2
   m_Name: 205 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1064,7 +1070,7 @@ GameObject:
   - component: {fileID: 1700048144353757701}
   m_Layer: 2
   m_Name: 3.5 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1171,7 +1177,7 @@ GameObject:
   - component: {fileID: 1700048144386045487}
   m_Layer: 2
   m_Name: 380 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1278,7 +1284,7 @@ GameObject:
   - component: {fileID: 1700048144506517082}
   m_Layer: 2
   m_Name: 303 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1385,7 +1391,7 @@ GameObject:
   - component: {fileID: 1700048144554190240}
   m_Layer: 2
   m_Name: 50 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1492,7 +1498,7 @@ GameObject:
   - component: {fileID: 1700048144569096126}
   m_Layer: 2
   m_Name: 3.0 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1599,7 +1605,7 @@ GameObject:
   - component: {fileID: 1700048144571666454}
   m_Layer: 2
   m_Name: 4.4 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1706,7 +1712,7 @@ GameObject:
   - component: {fileID: 1700048144599328137}
   m_Layer: 2
   m_Name: 140 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1907,6 +1913,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camerapuzzle: {fileID: 1700048144568365280}
   verificador: 2
+  tamanhoRay: 1
+  oie: 0
+  numeroScript: {fileID: 0}
 --- !u!54 &1700048144877550477
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1938,7 +1947,7 @@ GameObject:
   - component: {fileID: 1700048144900079561}
   m_Layer: 2
   m_Name: 400 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2139,6 +2148,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camerapuzzle: {fileID: 1700048144568365280}
   verificador: 1
+  tamanhoRay: 1
+  oie: 0
+  numeroScript: {fileID: 0}
 --- !u!54 &1700048144907206260
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2170,7 +2182,7 @@ GameObject:
   - component: {fileID: 1700048144927274452}
   m_Layer: 2
   m_Name: 420 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2277,7 +2289,7 @@ GameObject:
   - component: {fileID: 1700048144953842037}
   m_Layer: 2
   m_Name: 0.7 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2384,7 +2396,7 @@ GameObject:
   - component: {fileID: 1700048145005368307}
   m_Layer: 2
   m_Name: 2.2 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2491,7 +2503,7 @@ GameObject:
   - component: {fileID: 1700048145027203280}
   m_Layer: 2
   m_Name: 120 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2598,7 +2610,7 @@ GameObject:
   - component: {fileID: 1700048145103368278}
   m_Layer: 2
   m_Name: 35 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2705,7 +2717,7 @@ GameObject:
   - component: {fileID: 1700048145161352652}
   m_Layer: 2
   m_Name: 7.5 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2812,7 +2824,7 @@ GameObject:
   - component: {fileID: 1700048145163420664}
   m_Layer: 2
   m_Name: 220 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2919,7 +2931,7 @@ GameObject:
   - component: {fileID: 1700048145320045372}
   m_Layer: 2
   m_Name: 250 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3026,7 +3038,7 @@ GameObject:
   - component: {fileID: 1700048145531738534}
   m_Layer: 2
   m_Name: 1.0 Numero (1)
-  m_TagString: Untagged
+  m_TagString: CameraNumero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3354,6 +3366,7 @@ MonoBehaviour:
   numeroCerto2: 3
   numeroCerto3: 380
   GanhaItem: {fileID: 11400000, guid: 6a91db7d3bf940d44a74b39d5176e616, type: 2}
+  scriptPuzzle: {fileID: 0}
   numeroteste1: 0
   numeroteste2: 0
   numeroteste3: 0

@@ -11,7 +11,7 @@ public class CameraVerificador : MonoBehaviour
    public CameraNumero numeroScript;
    
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
        if( other.CompareTag("CameraNumero")){
             numeroScript = other.GetComponent<CameraNumero>();

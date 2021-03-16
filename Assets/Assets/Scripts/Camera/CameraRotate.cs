@@ -28,7 +28,7 @@ public class CameraRotate : MonoBehaviour
 
                 if (hit.collider.TryGetComponent<CameraScript>(out CameraScript camerascript))
                 {
-                   // camerascript.CameraRotate2(mouseX);
+                    camerascript.CameraRotate2();
                 }
 
             }
