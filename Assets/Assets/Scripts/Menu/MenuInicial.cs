@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuInicial : MonoBehaviour
 {
-
+    public MenuConfig config;
     
     private void Start()
     {
@@ -20,10 +20,17 @@ public class MenuInicial : MonoBehaviour
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        config.Inicialize();
     }
     public void StartGame()
     {
         ScriptLoading.instancie.AtivarLoad("Cena1");
+    }
+
+    public void Options()
+    {
+        config.gameObject.SetActive(true);
+        
     }
 
     public void QuitarJogo()

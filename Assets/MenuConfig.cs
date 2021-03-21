@@ -7,44 +7,7 @@ using TMPro;
 
 public class MenuConfig : MonoBehaviour
 {
-    //Resolução variavels
-    [Header("Graficos")]
-    [Header("Resolução")]
-    Resolution[] resolutions;
-    List<string> optionResolution = new List<string>();
-    [SerializeField]
-    private TMP_Dropdown dropResolution;
-    [SerializeField]
-    private Toggle toggleFullScreen;
-
-
-
-    //Qualidade 
-    [Header("Qualidade")]
-    [SerializeField] private TMP_Dropdown dropQuallity;
-    [SerializeField] RenderPipelineAsset [] renderesAssets;
-    List<string> qualidadeString = new List<string>();
-
-
-    [Space]
-    [Header("General")]
-    [SerializeField] private Toggle toggleInvertUpAxis;
-    [SerializeField] private Slider sliderLookSensity;
-    [SerializeField] private Slider sliderVolume;
-
-    //Config minhas configuraçãos
-    int currentResolution = 0;
-    bool isFullScreen=true;
-    int currentQuallity = 0;
-    float currentVolume = 1;
-    float currentlookSensity = 50;
-    bool InvertUpAxis;
-
-    private void Start()
-    {
-        Inicialize();
-    }
-
+   
     public void Inicialize()
     {
         ConfigurationUsuario config = (ConfigurationUsuario)SaveDataGame.LoadGame("Configuracao");
@@ -64,6 +27,9 @@ public class MenuConfig : MonoBehaviour
     {
         isFullScreen = config.graphics.fullscreen;
         currentQuallity = config.graphics.qualidade;
+        currentlookSensity = config.general.LookSensitivy;
+        InvertUpAxis = config.general.InvertUpAxis;
+        currentVolume = config.general.Volume;
         ConfigAlterada(config.graphics.RetornResolution());
         Debug.Log(config.graphics.resolution_height + "+" + config.graphics.resolution_widht);
 
@@ -129,10 +95,16 @@ public class MenuConfig : MonoBehaviour
         sliderLookSensity.onValueChanged.AddListener(SetConfigLookSensitivy);
         sliderVolume.onValueChanged.AddListener(SetConfigVolume);
         toggleInvertUpAxis.onValueChanged.AddListener(SetConfigInvertAxis);
-        
+
+        //Action Button
+        bt_Apply.onClick.AddListener(ApplicationConfig);
+        bt_back.onClick.AddListener(Back);
+        bt_Default.onClick.AddListener(ResetOptions);
+        bt_General.onClick.AddListener(ButtonGeneral);
+        bt_Graphics.onClick.AddListener(ButtonGraphics);
     }
 
-
+    #region Action Configuração Graficos
     public void SetFullScreen(bool isfull)
     {
         isFullScreen = isfull;
@@ -147,21 +119,25 @@ public class MenuConfig : MonoBehaviour
     {
         currentResolution = index;
     }
+    #endregion
 
+    #region Action Configuração Geral
     public void SetConfigLookSensitivy(float index)
     {
         currentlookSensity = index;
     }
     public void SetConfigVolume(float index)
     {
-        currentlookSensity = index;
+        currentVolume = index;
     }
     public void SetConfigInvertAxis(bool value)
     {
         InvertUpAxis = value;
     }
+    #endregion
 
-    public void ApplicationConfig()
+    #region Action Botões gerals
+    private void ApplicationConfig()
     {
         ConfigAlterada(resolutions[currentResolution]);
         ConfigurationGraphics configGraphicsData = new ConfigurationGraphics(resolution: resolutions[currentResolution], fullscreen: isFullScreen, quality: currentQuallity);
@@ -170,12 +146,86 @@ public class MenuConfig : MonoBehaviour
         SaveDataGame.SaveGame("Configuracao",configData);
     }
 
+    private void Back()
+    {
+        this.gameObject.SetActive(false);
+    }
+
+    private void ButtonGraphics()
+    {
+        gameObject_General.SetActive(false);
+        gameObject_Graphics.SetActive(true);
+    }
+
+    private void ButtonGeneral()
+    {
+        gameObject_General.SetActive(true);
+        gameObject_Graphics.SetActive(false);
+    }
+
+    private void ResetOptions()
+    {
+         currentResolution = 0;
+         isFullScreen = true;
+         currentQuallity = 0;
+         currentVolume = 1;
+         currentlookSensity = 1;
+         InvertUpAxis=false;
+         ApplicationConfig();
+    }
+    #endregion
+
     private void ConfigAlterada(Resolution resolution)
     {
         QualitySettings.SetQualityLevel(currentQuallity);
         Screen.SetResolution(resolution.width, resolution.height, isFullScreen);
-
-        var KeyboardMouseY = Input.GetAxis("Mouse Y");
-        
+        PlayerData.InvertUpAxis = InvertUpAxis;
+        PlayerData.LookSensitiy = currentlookSensity;
+        AudioListener.volume = currentVolume;
+       
     }
+
+
+    [Header("Referencias de Objetos")]
+    [SerializeField] private GameObject gameObject_General;
+    [SerializeField] private GameObject gameObject_Graphics;
+   
+    //Resolução variavels
+    [Header("Graficos")]
+    [Header("Resolução")]
+    Resolution[] resolutions;
+    List<string> optionResolution = new List<string>();
+    [SerializeField]
+    private TMP_Dropdown dropResolution;
+    [SerializeField]
+    private Toggle toggleFullScreen;
+
+    //Qualidade 
+    [Header("Qualidade")]
+    [SerializeField] private TMP_Dropdown dropQuallity;
+    [SerializeField] RenderPipelineAsset[] renderesAssets;
+    List<string> qualidadeString = new List<string>();
+
+    [Space]
+    [Header("General")]
+    [SerializeField] private Toggle toggleInvertUpAxis;
+    [SerializeField] private Slider sliderLookSensity;
+    [SerializeField] private Slider sliderVolume;
+
+    [Space]
+    [Header("Botão Confirmar")]
+    [SerializeField] private Button bt_General;
+    [SerializeField] private Button bt_Graphics;
+    [SerializeField] private Button bt_Apply;
+    [SerializeField] private Button bt_Default;
+    [SerializeField] private Button bt_back;
+
+
+    //Config minhas configuraçãos
+    int currentResolution = 0;
+    bool isFullScreen = true;
+    int currentQuallity = 0;
+    float currentVolume = 1;
+    float currentlookSensity = 1;
+    bool InvertUpAxis;
 }

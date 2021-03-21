@@ -8,6 +8,7 @@ public class TimelineLegenda : Susto
 {
    public PlayableDirector timeline;
     public TextMeshProUGUI textLegenda;
+    public bool jumpTimeline=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,17 @@ public class TimelineLegenda : Susto
         else
         {
             timeline.Resume();
+           
+        }
+
+      
+    }
+
+    private void FixedUpdate()
+    {
+        if (Input.GetButtonDown("Jump") && jumpTimeline)
+        {
+            ApagarTimeline();
         }
     }
 
@@ -31,7 +43,7 @@ public class TimelineLegenda : Susto
     {
         GerenciadorFase.instancie.sustoListId.Add(id);
         textLegenda.gameObject.SetActive(false);
-       
+        this.gameObject.SetActive(false);
     }
 
     private void OnDestroy()

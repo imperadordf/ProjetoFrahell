@@ -74,8 +74,7 @@ public class GameManager : MonoBehaviour
     {
         vida -= dano;
         if (vida <= 0 && !morreu)
-        {
-            
+        {          
             playerscript.Morrer();
             Invoke("MorreuCarregaFase", 4f);
             morreu = true;

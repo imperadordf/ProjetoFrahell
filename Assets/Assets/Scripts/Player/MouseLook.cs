@@ -10,19 +10,25 @@ public class MouseLook : MonoBehaviour
     public float xRotation=0;
     public Transform pescoco;
     public Transform TargetCamera;
-    
+    float invert,Sensitiy;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (PlayerData.InvertUpAxis)
+            invert = -1;
+        else
+            invert = 1;
+        Sensitiy = PlayerData.LookSensitiy;
+
+        sensibilidadeMouse*= Sensitiy;
     }
 
     // Update is called once per frame
     void Update()
     {
         float mouseX = Input.GetAxis("Mouse X") * sensibilidadeMouse * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * sensibilidadeMouse * Time.deltaTime;
-
+        float mouseY = Input.GetAxis("Mouse Y") * sensibilidadeMouse * Time.deltaTime * invert;
+        print(mouseY);
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -74.458f, 74.458f);

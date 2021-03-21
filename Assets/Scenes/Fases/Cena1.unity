@@ -7741,6 +7741,7 @@ MonoBehaviour:
   id: 10
   timeline: {fileID: 629550036}
   textLegenda: {fileID: 1980531188}
+  jumpTimeline: 1
 --- !u!1 &632935204
 GameObject:
   m_ObjectHideFlags: 0
@@ -10476,6 +10477,7 @@ MonoBehaviour:
   m_Script: {fileID: 1016672305}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Entries: []
 --- !u!4 &868980578
 Transform:
   m_ObjectHideFlags: 19
