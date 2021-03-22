@@ -14,12 +14,13 @@ public class MenuConfig : MonoBehaviour
         if (config!=null)
         {
             LoadConfig(config);
+            isloading = true;
         }
         GraphicsGame();
         ResolutionGame();
         GeneralConfiguration();
         ActionList();
-        toggleFullScreen.isOn= isFullScreen;
+        RefreshShown();      
     }
 
     //Carregando Informações
@@ -30,9 +31,9 @@ public class MenuConfig : MonoBehaviour
         currentlookSensity = config.general.LookSensitivy;
         InvertUpAxis = config.general.InvertUpAxis;
         currentVolume = config.general.Volume;
-        ConfigAlterada(config.graphics.RetornResolution());
+        resolutionMy = config.graphics.RetornResolution();
+        ConfigAlterada(resolutionMy);
         Debug.Log(config.graphics.resolution_height + "+" + config.graphics.resolution_widht);
-
     }
 
     //Pegando todas as resolutions e colocando na lista
@@ -45,16 +46,27 @@ public class MenuConfig : MonoBehaviour
         {
             string options = resolutions[i].width + "x" + resolutions[i].height;
             optionResolution.Add(options);
-            if (resolutions[i].width == Screen.currentResolution.width &&
-                resolutions[i].height == Screen.currentResolution.height)
+            if (isloading)
             {
-                currentResolution = i;
+                if (resolutions[i].width == resolutionMy.width &&
+             resolutions[i].height == resolutionMy.height)
+                {
+                    currentResolution = i;
+                }
             }
+            else
+            {
+                if (resolutions[i].width == Screen.currentResolution.width &&
+              resolutions[i].height == Screen.currentResolution.height)
+                {
+                    currentResolution = i;
+                }
+            }
+         
         }
 
         dropResolution.AddOptions(optionResolution);
-        dropResolution.value = currentResolution;
-        dropResolution.RefreshShownValue();
+ 
     }
 
     //Pegando todas os graficos  e colocando na lista
@@ -72,8 +84,19 @@ public class MenuConfig : MonoBehaviour
             }
         }
         dropQuallity.AddOptions(qualidadeString);
+    }
+
+    //Metodo para mostrar os valores no Unity
+    private void RefreshShown()
+    {
+        //Resolução Drop
+        dropResolution.value = currentResolution;
+        dropResolution.RefreshShownValue();
+        //Qualidade Drop
         dropQuallity.value = currentQuallity;
         dropQuallity.RefreshShownValue();
+        //Toggle tela cheia
+        toggleFullScreen.isOn = isFullScreen;
     }
 
     private void GeneralConfiguration()
@@ -83,60 +106,45 @@ public class MenuConfig : MonoBehaviour
         sliderVolume.value = currentVolume;
     }
 
-    //Add Action em cada botão na Unity
+    //Add Action em cada botão na Unity usando Lambda Expression
     private void ActionList()
     {
         //Actions Graphics
-        dropQuallity.onValueChanged.AddListener(SetConfigQuallity);
-        dropResolution.onValueChanged.AddListener(SetConfigScreen);
-        toggleFullScreen.onValueChanged.AddListener(SetFullScreen);
+        dropQuallity.onValueChanged.AddListener(index => currentQuallity = index);
+        dropResolution.onValueChanged.AddListener(index =>currentResolution=index);
+        toggleFullScreen.onValueChanged.AddListener(value=>isFullScreen=value);
 
         //Actions General
-        sliderLookSensity.onValueChanged.AddListener(SetConfigLookSensitivy);
-        sliderVolume.onValueChanged.AddListener(SetConfigVolume);
-        toggleInvertUpAxis.onValueChanged.AddListener(SetConfigInvertAxis);
+        sliderLookSensity.onValueChanged.AddListener(index=>currentlookSensity=index);
+        sliderVolume.onValueChanged.AddListener(index=>currentVolume=index);
+        toggleInvertUpAxis.onValueChanged.AddListener(value=>InvertUpAxis=value);
 
         //Action Button
         bt_Apply.onClick.AddListener(ApplicationConfig);
-        bt_back.onClick.AddListener(Back);
-        bt_Default.onClick.AddListener(ResetOptions);
-        bt_General.onClick.AddListener(ButtonGeneral);
-        bt_Graphics.onClick.AddListener(ButtonGraphics);
+
+        bt_back.onClick.AddListener(()=> this.gameObject.SetActive(false));
+
+        bt_Default.onClick.AddListener(()=> {
+            currentResolution = 0;
+            isFullScreen = true;
+            currentQuallity = 0;
+            currentVolume = 1;
+            currentlookSensity = 1;
+            InvertUpAxis = false;
+            ApplicationConfig();
+        });
+
+        bt_General.onClick.AddListener(()=> {
+            gameObject_General.SetActive(true);
+            gameObject_Graphics.SetActive(false);
+        });
+
+        bt_Graphics.onClick.AddListener(()=> {
+            gameObject_General.SetActive(false);
+            gameObject_Graphics.SetActive(true);
+        });
     }
 
-    #region Action Configuração Graficos
-    public void SetFullScreen(bool isfull)
-    {
-        isFullScreen = isfull;
-    }
-
-    public void SetConfigQuallity(int index)
-    {
-        currentQuallity = index;
-    }
-
-    public void SetConfigScreen(int index)
-    {
-        currentResolution = index;
-    }
-    #endregion
-
-    #region Action Configuração Geral
-    public void SetConfigLookSensitivy(float index)
-    {
-        currentlookSensity = index;
-    }
-    public void SetConfigVolume(float index)
-    {
-        currentVolume = index;
-    }
-    public void SetConfigInvertAxis(bool value)
-    {
-        InvertUpAxis = value;
-    }
-    #endregion
-
-    #region Action Botões gerals
     private void ApplicationConfig()
     {
         ConfigAlterada(resolutions[currentResolution]);
@@ -146,43 +154,14 @@ public class MenuConfig : MonoBehaviour
         SaveDataGame.SaveGame("Configuracao",configData);
     }
 
-    private void Back()
-    {
-        this.gameObject.SetActive(false);
-    }
-
-    private void ButtonGraphics()
-    {
-        gameObject_General.SetActive(false);
-        gameObject_Graphics.SetActive(true);
-    }
-
-    private void ButtonGeneral()
-    {
-        gameObject_General.SetActive(true);
-        gameObject_Graphics.SetActive(false);
-    }
-
-    private void ResetOptions()
-    {
-         currentResolution = 0;
-         isFullScreen = true;
-         currentQuallity = 0;
-         currentVolume = 1;
-         currentlookSensity = 1;
-         InvertUpAxis=false;
-         ApplicationConfig();
-    }
-    #endregion
-
     private void ConfigAlterada(Resolution resolution)
     {
         QualitySettings.SetQualityLevel(currentQuallity);
+        resolutionMy = resolution;
         Screen.SetResolution(resolution.width, resolution.height, isFullScreen);
         PlayerData.InvertUpAxis = InvertUpAxis;
         PlayerData.LookSensitiy = currentlookSensity;
-        AudioListener.volume = currentVolume;
-       
+        AudioListener.volume = currentVolume;     
     }
 
 
@@ -228,4 +207,6 @@ public class MenuConfig : MonoBehaviour
     float currentVolume = 1;
     float currentlookSensity = 1;
     bool InvertUpAxis;
+    Resolution resolutionMy;
+    bool isloading;
 }
