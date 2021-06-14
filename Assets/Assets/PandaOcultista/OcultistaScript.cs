@@ -127,21 +127,21 @@ public class OcultistaScript : MonoBehaviour
     //Verifico se abrir uma porta
     [Task]
     bool OpenDoor()
-    {
+    {   
         return _abriuPorta;
     }
-    
+
 
     //Caso eu abrir uma porta, eu entro nessa logica e a distancia entre a IA e a Porta for maior que 2, eu fecho a porta 
     [Task]
     private void DistanceDoorOpen()
     {
-        if (Vector3.Distance(transform.position,_portaIa.transform.position)>2)
+        if (Vector3.Distance(transform.position, _portaIa.transform.position) > 2 && _portaIa.portaOpen)
         {
             _portaIa.FecharPortaIa();
-            _abriuPorta=false;
-            _portaIa=null;
-            Task.current.Succeed();      
+            _abriuPorta = false;
+            _portaIa = null;
+            Task.current.Succeed();
         }
     }
 
@@ -167,8 +167,11 @@ public class OcultistaScript : MonoBehaviour
                         {
                             Debug.DrawRay(objectVision.position, rayDirection * distanciaDeVisao, Color.red);
                         }
+                        else
+                        {
+                            Debug.DrawRay(objectVision.position, rayDirection * distanciaDeVisao, Color.blue);
+                        }
 
-                        Debug.DrawRay(objectVision.position, rayDirection * distanciaDeVisao, Color.blue);
                     }
                 }
                 else
@@ -182,7 +185,7 @@ public class OcultistaScript : MonoBehaviour
     //Para saber se eu collidir com a porta assim eu abro ela e coloca abriu a porta como true, tambem verifico se a porta n esta trancada
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<PortaIa>(out PortaIa porta) && !_abriuPorta && !porta.scritPorta.locked)
+        if (other.TryGetComponent<PortaIa>(out PortaIa porta) && !_abriuPorta && !porta.scritPorta.locked && !porta.portaOpen)
         {
             print("Abriu");
             porta.AbrirPortaIa();
