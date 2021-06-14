@@ -44,7 +44,7 @@ public class VisionIA : MonoBehaviour
                 Vector3 rayDirection = Quaternion.AngleAxis(angleToRay, objectVision.up) * directionMultipl;
                 //
                 RaycastHit hitRaycast;
-                if (Physics.Raycast(objectVision.position, rayDirection, out hitRaycast, distanciaDeVisao, layerRay))
+                if (Physics.Raycast(objectVision.position, rayDirection, out hitRaycast, distanciaDeVisao))
                 {
                     if (!hitRaycast.transform.IsChildOf(transform.root) && !hitRaycast.collider.isTrigger)
                     {
