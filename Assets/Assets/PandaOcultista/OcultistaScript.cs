@@ -94,7 +94,7 @@ public class OcultistaScript : MonoBehaviour
                 if (Physics.Raycast(objectVision.position, rayDirection, out hitRaycast, distanciaDeVisao, layerRay))
                 {
 
-                    if (!hitRaycast.transform.IsChildOf(transform.root) && !hitRaycast.collider.isTrigger)
+                    if (!hitRaycast.transform.IsChildOf(transform.root))
                     {
                         print(hitRaycast.collider.tag + 2);
                         if (hitRaycast.collider.gameObject.CompareTag(tagdoPlayer))
@@ -161,7 +161,7 @@ public class OcultistaScript : MonoBehaviour
                 RaycastHit hitRaycast;
                 if (Physics.Raycast(objectVision.position, rayDirection, out hitRaycast, distanciaDeVisao))
                 {
-                    if (!hitRaycast.transform.IsChildOf(transform.root) && !hitRaycast.collider.isTrigger)
+                    if (!hitRaycast.transform.IsChildOf(transform.root))
                     {
                         if (hitRaycast.collider.gameObject.CompareTag(tagdoPlayer))
                         {
